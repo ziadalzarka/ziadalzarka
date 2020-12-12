@@ -44,107 +44,423 @@
       integrity="sha512-QTQigm89ZvHzwoJ/NgJPghQPegLIwnXuOXWEdAjjOvpE9uaBGeI05+auj0RjYVr86gtMaBJRKi8hWZVsrVe/Ug=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css"
+    />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
   </head>
   <body>
-    <section class="h-100 d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-lg-6">
-            <h1>Ziad Alzarka.</h1>
-            <span class="name-separator"></span>
-            <p>Software Engineer at Flow Health</p>
-            <div class="social-links">
-              <a
-                class="social-link"
-                href="https://twitter.com/ziad_alzarka"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                class="social-link"
-                href="https://www.linkedin.com/in/ziadalzarka/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                class="social-link"
-                href="https://www.instagram.com/ziadalzarka/"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
+    <div data-scroll-container>
+      <section data-scroll-section class="h-100 d-flex align-items-center">
+        <div class="container">
+          <div class="row">
+            <div data-scroll data-scroll-speed="1" class="col-12 col-lg-6">
+              <h1 id="name">Ziad Alzarka.</h1>
+              <span id="name-separator" class="name-separator"></span>
+              <p id="description">Software Engineer at Flow Health</p>
+              <div id="social-links" class="social-links">
+                <a
+                  class="social-link"
+                  href="https://twitter.com/ziad_alzarka"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/ziadalzarka/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.instagram.com/ziadalzarka/"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="col-sm-12 col-lg-6 pt-5 pt-lg-0">
-            <label>- Introduction</label>
-            <h2>
-              Software Engineer,<br />working remotely with<br />global
-              comapnies.
-            </h2>
-            <p>
-              I design great user experiences, complex architectures, mobile
-              apps and professional websites.
-            </p>
-            <a
-              href="https://thetuteur.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >My Blog</a
+            <div
+              data-scroll
+              data-scroll-speed="3"
+              class="col-12 col-lg-6 pt-5 pt-lg-0"
             >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="dark h-100 d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-lg-6">
-            <label>- Contact</label>
-            <h2>
-              Any type of Query<br />
-              & Discussion.
-            </h2>
-            <p>
-              I'm very open to have a conversation, or discuss business
-              opportunities.
-            </p>
-            <a
-              href="mailto:hi@ziadalzarka.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >hi@ziadalzarka.com</a
-            >
-          </div>
-          <div class="col-sm-12 col-lg-6 pt-5 pt-lg-0">
-            <h2>
-              The secret of creativity is being open-minded with integrity and
-              honesty.
-            </h2>
-            <p>
-              I move with balance like the wind and push my limits like a wild
-              fire.
-            </p>
-            <div>
-              <div class="stat">
-                <span class="stat-number">8</span>
-                <div class="stat-title">Yours of<br />Coding.</div>
-              </div>
-              <div class="stat">
-                <span class="stat-number">16</span>
-                <div class="stat-title">Happy<br />Students.</div>
-              </div>
+              <label>- Introduction</label>
+              <h2>
+                Software Engineer,<br />working remotely with<br />global
+                comapnies.
+              </h2>
+              <p>
+                I design great user experiences, complex architectures, mobile
+                apps and professional websites.
+              </p>
+              <a
+                href="https://thetuteur.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My Blog</a
+              >
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section data-scroll-section class="dark h-100 d-flex align-items-center">
+        <div class="container pt-5 pt-lg-0">
+          <div class="row">
+            <div data-scroll id="contact-info" class="col-12 col-lg-6">
+              <label>- Contact</label>
+              <h2>
+                Any type of Query<br />
+                & Discussion.
+              </h2>
+              <p>
+                I'm very open to have a conversation, or discuss business
+                opportunities.
+              </p>
+              <a
+                href="mailto:hi@ziadalzarka.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >hi@ziadalzarka.com</a
+              >
+            </div>
+            <div data-scroll class="col-12 col-lg-6 pt-5 pt-lg-0">
+              <h2>
+                The secret of creativity is being open-minded with integrity and
+                honesty.
+              </h2>
+              <p>
+                I move with balance like the wind and push my limits like a wild
+                fire.
+              </p>
+              <div>
+                <div class="stat">
+                  <span id="years" class="stat-number">8</span>
+                  <div class="stat-title">Yours of<br />Coding.</div>
+                </div>
+                <div class="stat">
+                  <span id="students" class="stat-number">16</span>
+                  <div class="stat-title">Happy<br />Students.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-scroll-section class="skills-section">
+        <div class="container">
+          <div class="row d-block d-lg-none">
+            <div class="col-12">
+              <h2>What I do</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+              <div id="backend" class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Backend<br />Engineering.</h3>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+              <div id="frontend" class="skill-card">
+                <i class="fab fa-react"></i>
+                <h3>Frontend<br />Engineering.</h3>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+              <div id="websites" class="skill-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Professional<br />Websites.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-scroll-section class="d-flex pt-0 align-items-center">
+        <div class="container p-5">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h2>
+                Got a project?<br />
+                Let's talk.
+              </h2>
+              <p>
+                Send me a contact request and I will reply to you as soon as
+                possible.
+              </p>
+              <a
+                href="mailto:hi@ziadalzarka.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >hi@ziadalzarka.com</a
+              >
+            </div>
+            <div class="col-12 col-lg-6 pt-5 pt-lg-0">
+              <h2>Let me know what you need.</h2>
+              <form action="https://formspree.io/f/xzbkjael" method="POST">
+                <div class="form-group">
+                  <label for="name">What is your name?</label>
+                  <input name="name" type="text" autocomplete="name" />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">What is your email?</label>
+                  <input name="email" type="email" autocomplete="email" />
+                </div>
+
+                <div class="form-group">
+                  <label for="messageContent">What do you need?</label>
+                  <textarea
+                    class="d-none"
+                    id="message"
+                    name="message"
+                  ></textarea>
+                  <div
+                    id="messageContent"
+                    name="messageContent"
+                    contenteditable="true"
+                    onkeyup="copyContent()"
+                    rows="3"
+                  ></div>
+                </div>
+
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-scroll-section class="dark d-flex pt-0 align-items-center">
+        <div class="container p-5">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h2>
+                What's new?<br />
+                My blog and news.
+              </h2>
+            </div>
+            <div class="col-12 col-lg-6 pt-5 pt-lg-0">
+              <div class="blog-post">
+                <label>Nov 20 - The Tuteur</label>
+                <a
+                  href="https://thetuteur.com/react-image-gallery-with-masonry-js/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >React Image Gallery with Masonry.js</a
+                >
+              </div>
+              <hr />
+              <div class="blog-post">
+                <label>Nov 8 - The Tuteur</label>
+                <a
+                  href="https://thetuteur.com/optimize-react-apps-pagespeed-insights-score/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Optimize React Apps PageSpeed Insights Score</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-scroll-section class="d-flex align-items-center">
+        <div class="container center-section p-5">
+          <div class="row">
+            <div class="col-6 offset-3 col-lg-4 offset-lg-4 pt-5">
+              <img class="profile-image" src="assets/images/profile.jpg" />
+              <p class="pt-5">Thank you. Have a good day ;)</p>
+              <div class="social-links pt-4 pb-4">
+                <a
+                  class="social-link"
+                  href="https://twitter.com/ziad_alzarka"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/ziadalzarka/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.instagram.com/ziadalzarka/"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <script>
+      function copyContent() {
+        document.querySelector("#message").innerText = document.querySelector(
+          "#messageContent"
+        ).innerText;
+      }
+
+      window.addEventListener("load", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const locoScroll = new LocomotiveScroll({
+          el: document.querySelector("[data-scroll-container]"),
+          smooth: true,
+          getDirection: true,
+          getSpeed: true,
+          tablet: { smooth: false },
+          smartphone: { smooth: false },
+        });
+        // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+        locoScroll.on("scroll", ScrollTrigger.update);
+
+        // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+        ScrollTrigger.scrollerProxy("[data-scroll-container]", {
+          scrollTop(value) {
+            return arguments.length
+              ? locoScroll.scrollTo(value, 0, 0)
+              : locoScroll.scroll.instance.scroll.y;
+          }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+          getBoundingClientRect() {
+            return {
+              top: 0,
+              left: 0,
+              width: window.innerWidth,
+              height: window.innerHeight,
+            };
+          },
+          // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+          pinType: document.querySelector("[data-scroll-container]").style
+            .transform
+            ? "transform"
+            : "fixed",
+        });
+
+        // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+        ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+        // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+        ScrollTrigger.refresh();
+
+        document.querySelector("#message").addEventListener("keypress", (e) => {
+          if (e.keyCode === 13) {
+            locoScroll.update();
+          }
+        });
+
+        const section1TL = gsap.timeline();
+
+        section1TL.to("#name-separator", {
+          x: 200,
+          duration: 1,
+          ease: "elastic",
+        });
+        section1TL.to("#name-separator", {
+          x: 0,
+          duration: 1,
+          ease: "power4",
+        });
+
+        const numbersTL = gsap.timeline({
+          scrollTrigger: {
+            scroller: "[data-scroll-container]",
+            trigger: ".stat",
+          },
+        });
+
+        let counter = { years: 0, students: 0 };
+
+        const studentsCounter = document.querySelector("#students");
+        const yearsCounter = document.querySelector("#years");
+
+        numbersTL.to(counter, {
+          years: 8,
+          students: 16,
+          duration: 2,
+          ease: "power4",
+          onUpdate: function () {
+            studentsCounter.innerText = Math.ceil(counter.students);
+            yearsCounter.innerText = Math.ceil(counter.years);
+          },
+        });
+
+        const skillCardsTL = gsap.timeline({
+          scrollTrigger: {
+            scroller: "[data-scroll-container]",
+            trigger: ".skills-section",
+          },
+        });
+
+        skillCardsTL.from(
+          ".skill-card#backend",
+          {
+            y: 200,
+            opacity: 0,
+            duration: 1,
+          },
+          0
+        );
+
+        skillCardsTL.from(
+          ".skill-card#frontend",
+          {
+            y: 200,
+            opacity: 0,
+            duration: 1.5,
+          },
+          0
+        );
+
+        skillCardsTL.from(
+          ".skill-card#websites",
+          {
+            y: 200,
+            opacity: 0,
+            duration: 2,
+          },
+          0
+        );
+      });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TFR0KR0TGZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TFR0KR0TGZ");
+    </script>
   </body>
 </html>

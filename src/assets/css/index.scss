@@ -1,9 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 $light-background: #333646;
+$secondary-background: #424657;
 $label: #9fa0a7;
 $light: white;
 $primary: #ffc25c;
 
 // General Styles
+
+@media screen and (min-width: 992px) {
+  body {
+    overflow: hidden;
+  }
+}
 
 body,
 h1,
@@ -11,7 +22,8 @@ h2,
 h3,
 p,
 a,
-label {
+label,
+input {
   font-family: "Poppins";
 }
 
@@ -73,6 +85,10 @@ h2 {
   font-size: 2em;
 }
 
+h3 {
+  font-size: 1.5em;
+}
+
 label,
 p,
 a {
@@ -89,7 +105,14 @@ a {
 // Sections
 
 .h-100 {
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.section-padding {
+  padding-top: 8em;
+  padding-bottom: 8em;
 }
 
 section.dark {
@@ -113,7 +136,7 @@ section.dark {
 }
 
 .stat-number {
-  font-size: 6em;
+  font-size: 4em;
   color: $primary;
 }
 
@@ -121,4 +144,129 @@ section.dark {
   display: inline-block;
   font-size: 1.25em;
   color: $light;
+}
+
+// Skills
+
+.skill-card {
+  display: inline-block;
+  background-color: $secondary-background;
+  color: white;
+  padding: 5em;
+
+  i {
+    font-size: 1.5em;
+    color: white;
+    vertical-align: top;
+    margin-right: 0.25em;
+  }
+
+  h3 {
+    display: inline-block;
+    font-weight: lighter;
+  }
+}
+
+.skills-section {
+  @media screen and (min-width: 992px) {
+    .container {
+      transform: translateY(-50%);
+    }
+  }
+  @media screen and (max-width: 992px) {
+    margin-top: 4em;
+    margin-bottom: 4em;
+
+    .skill-card {
+      margin-bottom: 2em;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+  }
+}
+
+// Forms
+
+form {
+  .form-group {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+
+  input,
+  [contenteditable] {
+    border: none;
+    background: none;
+    color: white;
+    border-bottom: solid 1px #888;
+    outline: none;
+    transition: border-bottom-color 1s;
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  input:focus,
+  [contenteditable]:focus {
+    border-bottom-color: #fff;
+  }
+
+  [contenteditable] {
+    line-height: 1.5em;
+  }
+
+  button {
+    border: none;
+    background: none;
+    color: $primary;
+    text-decoration: underline;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+}
+
+// Blog
+
+hr {
+  border: none;
+  border-bottom: 1px solid #888888;
+}
+
+.blog-post {
+  margin: 1em 0;
+
+  a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    line-height: 1.25em;
+    font-weight: lighter;
+
+    transition: color 0.25s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Footer
+
+.profile-image {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.center-section {
+  text-align: center;
 }
