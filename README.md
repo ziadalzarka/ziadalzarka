@@ -20,4 +20,4 @@ This is my GitHub profile. You can visit [my website] to find more info about me
 - [Optimize React Apps PageSpeed Insights Score](https://thetuteur.com/optimize-react-apps-pagespeed-insights-score/?utm_source=rss&utm_medium=rss&utm_campaign=optimize-react-apps-pagespeed-insights-score)
 <!-- BLOG-POST-LIST:END -->
 
-[my-website]: https://ziadalzarka.com/
+[my website]: https://ziadalzarka.com/
