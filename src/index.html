@@ -340,11 +340,10 @@
         const locoScroll = new LocomotiveScroll({
           el: document.querySelector("[data-scroll-container]"),
           smooth: true,
-          getDirection: true,
-          getSpeed: true,
           tablet: { smooth: false },
           smartphone: { smooth: false },
         });
+
         // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
         locoScroll.on("scroll", ScrollTrigger.update);
 
