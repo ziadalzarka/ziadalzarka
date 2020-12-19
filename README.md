@@ -8,7 +8,7 @@ This is my GitHub profile. You can visit [my website] to find more info about me
 - Backend Engineering
 - Teach Courses
 - Write Blog Posts
-- Always Learning xD
+- Always Learning
 
 **📕 Latest Blog Posts**
 
