@@ -19,7 +19,7 @@ Most if not all of the code I write cannot be shown in public, so don't expect m
 | Ruby                   | Ionic            | Prisma         | Jira                      |
 | Scala                  | Cordova          | MemoryDB       | Grafana                   |
 |                        | Web Components   | Redis          | Prometheus                |
-|                        | .NET Framework   | CouchDB        |                           |
+|                        | .NET Framework   | CouchDB        | Jaeger                    |
 |                        | .NET Core        | Gun.js         |                           |
 |                        | C# Mono          | MySQL          |                           |
 |                        | Xamarin          | SQLite         |                           |
@@ -29,6 +29,8 @@ Most if not all of the code I write cannot be shown in public, so don't expect m
 |                        | Socket.io        | IndexedDB      |                           |
 |                        | WebRTC           |                |                           |
 |                        | WebAssembly      |                |                           |
+|                        | Redux            |                |                           |
+|                        | MobX             |                |                           |
 
 | AWS                    | Third Party APIs | Testing        | Miscellaneous Tools       |
 |------------------------|------------------|----------------|---------------------------|
