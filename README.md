@@ -26,7 +26,7 @@ Most if not all of the code I write cannot be shown in public, so don't expect m
 |                        | Terraform        | Neo4j          |                           |
 |                        | Django           | DGraph         |                           |
 |                        | GraphQL          | LowDB          |                           |
-|                        |                  | IndexedDB      |                           |
+|                        | Socket.io        | IndexedDB      |                           |
 
 | AWS                    | Third Party APIs | Testing        | Miscellaneous Tools       |
 |------------------------|------------------|----------------|---------------------------|
