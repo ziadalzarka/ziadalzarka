@@ -9,7 +9,7 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 > 
 > An app that helps connect tutors with students in an easy, interactive and practical experience.
 > 
-> Based on Pub/Sub architecture and a graph data model. Includes tracing using OpenTracing and Jaeger. Supports MongoDB and DynamoDB. Supports search using ElasticSearch.
+> Based on Pub/Sub architecture, a graph data model and plug-n-play code structure. Includes tracing using OpenTracing and Jaeger. Supports MongoDB and DynamoDB. Supports search using ElasticSearch.
 
 **🙂 What I am familiar with**
 
