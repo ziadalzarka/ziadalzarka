@@ -27,6 +27,8 @@ Most if not all of the code I write cannot be shown in public, so don't expect m
 |                        | Django           | DGraph         |                           |
 |                        | GraphQL          | LowDB          |                           |
 |                        | Socket.io        | IndexedDB      |                           |
+|                        | WebRTC           |                |                           |
+|                        | WebAssembly      |                |                           |
 
 | AWS                    | Third Party APIs | Testing        | Miscellaneous Tools       |
 |------------------------|------------------|----------------|---------------------------|
