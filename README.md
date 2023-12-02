@@ -75,8 +75,8 @@ Most if not all of the code I write cannot be shown in public, so don't expect m
 | Ant Design             | Adobe Illustrator| Game Maker     |
 | Chakra UI              | Adobe XD         | Unreal Engine  |
 | Semantic UI            | Figma            | Autodesk Maya  |
-| Bootstrap              |                  | Blender        |
-| Krypton .NET           | Canva            |                |
+| Bootstrap              | Canva            | Blender        |
+| Krypton .NET           |                  |                |
 
 | Books                  |
 |----------------------------------------------------------------------------------------|
