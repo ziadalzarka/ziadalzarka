@@ -18,31 +18,33 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 
 **What I am familiar with :)**
 
-| Programming Languages  | Frameworks       | Databases      | System Software           |
-|------------------------|------------------|----------------|---------------------------|
-| Node.js                | Nest.js          | Cassandra      | Kafka                     |
-| TypeScript             | Next.js          | DynamoDB       | ElasticSearch             |
-| JavaScript             | React            | DocumentDB     | Kubernetes                |
-| Python                 | Angular          | MongoDB        | Docker                    |
-| Java                   | Vue              | Postgres       | Jenkins                   |
-| C#                     | Svelte           | Neptune        | Git                       |
-| PHP                    | Electron         | ElasticSearch  | Nginx                     |
-| Visual Basic           | React Native     | Firebase       | Redbird Reverse Proxy     |
-| Ruby                   | Ionic            | Prisma         | Jira                      |
-| Go                     | Cordova          | MemoryDB       | Grafana                   |
-| Scala                  | Web Components   | Redis          | Prometheus                |
-|                        | .NET Framework   | CouchDB        | Jaeger                    |
-|                        | .NET Core        | Gun.js         |                           |
-|                        | C# Mono          | MySQL          |                           |
-|                        | Xamarin          | SQLite         |                           |
-|                        | Terraform        | Neo4j          |                           |
-|                        | Django           | DGraph         |                           |
-|                        | GraphQL          | LowDB          |                           |
-|                        | Socket.io        | IndexedDB      |                           |
-|                        | WebRTC           |                |                           |
-|                        | WebAssembly      |                |                           |
-|                        | Redux            |                |                           |
-|                        | MobX             |                |                           |
+| Programming Languages | Frameworks       | Databases      | System Software           |
+|-----------------------|------------------|----------------|---------------------------|
+| TypeScript            | Node.js          | Cassandra      | Kafka                     |
+| JavaScript            | Nest.js          | DynamoDB       | ElasticSearch             |
+| Python                | Next.js          | DocumentDB     | Kubernetes                |
+| Java                  | React            | MongoDB        | Docker                    |
+| C#                    | Angular          | Postgres       | Jenkins                   |
+| PHP                   | Vue              | Neptune        | Git                       |
+| Visual Basic          | Svelte           | ElasticSearch  | Nginx                     |
+| Ruby                  | Electron         | Firebase       | Redbird Reverse Proxy     |
+| Go                    | React Native     | Prisma         | Jira                      |
+| Scala                 | Ionic            | MemoryDB       | Grafana                   |
+|                       | Cordova          | Redis          | Prometheus                |
+|                       | Web Components   | CouchDB        | Jaeger                    |
+|                       | .NET Framework   | Gun.js         |                           |
+|                       | .NET Core        | MySQL          |                           |
+|                       | C# Mono          | SQLite         |                           |
+|                       | Xamarin          | Neo4j          |                           |
+|                       | Terraform        | DGraph         |                           |
+|                       | Django           | LowDB          |                           |
+|                       | GraphQL          | IndexedDB      |                           |
+|                       | Socket.io        |                |                           |
+|                       | WebRTC           |                |                           |
+|                       | WebAssembly      |                |                           |
+|                       | Redux            |                |                           |
+|                       | MobX             |                |                           |
+
 
 | AWS                    | Third Party APIs | Testing        | Miscellaneous Tools       |
 |------------------------|------------------|----------------|---------------------------|
