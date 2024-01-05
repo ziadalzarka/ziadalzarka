@@ -29,8 +29,8 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | PHP                    | Electron         | ElasticSearch  | Nginx                     |
 | Visual Basic           | React Native     | Firebase       | Redbird Reverse Proxy     |
 | Ruby                   | Ionic            | Prisma         | Jira                      |
-| Scala                  | Cordova          | MemoryDB       | Grafana                   |
-|                        | Web Components   | Redis          | Prometheus                |
+| Go                     | Cordova          | MemoryDB       | Grafana                   |
+| Scala                  | Web Components   | Redis          | Prometheus                |
 |                        | .NET Framework   | CouchDB        | Jaeger                    |
 |                        | .NET Core        | Gun.js         |                           |
 |                        | C# Mono          | MySQL          |                           |
