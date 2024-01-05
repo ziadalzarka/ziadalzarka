@@ -11,7 +11,12 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 > 
 > Based on Pub/Sub architecture, a graph data model and plug-n-play code structure. Includes tracing using OpenTracing and Jaeger. Supports MongoDB and DynamoDB. Supports search using ElasticSearch.
 
-**🙂 What I am familiar with**
+**Follow me on Medium :)**
+
+- [10 Essential Steps to Dramatically Optimize The Performance of a Website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
+- [The easiest way to crack a WiFi password using your computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10)
+
+**What I am familiar with ^_^**
 
 | Programming Languages  | Frameworks       | Databases      | System Software           |
 |------------------------|------------------|----------------|---------------------------|
