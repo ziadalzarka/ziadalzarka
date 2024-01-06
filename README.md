@@ -120,9 +120,3 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | The Synthesizer - Mark Vail                                                            |
 | Objectivism The Philosophy of Ayn Rand - Ayn Rand                                      |
 | The Shortcomings of Objectivism - Nathan Dickey                                        |
-
-
-**📕 Latest Blog Posts**
-
-- [React Image Gallery with Masonry.js](https://dev.to/ziadalzarka/create-react-image-gallery-with-masonry-js-2jba)
-- [Optimize React Apps PageSpeed Insights Score](https://dev.to/ziadalzarka/optimize-react-apps-pagespeed-insights-score-40o4)
