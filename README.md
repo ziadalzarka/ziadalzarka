@@ -11,6 +11,10 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 > 
 > Based on Pub/Sub architecture, a graph data model and plug-n-play code structure. Includes tracing using OpenTracing and Jaeger. Supports MongoDB and DynamoDB. Supports search using ElasticSearch.
 
+**My latest YouTube videos**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1F_GmilUsFQ?si=8zWClG1zcAQpsdeH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 **Follow me on Medium :)**
 
 - [10 Essential Steps to Dramatically Optimize The Performance of a Website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
