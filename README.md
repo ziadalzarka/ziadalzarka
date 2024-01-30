@@ -13,7 +13,13 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 
 **My latest YouTube videos**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1F_GmilUsFQ?si=8zWClG1zcAQpsdeH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p align="left">
+  <a href="https://www.youtube.com/watch?v=1F_GmilUsFQ">
+    <img src="https://img.youtube.com/vi/1F_GmilUsFQ/0.jpg" alt="Writing a reverse proxy using the Nim programming language" style="width: 45%;">
+  </a>
+</p>
+
+[Writing a reverse proxy using the Nim programming language](https://www.youtube.com/watch?v=1F_GmilUsFQ)
 
 **Follow me on Medium :)**
 
