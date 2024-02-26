@@ -14,12 +14,14 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 **My latest YouTube videos**
 
 <p align="left">
-  <a href="https://www.youtube.com/watch?v=1F_GmilUsFQ">
-    <img src="https://img.youtube.com/vi/1F_GmilUsFQ/0.jpg" alt="Writing a reverse proxy using the Nim programming language" style="width: 45%;">
+  <a href="https://www.youtube.com/watch?v=IJtH-e84iVQ">
+    <img src="https://i.ytimg.com/an_webp/IJtH-e84iVQ/mqdefault_6s.webp" alt="8 Projects to experiment with as a Software Engineer" style="width: 45%;">
   </a>
 </p>
 
-[Writing a reverse proxy using the Nim programming language](https://www.youtube.com/watch?v=1F_GmilUsFQ)
+- [Writing a reverse proxy using the Nim programming language](https://www.youtube.com/watch?v=1F_GmilUsFQ)
+- [8 Projects to experiment with as a Software Engineer](https://www.youtube.com/watch?v=IJtH-e84iVQ)
+- [How video calls work (P2P, SFU, MCU)](https://www.youtube.com/watch?v=qwtS_EOavzI)
 
 **Follow me on Medium :)**
 
