@@ -19,8 +19,8 @@ Software Engineering is my one true passion in life. I spend most of my time lea
   </a>
 </p>
 
-- [Writing a reverse proxy using the Nim programming language](https://www.youtube.com/watch?v=1F_GmilUsFQ)
 - [8 Projects to experiment with as a Software Engineer](https://www.youtube.com/watch?v=IJtH-e84iVQ)
+- [Writing a reverse proxy using the Nim programming language](https://www.youtube.com/watch?v=1F_GmilUsFQ)
 - [How video calls work (P2P, SFU, MCU)](https://www.youtube.com/watch?v=qwtS_EOavzI)
 
 **Follow me on Medium :)**
