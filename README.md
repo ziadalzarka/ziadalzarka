@@ -15,7 +15,7 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 
 <p align="left">
   <a href="https://www.youtube.com/watch?v=IJtH-e84iVQ">
-    <img src="https://i.ytimg.com/an_webp/IJtH-e84iVQ/mqdefault_6s.webp?du=3000&sqp=CKTG8q4G&rs=AOn4CLBm4ilMB675XCUeddvQlK6Qz_CGxw" alt="8 Projects to experiment with as a Software Engineer" style="width: 45%;">
+    <img src="https://img.youtube.com/vi/IJtH-e84iVQ/sddefault.jpg" alt="8 Projects to experiment with as a Software Engineer" style="width: 45%;">
   </a>
 </p>
 
