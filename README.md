@@ -32,8 +32,8 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 
 | Programming Languages | Frameworks       | Databases      | System Software           |
 |-----------------------|------------------|----------------|---------------------------|
-| TypeScript            | Node.js          | Cassandra      | Kafka                     |
-| JavaScript            | Nest.js          | DynamoDB       | ElasticSearch             |
+| JavaScript            | Node.js          | Cassandra      | Kafka                     |
+| Rust                  | Nest.js          | DynamoDB       | ElasticSearch             |
 | Python                | Next.js          | DocumentDB     | Kubernetes                |
 | Java                  | React            | MongoDB        | Docker                    |
 | C#                    | Angular          | Postgres       | Jenkins                   |
