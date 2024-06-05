@@ -38,7 +38,7 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | Java                  | React            | MongoDB        | Docker                    |
 | C#                    | Angular          | Postgres       | Jenkins                   |
 | PHP                   | Vue              | Neptune        | Git                       |
-| Visual Basic          | Svelte           | ElasticSearch  | Nginx                     |
+| Visual Basic          | Svelte/SvelteKit | ElasticSearch  | Nginx                     |
 | Ruby                  | Electron         | Firebase       | Redbird Reverse Proxy     |
 | Go                    | React Native     | Prisma         | Jira                      |
 | Scala                 | Ionic            | MemoryDB       | Grafana                   |
@@ -51,11 +51,13 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 |                       | Terraform        | DGraph         |                           |
 |                       | Django           | LowDB          |                           |
 |                       | GraphQL          | IndexedDB      |                           |
-|                       | Socket.io        |                |                           |
-|                       | WebRTC           |                |                           |
-|                       | WebAssembly      |                |                           |
+|                       | Socket.io        | SurrealDB      |                           |
+|                       | WebRTC           | Supabase       |                           |
+|                       | WebAssembly      | CouchDB        |                           |
 |                       | Redux            |                |                           |
 |                       | MobX             |                |                           |
+|                       | TypeOrm          |                |                           |
+|                       | Drizzle          |                |                           |
 
 
 | AWS                    | Third Party APIs | Testing        | Miscellaneous Tools       |
@@ -69,11 +71,12 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | CodePipeline           | Paymob           |                | AWS CodeWhisperer         |
 | S3                     | OpenAI           |                | Insomnia                  |
 | Lambda                 | Telegram         |                | Postman                   |
-| Cognito                | Instagram        |                | Logseq                    |
+| Cognito                | Instagram        |                | Linear                    |
 | CloudWatch             | Google Maps      |                | Notion                    |
 | KMS                    | Google Vision AI |                | Obsidian                  |
 | IAM                    | Google Analytics |                | Confluence                |
 | EventBridge            | Let’s Encrypt    |                |                           |
+| SageMaker              |                  |                |                           |
 | Kinesis                |                  |                |                           |
 | Glue                   |                  |                |                           |
 | Secrets Manager        |                  |                |                           |
@@ -94,10 +97,11 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | Hostinger              | Neo4j Browser    | Linux          | MonoDevelop               |
 | GoDaddy                | Metabase         | Cell Phones    | Xcode                     |
 | Heroku                 | AWS OpenSearch   | ARM            | Code Blocks               |
-|                        | Integromat       | Raspberry PI   | Atom                      |
-|                        |                  | Arduino        | Notepad++                 |
-|                        |                  |                | Adobe Dreamweaver         |
-|                        |                  |                | Vim                       |
+|                        | Make             | Raspberry PI   | Atom                      |
+|                        | TablePlus        | Arduino        | Notepad++                 |
+|                        | Kafka Offsets    |                | Adobe Dreamweaver         |
+|                        | Insomnia         |                | Vim                       |
+|                        | Insomnia         |                | Zed                       |
 
 | UI Libraries           | Design           | 3D & Games     |
 |------------------------|------------------|----------------|
@@ -106,6 +110,7 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | Chakra UI              | Adobe XD         | Unreal Engine  |
 | Semantic UI            | Figma            | Autodesk Maya  |
 | Bootstrap              | Canva            | Blender        |
+| Shadcn                 |                  |                |
 | Krypton .NET           |                  |                |
 
 | Books                  |
