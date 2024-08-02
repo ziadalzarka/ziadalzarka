@@ -36,12 +36,12 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | JavaScript            | Node.js          | Cassandra      | Kafka                     |
 | Rust                  | Nest.js          | DynamoDB       | ElasticSearch             |
 | Python                | Next.js          | DocumentDB     | Kubernetes                |
-| Java                  | React            | MongoDB        | Docker                    |
-| C#                    | Angular          | Postgres       | Jenkins                   |
-| PHP                   | Vue              | Neptune        | Git                       |
+| Go                    | React            | MongoDB        | Docker                    |
+| Java                  | Angular          | Postgres       | Jenkins                   |
+| C#                    | Vue              | Neptune        | Git                       |
 | Visual Basic          | Svelte/SvelteKit | ElasticSearch  | Nginx                     |
 | Ruby                  | Electron         | Firebase       | Redbird Reverse Proxy     |
-| Go                    | React Native     | Prisma         | Jira                      |
+| PHP                   | React Native     | Prisma         | Jira                      |
 | Scala                 | Ionic            | MemoryDB       | Grafana                   |
 |                       | Cordova          | Redis          | Prometheus                |
 |                       | Web Components   | CouchDB        | Jaeger                    |
