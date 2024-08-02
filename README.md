@@ -25,6 +25,7 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 
 **Follow me on Medium :)**
 
+- [Linking a Go static library to Rust and handling asynchronous calls](https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b)
 - [10 Essential Steps to Dramatically Optimize The Performance of a Website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
 - [The Easiest Way To Crack a WiFi Password Using Your Computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10)
 
