@@ -1,6 +1,6 @@
 **👋 Hey there!**
 
-Software Engineering is my one true passion in life. I spend most of my time learning and deepening my knowledge. I started coding at the age of 12 and I aspire to be a Software Architect!
+Software Engineering is my one true passion in life. I spend most of my time learning and deepening my knowledge. I started coding at the age of 12 which changed my life around and I aspire to contribute back to this community as much as possible!
 
 > [!NOTE]
 > Most if not all of the code I write cannot be shared publicly, however, here's a project that I was working on a while back.
