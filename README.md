@@ -45,14 +45,14 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | Scala                 | Ionic            | MemoryDB       | Grafana                   |
 |                       | Cordova          | Redis          | Prometheus                |
 |                       | Web Components   | CouchDB        | Jaeger                    |
-|                       | .NET Framework   | Gun.js         |                           |
+|                       | .NET Framework   | SurrealDB      |                           |
 |                       | .NET Core        | MySQL          |                           |
 |                       | C# Mono          | SQLite         |                           |
 |                       | Xamarin          | Neo4j          |                           |
 |                       | Terraform        | DGraph         |                           |
 |                       | Django           | LowDB          |                           |
 |                       | GraphQL          | IndexedDB      |                           |
-|                       | Socket.io        | SurrealDB      |                           |
+|                       | Socket.io        | Gun.js         |                           |
 |                       | WebRTC           | Supabase       |                           |
 |                       | WebAssembly      | CouchDB        |                           |
 |                       | Redux            |                |                           |
@@ -76,7 +76,7 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 | CloudWatch             | Google Maps      |                | Notion                    |
 | KMS                    | Google Vision AI |                | Obsidian                  |
 | IAM                    | Google Analytics |                | Confluence                |
-| EventBridge            | Let’s Encrypt    |                |                           |
+| EventBridge            | Let’s Encrypt    |                | Linear                    |
 | SageMaker              |                  |                |                           |
 | Kinesis                |                  |                |                           |
 | Glue                   |                  |                |                           |
