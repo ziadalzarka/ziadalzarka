@@ -11,6 +11,12 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 > 
 > Based on Pub/Sub architecture, a graph data model and plug-n-play code structure. Includes tracing using OpenTracing and Jaeger. Supports MongoDB and DynamoDB. Supports search using ElasticSearch.
 
+**Follow me on Medium :)**
+
+- [Linking a Go static library to Rust and handling asynchronous calls](https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b)
+- [10 Essential Steps to Dramatically Optimize The Performance of a Website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
+- [The Easiest Way To Crack a WiFi Password Using Your Computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10)
+
 **My latest YouTube videos**
 
 <p align="left">
@@ -23,11 +29,13 @@ Software Engineering is my one true passion in life. I spend most of my time lea
 - [Writing a reverse proxy using the Nim programming language](https://www.youtube.com/watch?v=1F_GmilUsFQ)
 - [How video calls work (P2P, SFU, MCU)](https://www.youtube.com/watch?v=qwtS_EOavzI)
 
-**Follow me on Medium :)**
+**What I watch on a daily basis**
 
-- [Linking a Go static library to Rust and handling asynchronous calls](https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b)
-- [10 Essential Steps to Dramatically Optimize The Performance of a Website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
-- [The Easiest Way To Crack a WiFi Password Using Your Computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10)
+My [Software Engineering Knowledge+ Youtube Playlist](https://youtube.com/playlist?list=PLjaaEYWVFtMSwXGytbIG7pXB7imM7jv31&si=Z9zRC7VuH5uOa2Ph).
+
+<img src="https://github.com/user-attachments/assets/96015661-3614-4f05-8bcd-13fa20a129ff" width="50%">
+
+
 
 **What I am familiar with :)**
 
