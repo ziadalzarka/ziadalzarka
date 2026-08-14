@@ -1,10 +1,10 @@
 name: Deploy ziadalzarka.dev
 
 on:
+  # No paths-ignore: the build copies resume/ into public/resume.pdf, so a résumé
+  # change has to redeploy the site too.
   push:
     branches: [master]
-    paths-ignore:
-      - "resume/**"
   # The homepage reads live GitHub numbers at build time, so rebuild daily to keep
   # release tags and star counts current without anyone touching the repo.
   schedule:
