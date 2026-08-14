@@ -17,8 +17,9 @@ permissions:
   id-token: write
 
 concurrency:
+  # Queue rather than cancel: a half-applied Pages deployment is worse than a slow one.
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
