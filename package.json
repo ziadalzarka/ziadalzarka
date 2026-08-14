@@ -1,7 +1,27 @@
 {
   "name": "ziadalzarka",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ziadalzarka.dev",
   "repository": "https://github.com/ziadalzarka/ziadalzarka.git",
   "author": "Ziad Alzarka <ziadalzarka@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "prebuild": "node tools/sync-resume.mjs",
+    "build": "astro build",
+    "og": "node tools/make-og.mjs",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@fontsource-variable/martian-mono": "^5.3.0",
+    "@fontsource-variable/spline-sans-mono": "^5.3.0",
+    "astro": "^7.2.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true
+  }
 }

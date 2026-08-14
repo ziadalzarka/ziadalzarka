@@ -1,148 +1,86 @@
-**👋 Hey there!**
+# Ziad Alzarka
 
-Software Engineering is my one true passion in life. I spend most of my time learning and deepening my knowledge. I started coding at the age of 12 which changed my life around and I aspire to contribute back to this community as much as possible!
+**Senior software engineer and systems architect.** Nine years building data-intensive
+platforms in two domains where a wrong number is somebody's real problem — **finance**
+(double-entry ledgers, reconciliation, AP automation) and **medicine** (AI diagnosis, claims,
+lab data pipelines).
 
-> [!NOTE]
-> Most if not all of the code I write cannot be shared publicly, however, here's a project that I was working on a while back.
-> 
-> [Study House API](https://github.com/study-house-org/api)
-> 
-> An app that helps connect tutors with students in an easy, interactive and practical experience.
-> 
-> Based on Pub/Sub architecture, a graph data model and plug-n-play code structure. Includes tracing using OpenTracing and Jaeger. Supports MongoDB and DynamoDB. Supports search using ElasticSearch.
+Lately a lot of my work is automating engineering itself: agents that take a ticket to a
+reviewed pull request, and a fleet of independent reviewers that reads every backend PR before
+a human does.
 
-**Follow me on Medium :)**
+[**ziadalzarka.dev**](https://ziadalzarka.dev) · [Résumé](https://ziadalzarka.dev/resume.pdf) ·
+[LinkedIn](https://linkedin.com/in/ziadalzarka) · [Medium](https://medium.com/@ziadalzarka) ·
+[ziadalzarka@gmail.com](mailto:ziadalzarka@gmail.com)
 
+---
+
+## What I work on
+
+| | |
+|---|---|
+| **Distributed & offline-first** | Sync engines, replication topologies, conflict resolution, clock design — and reconstructing state from event logs when a datastore is gone |
+| **Fintech data** | Payment-provider integrations, transaction matching, double-entry ledger design, and the pipelines underneath them |
+| **AI in the engineering loop** | Ticket-to-PR agent workflows, multi-agent code review, MCP server access, and the skill layer that makes agents useful on a large codebase |
+| **Architecture & product** | Zero-to-production builds and second opinions. Kotlin/JVM, TypeScript, React, NestJS, Postgres, AWS, GCP |
+
+## Experience
+
+**[Light](https://light.inc)** — Senior Software Engineer, Procure-to-Pay & Record-to-Report ·
+*Dec 2025 – present*
+Backend on the team owning AP automation, procurement, the approval engine and the accounting
+ledger. Founded the company's AI engineering platform.
+
+**Ankor.app** — Senior Software Engineer · *Jul – Nov 2025*
+Led a financial reconciliation platform from inception to production — 5+ payment providers at
+98%+ match accuracy, four-tier dbt pipeline, automated double-entry journals.
+
+**Adia Health** (formerly Flow Health) — Senior Software Engineer · *Jan 2021 – Jun 2025*
+AI-powered medical assistant for labs, physicians and insurers. Recovered a completely lost
+production database of ~1.5 billion records by replaying events out of Kafka, CloudWatch and S3.
+
+**CoatConnect** · *2019 – 2020* — web performance and SSR.
+**BirdCloud** · *2017 – 2018* — first job, client software across legal, medical and laundry.
+
+## Things I've built in the open
+
+**[peel](https://github.com/ziadalzarka/peel)** — a terminal diff reviewer that stages what you
+just reviewed. Every local diff tool is read-only, so reviewing and `git add` end up as two
+passes over the same diff. `peel` is one pass: read a file, press `s`, and it's staged, folded
+away, and the next file is in front of you.
+
+```sh
+brew install ziadalzarka/tap/peel
+```
+
+**[icloud-image-labeler](https://github.com/ziadalzarka/icloud-image-labeler)** — auto-labels an
+Apple Photos library with any OpenAI-compatible LLM, writing keywords, titles, descriptions and
+OCR text back into Photos.app. Built for a local model in LM Studio, so the photos never have to
+leave the machine.
+
+**Magmooty** *(source private)* — an offline-first distributed system in Rust, Go and Tauri for
+regions with unreliable connectivity. Cryptographic sync on SurrealDB/RocksDB with a hybrid
+logical clock, a Go-to-Rust FFI bridge, UDP peer discovery and BLE attendance tracking.
+
+## Writing
+
+<!-- BLOG-POST-LIST:START -->
 - [Linking a Go static library to Rust and handling asynchronous calls](https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b)
-- [10 Essential Steps to Dramatically Optimize The Performance of a Website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
-- [The Easiest Way To Crack a WiFi Password Using Your Computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10)
+- [10 essential steps to dramatically optimize the performance of a website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
+- [The easiest way to crack a WiFi password using your computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10)
+<!-- BLOG-POST-LIST:END -->
 
-**My latest YouTube videos**
+## Talks and videos
 
-<p align="left">
-  <a href="https://www.youtube.com/watch?v=IJtH-e84iVQ">
-    <img src="https://img.youtube.com/vi/IJtH-e84iVQ/sddefault.jpg" alt="8 Projects to experiment with as a Software Engineer" style="width: 45%;">
-  </a>
-</p>
-
-- [8 Projects to experiment with as a Software Engineer](https://www.youtube.com/watch?v=IJtH-e84iVQ)
+- [8 projects to experiment with as a software engineer](https://www.youtube.com/watch?v=IJtH-e84iVQ)
 - [Writing a reverse proxy using the Nim programming language](https://www.youtube.com/watch?v=1F_GmilUsFQ)
-- [How video calls work (P2P, SFU, MCU)](https://www.youtube.com/watch?v=qwtS_EOavzI)
+- [How video calls work — P2P, SFU, MCU](https://www.youtube.com/watch?v=qwtS_EOavzI)
 
-**What I watch on a daily basis**
+---
 
-My [Software Engineering Knowledge+ Youtube Playlist](https://youtube.com/playlist?list=PLjaaEYWVFtMSwXGytbIG7pXB7imM7jv31&si=Z9zRC7VuH5uOa2Ph).
+I started coding at 12 and took my first paid job at 16. Most of what I write at work can't be
+shared publicly, so this profile is the small public edge of it — the full picture lives at
+**[ziadalzarka.dev](https://ziadalzarka.dev)**.
 
-<img src="https://github.com/user-attachments/assets/96015661-3614-4f05-8bcd-13fa20a129ff" width="50%">
-
-
-
-**What I am familiar with :)**
-
-| Programming Languages | Frameworks       | Databases      | System Software           |
-|-----------------------|------------------|----------------|---------------------------|
-| JavaScript            | Node.js          | Cassandra      | Kafka                     |
-| Rust                  | Nest.js          | DynamoDB       | ElasticSearch             |
-| Python                | Next.js          | DocumentDB     | Kubernetes                |
-| Go                    | React            | MongoDB        | Docker                    |
-| Java                  | Svelte           | Postgres       | Jenkins                   |
-| C#                    | Vue              | Neptune        | Git                       |
-| Visual Basic          | Angular          | ElasticSearch  | Nginx                     |
-| Ruby                  | Electron & Tauri | Firebase       | Redbird Reverse Proxy     |
-| PHP                   | React Native     | Prisma         | Jira                      |
-| Scala                 | Ionic            | MemoryDB       | Grafana                   |
-|                       | Cordova          | Redis          | Prometheus                |
-|                       | Web Components   | CouchDB        | Jaeger                    |
-|                       | .NET Framework   | SurrealDB      |                           |
-|                       | .NET Core        | MySQL          |                           |
-|                       | C# Mono          | SQLite         |                           |
-|                       | Xamarin          | Neo4j          |                           |
-|                       | Terraform        | DGraph         |                           |
-|                       | Django           | LowDB          |                           |
-|                       | GraphQL          | IndexedDB      |                           |
-|                       | Socket.io        | Gun.js         |                           |
-|                       | WebRTC           | Supabase       |                           |
-|                       | WebAssembly      | CouchDB        |                           |
-|                       | Redux            |                |                           |
-|                       | MobX             |                |                           |
-|                       | TypeOrm          |                |                           |
-|                       | Drizzle          |                |                           |
-
-
-| AWS                    | Third Party APIs | Testing        | Miscellaneous Tools       |
-|------------------------|------------------|----------------|---------------------------|
-| EC2                    | Algolia          | Puppeteer      | CircleCI                  |
-| ECS                    | Cloudinary       | Jest           | Sentry                    |
-| SQS                    | Twilio           | Mocha          | Mouseflow                 |
-| SNS                    | SendGrid         | Jasmine        | Netlify                   |
-| API Gateway            | Auth0            | Cypress        | Cloudflare                |
-| OpenSearch             | Stripe           | Selenium       | ChatGPT                   |
-| CodePipeline           | Paymob           |                | AWS CodeWhisperer         |
-| S3                     | OpenAI           |                | Insomnia                  |
-| Lambda                 | Telegram         |                | Postman                   |
-| Cognito                | Instagram        |                | Linear                    |
-| CloudWatch             | Google Maps      |                | Notion                    |
-| KMS                    | Google Vision AI |                | Obsidian                  |
-| IAM                    | Google Analytics |                | Confluence                |
-| EventBridge            | Let’s Encrypt    |                | Linear                    |
-| SageMaker              |                  |                |                           |
-| Kinesis                |                  |                |                           |
-| Glue                   |                  |                |                           |
-| Secrets Manager        |                  |                |                           |
-| Cloudformation         |                  |                |                           |
-| MediaLive              |                  |                |                           |
-| Athena                 |                  |                |                           |
-| Data Migration Service |                  |                |                           |
-| CloudFront             |                  |                |                           |
-| Route53                |                  |                |                           |
-
-| Cloud Providers        | Tools            | Platforms      | Code Editors & IDEs       |
-|------------------------|------------------|----------------|---------------------------|
-| On-Premise             | cPanel           | Web            | VSCode                    |
-| AWS                    | phpMyAdmin       | Android        | Visual Studio             |
-| DigitalOcean           | Studio 3T        | iOS            | IntelliJ IDEA             |
-| GCP                    | pgAdmin          | Windows        | Android Studio            |
-| Linode                 | SQLite Browser   | MacOS          | Eclipse                   |
-| Hostinger              | Neo4j Browser    | Linux          | MonoDevelop               |
-| GoDaddy                | Metabase         | Cell Phones    | Xcode                     |
-| Heroku                 | AWS OpenSearch   | ARM            | Code Blocks               |
-|                        | Make             | Raspberry PI   | Atom                      |
-|                        | TablePlus        | Arduino        | Notepad++                 |
-|                        | Kafka Offsets    |                | Adobe Dreamweaver         |
-|                        | Insomnia         |                | Vim                       |
-|                        | Insomnia         |                | Zed                       |
-
-| UI Libraries           | Design           | 3D & Games     |
-|------------------------|------------------|----------------|
-| Material Design        | Adobe Photoshop  | Unity          |
-| Ant Design             | Adobe Illustrator| Game Maker     |
-| Chakra UI              | Adobe XD         | Unreal Engine  |
-| Semantic UI            | Figma            | Autodesk Maya  |
-| Bootstrap              | Canva            | Blender        |
-| Shadcn                 |                  |                |
-| Krypton .NET           |                  |                |
-
-| Books                  |
-|----------------------------------------------------------------------------------------|
-| Designing Data-Intensive Applications - Martin Kleppmann                               |
-| Microservices vs Service-Oriented Architecture - Mark Richards                         |
-| Architectural Styles and the Design of Network-based Software Architectures            |
-| Building Microservices Designing Fine Grained Systems - Sam Newman                     |
-| Text Algorithms - Maxime Crochemore                                                    |
-| The Little MongoDB Book - Karl Seguin                                                  |
-| Thinking Architecturally - Nathaniel Schutta                                           |
-| Your API Is Bad - Paddy Foran                                                          |
-| The Five Dysfunctions of a Team - Patrick Lencioni                                     |
-| The 7 Habits of Highly Effective People - Stephen R. Covey                             |
-| Atomic Habits - James Clear                                                            |
-| How to win friends and influence people - Dale Carnegie                                |
-| 12 Rules for Life - Jordan Peterson                                                    |
-| Man's Search For Meaning - Viktor E. Frankl                                            |
-| The 48 Laws Of Power - Robert Greene                                                   |
-| The 50th Law - Robert Greene                                                           |
-| The Power of Now - Eckhart Tolle                                                       |
-| What Every Body Is Saying - Joe Navarro                                                |
-| The Design of Everyday Things - Donald A. Norman                                       |
-| The Synthesizer - Mark Vail                                                            |
-| Objectivism The Philosophy of Ayn Rand - Ayn Rand                                      |
-| The Shortcomings of Objectivism - Nathan Dickey                                        |
+I take on consulting and advisory work alongside my day job. If you have a system that has to be
+right and currently isn't, [get in touch](mailto:ziadalzarka@gmail.com).

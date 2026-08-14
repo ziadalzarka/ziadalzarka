@@ -1,0 +1,177 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { CONTACT } from '../data/contact';
+import type { Pulse } from '../data/github';
+
+interface Props {
+  entry: CollectionEntry<'docs'>;
+  path: string;
+  release?: string;
+  pulse?: Pulse;
+}
+
+const { entry, path, release, pulse } = Astro.props;
+const d = entry.data;
+const isThesis = d.kind === 'thesis';
+
+const displayParts =
+  isThesis && d.display && d.accent ? d.display.split(d.accent) : null;
+---
+
+<section class="doc" id={entry.id} data-doc={entry.id} aria-labelledby={`${entry.id}-title`}>
+  {
+    isThesis ? (
+      <header class="thesis">
+        <h1 class="thesis__display" id={`${entry.id}-title`}>
+          {displayParts ? (
+            <>
+              {displayParts[0]}
+              <em>{d.accent}</em>
+              {displayParts.slice(1).join(d.accent!)}
+            </>
+          ) : (
+            d.display ?? d.title
+          )}
+        </h1>
+      </header>
+    ) : (
+      <header class="doc__head">
+        <div class="doc__path">
+          <span class="micro">
+            {path.includes('/') ? (
+              <>
+                {path.split('/')[0]}/<b>{path.split('/').slice(1).join('/')}</b>
+              </>
+            ) : (
+              <b>{path}</b>
+            )}
+          </span>
+          <span class="doc__rule" />
+          {release && <span class="micro" style="color:var(--jade)">{release}</span>}
+          {d.status === 'private' && <span class="micro">private source</span>}
+        </div>
+        <h2 class="doc__title" id={`${entry.id}-title`}>{d.title}</h2>
+        {d.tagline && <p class="doc__meta">{d.tagline}</p>}
+        {(d.role || d.period || d.place) && (
+          <p class="doc__meta">
+            {d.role && <span>{d.role}</span>}
+            {d.period && <span>{d.period}</span>}
+            {d.place && <span>{d.place}</span>}
+          </p>
+        )}
+      </header>
+    )
+  }
+
+  <div class={isThesis ? 'prose thesis__lede' : 'prose'}>
+    <slot />
+  </div>
+
+  {
+    d.offers.length > 0 && (
+      <ol class="offers">
+        {d.offers.map((offer, i) => (
+          <li class="offer">
+            <span class="offer__idx">{String(i + 1).padStart(2, '0')}</span>
+            <div>
+              <h3 class="offer__name">{offer.name}</h3>
+              <p class="offer__body">{offer.body}</p>
+              <p class="offer__proof">{offer.proof}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    )
+  }
+
+  {
+    d.entries.length > 0 && (
+      <div class="entries">
+        {d.entries.map((item) => (
+          <a class="entry" href={item.url} rel="noopener" target="_blank">
+            <span class="entry__name">{item.name}</span>
+            <span class="entry__meta">{item.meta}</span>
+          </a>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    d.kind === 'contact' && (
+      <div class="contact">
+        <div class="contact__row">
+          <span class="contact__key">Email</span>
+          <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+        </div>
+        <div class="contact__row">
+          <span class="contact__key">Calendar</span>
+          <a href={CONTACT.booking} rel="noopener" target="_blank">
+            Book a 30-minute intro
+          </a>
+        </div>
+        <div class="contact__row">
+          <span class="contact__key">LinkedIn</span>
+          <a href={CONTACT.linkedin} rel="noopener" target="_blank">
+            linkedin.com/in/ziadalzarka
+          </a>
+        </div>
+        <div class="contact__row">
+          <span class="contact__key">GitHub</span>
+          <a href={CONTACT.github} rel="noopener" target="_blank">
+            github.com/ziadalzarka
+          </a>
+        </div>
+      </div>
+    )
+  }
+
+  {
+    d.stack.length > 0 && (
+      <ul class="stack">
+        {d.stack.map((s) => (
+          <li>{s}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  {
+    isThesis && pulse?.live && (
+      <div class="pulse">
+        <span>
+          github · <b>{pulse.repos}</b> public {pulse.repos === 1 ? 'repo' : 'repos'}
+        </span>
+        <span>
+          <b>{pulse.stars}</b> {pulse.stars === 1 ? 'star' : 'stars'}
+        </span>
+        <span>
+          <b>{pulse.followers}</b> {pulse.followers === 1 ? 'follower' : 'followers'}
+        </span>
+        {pulse.releases.peel && (
+          <span>
+            peel <b>{pulse.releases.peel}</b>
+          </span>
+        )}
+      </div>
+    )
+  }
+
+  {
+    d.links.length > 0 && (
+      <ul class="links">
+        {d.links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              rel={l.href.startsWith('/') ? undefined : 'noopener'}
+              target={l.href.startsWith('/') ? undefined : '_blank'}
+            >
+              {l.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</section>

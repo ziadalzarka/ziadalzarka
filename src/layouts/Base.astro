@@ -1,0 +1,73 @@
+---
+import '@fontsource-variable/martian-mono';
+import '@fontsource-variable/spline-sans-mono';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const social = new URL('/og.png', Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a100f" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={social} />
+    <meta property="og:site_name" content="Ziad Alzarka" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={social} />
+    <meta name="twitter:image:alt" content="Ziad Alzarka — senior software engineer" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Ziad Alzarka',
+        url: 'https://ziadalzarka.dev',
+        email: 'mailto:ziadalzarka@gmail.com',
+        jobTitle: 'Senior Software Engineer',
+        worksFor: { '@type': 'Organization', name: 'Light', url: 'https://light.inc' },
+        address: { '@type': 'PostalAddress', addressLocality: 'Cairo', addressCountry: 'EG' },
+        alumniOf: { '@type': 'CollegeOrUniversity', name: 'Kafrelsheikh University' },
+        knowsLanguage: ['en', 'ar'],
+        sameAs: [
+          'https://github.com/ziadalzarka',
+          'https://linkedin.com/in/ziadalzarka',
+          'https://medium.com/@ziadalzarka',
+        ],
+      })}
+    />
+  </head>
+  <body>
+    <a class="skip" href="#pane">Skip to content</a>
+    <slot />
+  </body>
+</html>
