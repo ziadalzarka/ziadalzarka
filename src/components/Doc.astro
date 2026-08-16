@@ -81,10 +81,21 @@ const displayParts =
           <a class="cta__btn" id="cta-resume" href={CONTACT.resume} download>
             Résumé <span aria-hidden="true">↓</span>
           </a>
-          <a class="cta__btn cta__btn--quiet" href={`mailto:${CONTACT.email}`}>
+          <a class="cta__btn" href={`mailto:${CONTACT.email}`}>
             Email
           </a>
         </div>
+
+        {d.highlights.length > 0 && (
+          <p class="hotlinks">
+            {d.highlights.map((h) => (
+              <a class="hotlink" href={`#${h.doc}`} data-jump={h.doc}>
+                {h.label}
+                <span class="hotlink__meta">{h.meta}</span>
+              </a>
+            ))}
+          </p>
+        )}
 
         <p class="thesis__hint">
           <span>A review queue — files tick off as you read them.</span>

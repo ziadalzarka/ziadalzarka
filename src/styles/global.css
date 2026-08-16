@@ -612,9 +612,34 @@ kbd {
   color: var(--bg);
 }
 
-.cta__btn--quiet {
-  background: none;
-  color: var(--text-dim);
+.hotlinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 1.4rem;
+  margin-top: 1.2rem;
+  font-size: var(--step-ui);
+}
+
+.hotlink {
+  color: var(--amber);
+  text-decoration: none;
+}
+
+.hotlink::before {
+  content: '→ ';
+  color: var(--text-faint);
+}
+
+.hotlink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.hotlink__meta {
+  margin-left: 0.5rem;
+  font-size: var(--step-micro);
+  color: var(--text-faint);
 }
 
 @media (prefers-reduced-motion: no-preference) {

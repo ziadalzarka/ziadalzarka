@@ -24,6 +24,10 @@ const docs = defineCollection({
     status: z.enum(['public', 'private']).optional(),
     repo: z.string().optional(),
 
+    highlights: z
+      .array(z.object({ label: z.string(), doc: z.string(), meta: z.string() }))
+      .default([]),
+
     stack: z.array(z.string()).default([]),
     links: z.array(link).default([]),
     entries: z.array(z.object({ name: z.string(), url: z.string(), meta: z.string() })).default([]),

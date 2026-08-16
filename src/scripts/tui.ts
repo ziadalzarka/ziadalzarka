@@ -316,6 +316,20 @@ for (const node of nodes) {
   });
 }
 
+/* Hero shortcuts into a file. A bare hash would not move the pane, which is the
+   scroll container on desktop, so they go through the same selection path. */
+for (const jump of document.querySelectorAll<HTMLAnchorElement>('[data-jump]')) {
+  jump.addEventListener('click', (e) => {
+    const id = jump.dataset.jump!;
+    const node = byId.get(id);
+    if (!node) return;
+
+    e.preventDefault();
+    select(visibleNodes().indexOf(node));
+    history.replaceState(null, '', `#${id}`);
+  });
+}
+
 /* ── boot ──────────────────────────────────────────────────────────────────── */
 
 const fromHash = decodeURIComponent(location.hash.slice(1));
