@@ -8,6 +8,8 @@ const search = document.getElementById('search') as HTMLFormElement;
 const searchInput = document.getElementById('search-input') as HTMLInputElement;
 const noMatch = document.getElementById('no-match')!;
 const post = document.getElementById('post') as HTMLAnchorElement;
+const book = document.getElementById('cta-book') as HTMLAnchorElement | null;
+const resume = document.getElementById('cta-resume') as HTMLAnchorElement | null;
 
 const byId = new Map(nodes.map((n) => [n.dataset.node!, n]));
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -286,6 +288,16 @@ document.addEventListener('keydown', (e) => {
     case 'p':
       e.preventDefault();
       postReview();
+      break;
+    case 'B':
+    case 'b':
+      e.preventDefault();
+      book?.click();
+      break;
+    case 'R':
+    case 'r':
+      e.preventDefault();
+      resume?.click();
       break;
   }
 });

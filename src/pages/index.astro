@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Doc from '../components/Doc.astro';
 import Mark from '../components/Mark.astro';
-import { getPulse } from '../data/github';
+import { getReleases } from '../data/github';
 import { CONTACT } from '../data/contact';
 
 const GROUPS = [
@@ -29,14 +29,14 @@ const rendered = await Promise.all(
   ordered.map(async (entry) => ({ entry, Content: (await render(entry)).Content }))
 );
 
-const pulse = await getPulse();
+const releases = await getReleases();
 
 const pathFor = (e: (typeof ordered)[number]) =>
   e.data.group === 'root' ? e.data.file : `${e.data.group}/${e.data.file}`;
 
 const releaseFor = (e: (typeof ordered)[number]) => {
   const name = e.data.repo?.split('/')[1];
-  return name ? pulse.releases[name] : undefined;
+  return name ? releases[name] : undefined;
 };
 
 const KEYS = [
@@ -45,6 +45,8 @@ const KEYS = [
   { keys: '⏎', does: 'open selected' },
   { keys: '/', does: 'search files' },
   { keys: 'g  G', does: 'first · last' },
+  { keys: 'b', does: 'book a call' },
+  { keys: 'r', does: 'résumé (pdf)' },
   { keys: 'P', does: 'post review' },
   { keys: '?', does: 'this list' },
   { keys: 'esc', does: 'dismiss' },
@@ -60,8 +62,16 @@ const contactId = ordered.find((e) => e.data.kind === 'contact')?.id ?? '';
   <div class="shell">
     <header class="bar bar--top">
       <span class="bar__host"><b>ziad</b>@ziadalzarka.dev</span>
-      <span class="bar__spacer"></span>
       <span class="micro" id="crumb">readme.md</span>
+      <span class="bar__spacer"></span>
+      <nav class="chips chips--head" aria-label="Primary actions">
+        <a class="chip" href={CONTACT.resume} download>
+          Résumé <span aria-hidden="true">↓</span>
+        </a>
+        <a class="chip chip--go" href={CONTACT.booking} rel="noopener" target="_blank">
+          Book a call
+        </a>
+      </nav>
     </header>
 
     <div class="body">
@@ -108,12 +118,7 @@ const contactId = ordered.find((e) => e.data.kind === 'contact')?.id ?? '';
         <div class="pane__inner">
           {
             rendered.map(({ entry, Content }) => (
-              <Doc
-                entry={entry}
-                path={pathFor(entry)}
-                release={releaseFor(entry)}
-                pulse={pulse}
-              >
+              <Doc entry={entry} path={pathFor(entry)} release={releaseFor(entry)}>
                 <Content />
               </Doc>
             ))
@@ -126,12 +131,20 @@ const contactId = ordered.find((e) => e.data.kind === 'contact')?.id ?? '';
       <div class="keymap">
         <span><b>j/k</b>move</span>
         <span><b>/</b>search</span>
+        <span><b>b</b>book</span>
         <span><b>?</b>keys</span>
       </div>
       <span class="bar__spacer"></span>
       <span class="counter"><b id="read-count">0</b>/{ordered.length} reviewed</span>
       <a class="post" href={`#${contactId}`} id="post">P · post review</a>
-      <a class="bar__cta" href={`mailto:${CONTACT.email}`}>Get in touch</a>
+      <nav class="chips chips--foot" aria-label="Primary actions">
+        <a class="chip" href={CONTACT.resume} download>
+          Résumé <span aria-hidden="true">↓</span>
+        </a>
+        <a class="chip chip--go" href={CONTACT.booking} rel="noopener" target="_blank">
+          Book a call
+        </a>
+      </nav>
     </footer>
   </div>
 

@@ -14,6 +14,7 @@ const bg = '#0a100f';
 const raise = '#0e1615';
 const sunk = '#070c0b';
 const line = '#1b2b28';
+const lineLit = '#2b423d';
 const text = '#d3dcd8';
 const dim = '#7c918b';
 const faint = '#4c5e59';
@@ -60,19 +61,24 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
   <rect x="0" y="128" width="3" height="30" fill="${amber}"/>
   ${rows}
 
-  <text x="380" y="250" font-family="${mono}" font-size="60" font-weight="700"
-        fill="${text}" letter-spacing="-3">Data that</text>
-  <text x="380" y="322" font-family="${mono}" font-size="60" font-weight="700"
-        fill="${text}" letter-spacing="-3">isn't allowed</text>
-  <text x="380" y="394" font-family="${mono}" font-size="60" font-weight="700"
-        fill="${text}" letter-spacing="-3">to be <tspan fill="${amber}">wrong</tspan>.</text>
+  <text x="380" y="268" font-family="${mono}" font-size="60" font-weight="700"
+        fill="${text}" letter-spacing="-3">I make hard</text>
+  <text x="380" y="340" font-family="${mono}" font-size="60" font-weight="700"
+        fill="${text}" letter-spacing="-3">systems <tspan fill="${amber}">boring</tspan>.</text>
 
-  <text x="380" y="452" font-family="${mono}" font-size="20" fill="${dim}">
+  <text x="380" y="400" font-family="${mono}" font-size="20" fill="${dim}">
     Ziad Alzarka — senior software engineer
   </text>
-  <text x="380" y="482" font-family="${mono}" font-size="20" fill="${faint}">
-    ledgers · sync engines · reconciliation · AI agents
+  <text x="380" y="430" font-family="${mono}" font-size="20" fill="${faint}">
+    ledgers · medical AI · agents that ship code
   </text>
+
+  <rect x="380" y="462" width="238" height="44" fill="${amber}"/>
+  <text x="499" y="490" text-anchor="middle" font-family="${mono}" font-size="16"
+        font-weight="700" fill="${bg}">Book a 30-min call</text>
+  <rect x="632" y="462" width="152" height="44" fill="none" stroke="${lineLit}" stroke-width="1"/>
+  <text x="708" y="490" text-anchor="middle" font-family="${mono}" font-size="16"
+        fill="${text}">Résumé ↓</text>
 
   <rect x="0" y="${H - 52}" width="${W}" height="52" fill="${sunk}"/>
   <line x1="0" y1="${H - 52}" x2="${W}" y2="${H - 52}" stroke="${line}" stroke-width="1"/>

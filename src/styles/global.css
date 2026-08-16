@@ -363,13 +363,11 @@ kbd {
 }
 
 .doc {
-  padding: clamp(2rem, 6vh, 3.75rem) 0;
-  border-bottom: 1px solid var(--line);
+  padding: clamp(2rem, 6vh, 3.75rem) 0 0;
   scroll-margin-top: 0;
 }
 
 .doc:last-child {
-  border-bottom: 0;
   padding-bottom: 40vh;
 }
 
@@ -552,7 +550,7 @@ kbd {
   letter-spacing: -0.055em;
   line-height: 1.03;
   color: var(--text);
-  max-width: 13ch;
+  max-width: 15ch;
   text-wrap: balance;
 }
 
@@ -572,6 +570,118 @@ kbd {
 .thesis__lede strong {
   color: var(--text);
   font-weight: 500;
+}
+
+/* ── primary actions ─────────────────────────────────────────── */
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.9rem;
+}
+
+.cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.05rem;
+  border: 1px solid var(--line-lit);
+  background: var(--bg-raise);
+  color: var(--text);
+  font-size: var(--step-ui);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cta__btn:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.cta__btn--go {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg);
+  font-weight: 500;
+}
+
+.cta__btn--go:hover {
+  background: color-mix(in srgb, var(--amber) 82%, #fff);
+  border-color: color-mix(in srgb, var(--amber) 82%, #fff);
+  color: var(--bg);
+}
+
+.cta__btn--quiet {
+  background: none;
+  color: var(--text-dim);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cta__btn {
+    transition:
+      background 0.15s var(--ease),
+      border-color 0.15s var(--ease),
+      color 0.15s var(--ease);
+  }
+}
+
+.thesis__hint {
+  margin-top: 1.15rem;
+  font-size: var(--step-micro);
+  letter-spacing: 0.05em;
+  line-height: 2;
+  color: var(--text-faint);
+}
+
+.thesis__keys {
+  display: inline-block;
+  margin-left: 0.9rem;
+  white-space: nowrap;
+}
+
+/* ── bar chips ───────────────────────────────────────────────── */
+
+.chips {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--line-lit);
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: var(--step-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.chip--go {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg);
+  font-weight: 500;
+}
+
+.chip--go:hover {
+  background: color-mix(in srgb, var(--amber) 82%, #fff);
+  border-color: color-mix(in srgb, var(--amber) 82%, #fff);
+  color: var(--bg);
+}
+
+.chips--foot {
+  display: none;
 }
 
 /* ── hire / engagements ──────────────────────────────────────── */
@@ -685,27 +795,6 @@ kbd {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-faint);
-}
-
-/* ── live github strip ───────────────────────────────────────── */
-
-.pulse {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.4rem;
-  margin-top: 1.5rem;
-  padding: 0.75rem 0.95rem;
-  border: 1px solid var(--line);
-  background: var(--bg-raise);
-  font-size: var(--step-micro);
-  letter-spacing: 0.06em;
-  color: var(--text-faint);
-  text-transform: uppercase;
-}
-
-.pulse b {
-  color: var(--jade);
-  font-weight: 500;
 }
 
 /* ── help overlay ────────────────────────────────────────────── */
@@ -918,7 +1007,13 @@ kbd {
     display: none;
   }
 
-  .bar .bar__cta {
+  /* The fixed bottom bar is the thumb-reachable action bar on a phone, so the
+     chips move there and the top bar keeps only the identity. */
+  .bar .chips--head {
+    display: none;
+  }
+
+  .bar .chips--foot {
     display: flex;
   }
 
@@ -931,28 +1026,17 @@ kbd {
     display: none;
   }
 
+  .thesis__keys {
+    display: none;
+  }
+
   .thesis {
     padding-top: 1.25rem;
   }
 
   .doc {
-    padding: 2.25rem 0;
+    padding: 2.25rem 0 0;
   }
-}
-
-.bar__cta {
-  display: none;
-  align-items: center;
-  gap: 0.45rem;
-  margin-left: auto;
-  padding: 0.4rem 0.85rem;
-  background: var(--amber);
-  color: var(--bg);
-  font-size: var(--step-ui);
-  letter-spacing: 0.02em;
-  text-transform: none;
-  text-decoration: none;
-  font-weight: 500;
 }
 
 .keymap {
@@ -1002,7 +1086,11 @@ kbd {
 }
 
 @media (max-width: 30rem) {
-  .bar__host span {
+  #crumb {
+    display: none;
+  }
+
+  .bar .counter {
     display: none;
   }
 }
