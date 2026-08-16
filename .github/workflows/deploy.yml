@@ -5,8 +5,8 @@ on:
   # change has to redeploy the site too.
   push:
     branches: [main]
-  # The homepage reads live GitHub numbers at build time, so rebuild daily to keep
-  # release tags and star counts current without anyone touching the repo.
+  # The build fetches peel's latest release tag from GitHub, so rebuild daily to keep
+  # it current without anyone touching the repo.
   schedule:
     - cron: "0 4 * * *"
   workflow_dispatch:

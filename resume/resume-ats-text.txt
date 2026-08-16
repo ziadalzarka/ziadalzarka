@@ -16,12 +16,12 @@ Light — Remote                                                                
 Senior Software Engineer, Procure-to-Pay & Record-to-Report
 Backend engineer on the team owning AP automation, procurement, the approval engine and the accounting ledger in a Kotlin
 modular monolith.
-• Founded and led the company's AI engineering platform. Built an autonomous Claude Code agent turning a GitHub issue or
-  Linear ticket into a reviewed pull request — phased planning/execution workflows, MCP access to Slack, Linear and Datadog,
-  and a migration from the Anthropic API to AWS Bedrock for compliance.
+• Built an autonomous Claude Code agent turning a GitHub issue or Linear ticket into a reviewed pull request — phased
+  planning/execution workflows, MCP access to Slack, Linear and Datadog, and a migration from the Anthropic API to AWS
+  Bedrock for compliance.
 • Shipped the multi-agent PR review fleet now running on every backend PR — independent architecture, security, product-
   logic and code-standards reviewers posting inline findings, rolled out from a pilot allowlist to the whole backend org.
-• Authored the agent tooling layer the org develops against: reusable planning, debugging and documentation skills, an
+• Authored the agent framework the org develops against: reusable planning and debugging skills, ADRs and documentation, an
   automated PR-authoring and release workflow, and per-module instruction files that cut agent context overhead on a large
   codebase.
 • Eliminated the failure mode that took production down twice. Migrated the ledger's hottest endpoints from offset to keyset
@@ -116,9 +116,9 @@ Infra & Ops        AWS (S3, SNS/SQS, Lambda, Bedrock, OpenSearch), GCP, Kubernet
 Frontend           React, Next.js, Svelte, Angular, React Native, Tailwind CSS, Core Web Vitals optimisation
 Domain             Double-entry accounting, AP and procurement, payment reconciliation, VAT compliance, approval workflows,
                    multi-tenant SaaS
-Spoken             English — fluent (professional working proficiency); Arabic — native
+Spoken             English — bilingual; Arabic — native
 
 EDUCATION
 
-Kafrelsheikh University — Egypt · Bachelor of Science, Computer Science                                               2018 – 2022
+Bachelor of Science, Computer Science · Egypt                                                                         2018 – 2022
 

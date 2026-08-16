@@ -38,9 +38,10 @@ reintroduce an error he has already caught.
 | "Built MCP tools for procurement / journal-entry writes" | He **extended existing** MCP tools (`AttachFilesTool`, `CreateJournalEntryTool`). He did not author them. MCP is safe to claim only as: wired MCP server access (Slack, Linear, Datadog, GitHub) into agents, and modified existing tools |
 | "229 merged pull requests" | **Confidential and irrelevant.** Never publish a commit or PR count |
 | Ankor.app "July 2025 – Present" | Ankor ended **November 2025**. Light began **December 2025**. No overlap |
-| "KFS University" / "Bechelor" | **Kafrelsheikh University**; *Bachelor* of Science, Computer Science |
+| "Bechelor" | *Bachelor* of Science, Computer Science |
 
-What he *did* author on the AI platform, and can be claimed fully: the autonomous
+He did **not** found or lead the AI platform — never claim either. What he *did* author,
+and can be claimed fully: the autonomous
 Claude Code agent (GitHub/Linear issue → reviewed PR), the multi-agent PR review fleet
 (architecture, security, product-logic, code-standards reviewers), an independent security
 reviewer, the reusable skill library (planning, debugging, docs, PR authoring, release),
@@ -65,8 +66,8 @@ Contact and links:
 
 - ziadalzarka@gmail.com · +20 109 670 7442 · **Cairo, Egypt** (remote) — use Cairo, never Damanhur
 - linkedin.com/in/ziadalzarka · github.com/ziadalzarka · medium.com/@ziadalzarka
-- Education: Kafrelsheikh University, BSc Computer Science, 2018–2022
-- Languages: English (fluent, professional working proficiency), Arabic (native)
+- Education: BSc Computer Science, 2018–2022 (institution omitted by choice)
+- Languages: English (bilingual), Arabic (native)
 
 ## Metrics — confirmed accurate
 

@@ -29,7 +29,7 @@ a human does.
 **[Light](https://light.inc)** — Senior Software Engineer, Procure-to-Pay & Record-to-Report ·
 *Dec 2025 – present*
 Backend on the team owning AP automation, procurement, the approval engine and the accounting
-ledger. Founded the company's AI engineering platform.
+ledger. Built the team's autonomous ticket-to-PR agent and multi-agent PR review fleet.
 
 **Ankor.app** — Senior Software Engineer · *Jul – Nov 2025*
 Led a financial reconciliation platform from inception to production — 5+ payment providers at

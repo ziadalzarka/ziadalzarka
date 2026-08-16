@@ -12,18 +12,14 @@ stack: [TypeScript, React, NestJS, Cassandra, DynamoDB, AWS Neptune, PostgreSQL,
 ---
 
 Formerly Flow Health. I led technical development of an AI-powered medical assistant for
-laboratories, physicians and insurers — AI diagnosis and test recommendation, claim filing, fee
-schedules, vector search, and real-time cross-database replication.
+laboratories, physicians and insurers.
 
 - Recovered a completely lost production database — on the order of 1.5 billion records — by
   replaying events reconstructed from Kafka, CloudWatch and S3.
-- Migrated the primary datastore from Cassandra to DynamoDB, improving availability and
-  performance while cutting maintenance and cost substantially.
-- Integrated vector search into the medical knowledge graph using AWS OpenSearch, tuned for
-  high-volume ETL workloads.
-- Introduced a graph database for relationship-heavy queries and reworked the data services to
-  remove race conditions and ACL overhead, cutting aggregation and read latency meaningfully in
-  both passes.
+- Migrated the primary datastore from Cassandra to DynamoDB, improving availability while cutting
+  maintenance and cost substantially.
+- Integrated vector search into the medical knowledge graph on AWS OpenSearch, and introduced a
+  graph database for relationship-heavy queries.
 - Built ingestion pipelines normalising unstructured medical history, and embedded software
   streaming results off Sysmex lab analysers.
 - Set the team's CI, code-standards and RFC practices.

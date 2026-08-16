@@ -14,16 +14,14 @@ stack: [TypeScript, React, NestJS, GraphQL, PostgreSQL, BigQuery, MotherDuck, db
 I led technical development of a financial reconciliation platform for e-commerce businesses,
 from inception to production.
 
-- Architected a multi-tenant SaaS platform processing millions of transactions monthly at 98%+
-  reconciliation accuracy, integrating 5+ payment providers — Shopify, Klarna, PayPal, Plaid and
-  Adyen.
-- Built a four-tier data pipeline (raw → staging → fact → app) with dbt and Python ETL, enabling
-  transaction matching, multi-currency support and automated double-entry journal generation.
-- Delivered the full product surface: React/TypeScript frontend, GraphQL API and NestJS backend,
-  with settlement tracking, audit trail and Excel financial reporting including an ML-based
-  refunds accrual forecast.
-- Established the engineering foundations — monorepo tooling, test framework, CI/CD to GCP, and a
-  split transactional (PostgreSQL) / analytical (BigQuery, MotherDuck) data architecture.
+- Architected a multi-tenant platform processing millions of transactions monthly at 98%+
+  reconciliation accuracy across 5+ payment providers — Shopify, Klarna, PayPal, Plaid, Adyen.
+- Built a four-tier dbt and Python pipeline (raw → staging → fact → app) behind transaction
+  matching, multi-currency support and automated double-entry journals.
+- Delivered the full product surface: React frontend, GraphQL API and NestJS backend, with
+  settlement tracking, audit trail and an ML-based refunds accrual forecast.
+- Established the engineering foundations — monorepo tooling, CI/CD to GCP, and a split
+  transactional (PostgreSQL) / analytical (BigQuery) data architecture.
 
-We took it to production and 4 paying customers in 3 months, then wound the company down in
-November when the funding didn't come together.
+We reached production and 4 paying customers in 3 months, then wound the company down in November
+when the funding didn't come together.

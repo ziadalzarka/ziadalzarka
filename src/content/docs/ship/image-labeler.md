@@ -15,15 +15,12 @@ links:
 
 Generates keywords, titles, descriptions and OCR text for photos and videos, then writes the
 metadata back into Photos.app so the library becomes searchable. Built for a local model in
-LM Studio — your photos never have to leave the machine — but it speaks to Ollama, vLLM or any
-cloud provider on the same OpenAI-compatible API.
+LM Studio — your photos never leave the machine — but it speaks to any OpenAI-compatible API.
 
 ```
 Photos.app ──▶ Discovery ──▶ Export ──▶ LLM ──▶ Writer ──▶ Photos.app
                osxphotos     Pillow     API     PhotoScript
 ```
 
-Discovery queries the library for media with no keywords, filtered by date and type. Export
-handles JPEG with HEIC and iCloud fallbacks, and pulls frames out of video via ffmpeg. The
-writer goes back in through AppleScript automation. Photos process in parallel, videos
-sequentially.
+Discovery finds media with no keywords. Export handles JPEG with HEIC and iCloud fallbacks, and
+pulls frames out of video via ffmpeg. The writer goes back in through AppleScript.

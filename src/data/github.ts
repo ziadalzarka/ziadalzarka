@@ -1,21 +1,7 @@
 const USER = 'ziadalzarka';
 const API = 'https://api.github.com';
 
-export type Pulse = {
-  repos: number | null;
-  stars: number | null;
-  followers: number | null;
-  releases: Record<string, string>;
-  live: boolean;
-};
-
-const FALLBACK: Pulse = {
-  repos: null,
-  stars: null,
-  followers: null,
-  releases: {},
-  live: false,
-};
+export type Releases = Record<string, string>;
 
 const headers: Record<string, string> = {
   accept: 'application/vnd.github+json',
@@ -35,44 +21,26 @@ async function json(path: string) {
 /** Repos whose latest release tag is worth showing next to the project. */
 const TRACKED = ['peel'];
 
-let cached: Promise<Pulse> | null = null;
+let cached: Promise<Releases> | null = null;
 
-export function getPulse(): Promise<Pulse> {
+export function getReleases(): Promise<Releases> {
   cached ??= load();
   return cached;
 }
 
-async function load(): Promise<Pulse> {
-  try {
-    const [user, repos] = await Promise.all([
-      json(`/users/${USER}`),
-      json(`/users/${USER}/repos?per_page=100&type=owner&sort=updated`),
-    ]);
+async function load(): Promise<Releases> {
+  const releases: Releases = {};
 
-    const owned = (repos as any[]).filter((r) => !r.fork);
-    const stars = owned.reduce((sum, r) => sum + (r.stargazers_count ?? 0), 0);
+  await Promise.all(
+    TRACKED.map(async (name) => {
+      try {
+        const rel = await json(`/repos/${USER}/${name}/releases/latest`);
+        if (rel?.tag_name) releases[name] = rel.tag_name;
+      } catch (err) {
+        console.warn(`[github] no release for ${name}: ${(err as Error).message}`);
+      }
+    })
+  );
 
-    const releases: Record<string, string> = {};
-    await Promise.all(
-      TRACKED.map(async (name) => {
-        try {
-          const rel = await json(`/repos/${USER}/${name}/releases/latest`);
-          if (rel?.tag_name) releases[name] = rel.tag_name;
-        } catch {
-          /* a repo with no releases is not an error */
-        }
-      })
-    );
-
-    return {
-      repos: user.public_repos ?? owned.length,
-      stars,
-      followers: user.followers ?? null,
-      releases,
-      live: true,
-    };
-  } catch (err) {
-    console.warn(`[github] live data unavailable, falling back: ${(err as Error).message}`);
-    return FALLBACK;
-  }
+  return releases;
 }
