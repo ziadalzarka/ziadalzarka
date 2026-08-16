@@ -12,6 +12,7 @@
     "prebuild": "node tools/sync-resume.mjs",
     "build": "astro build",
     "og": "node tools/make-og.mjs",
+    "favicon": "node tools/make-favicon.mjs",
     "preview": "astro preview",
     "check": "astro check"
   },
