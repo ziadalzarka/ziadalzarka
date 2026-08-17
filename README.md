@@ -65,9 +65,10 @@ logical clock, a Go-to-Rust FFI bridge, UDP peer discovery and BLE attendance tr
 ## Writing
 
 <!-- BLOG-POST-LIST:START -->
-- [Linking a Go static library to Rust and handling asynchronous calls](https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b)
-- [10 essential steps to dramatically optimize the performance of a website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
-- [The easiest way to crack a WiFi password using your computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10)
+- [TypeOrm is timing out with Jest Fake Timers](https://medium.com/@ziadalzarka/typeorm-is-timing-out-with-jest-fake-timers-c11f8a350a78?source=rss-c07fb8a8f629------2)
+- [Linking a Go static library to Rust and handling asynchronous calls](https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b?source=rss-c07fb8a8f629------2)
+- [10 Essential Steps to Dramatically Optimize The Performance of a Website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece?source=rss-c07fb8a8f629------2)
+- [The easiest way to crack a WiFi password using your computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10?source=rss-c07fb8a8f629------2)
 <!-- BLOG-POST-LIST:END -->
 
 ## Talks and videos
