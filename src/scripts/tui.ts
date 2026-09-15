@@ -85,13 +85,24 @@ for (const input of ['wheel', 'touchstart', 'mousedown'] as const) {
   window.addEventListener(input, stopGlide, { passive: true });
 }
 
-/** Keep the selected row inside the rail without dragging the page around. */
+/**
+ * Keep the selected file in view inside the rail without dragging the page
+ * around. The rail is a vertical tree on desktop and a horizontal tab strip on
+ * mobile, so the axis follows the layout — otherwise the current tab sits off
+ * the end of the strip with no sign of where you are.
+ */
 function keepVisible(node: HTMLElement) {
   const rail = node.closest<HTMLElement>('.rail');
-  if (!rail || compact.matches) return;
+  if (!rail) return;
 
   const row = node.getBoundingClientRect();
   const box = rail.getBoundingClientRect();
+
+  if (compact.matches) {
+    if (row.left < box.left) rail.scrollLeft += row.left - box.left - 12;
+    else if (row.right > box.right) rail.scrollLeft += row.right - box.right + 12;
+    return;
+  }
 
   if (row.top < box.top) rail.scrollTop += row.top - box.top - 8;
   else if (row.bottom > box.bottom) rail.scrollTop += row.bottom - box.bottom + 8;

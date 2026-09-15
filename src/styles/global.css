@@ -1086,8 +1086,11 @@ kbd {
     overflow: visible;
   }
 
+  /* The last file has to clear the top of the viewport, or its tab never lights
+     up and tapping it stops short of the file. Half a screen of runway under it,
+     plus the fixed action bar the page scrolls behind. */
   .pane__inner {
-    padding-bottom: 6rem;
+    padding-bottom: calc(45vh + 3rem);
   }
 
   .bar--bottom {
