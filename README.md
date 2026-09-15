@@ -1,6 +1,6 @@
 # Ziad Alzarka
 
-**Senior software engineer and systems architect.** Nine years building data-intensive
+**Senior software engineer and systems architect.** 9 years building data-intensive
 platforms in two domains where a wrong number is somebody's real problem — **finance**
 (double-entry ledgers, reconciliation, AP automation) and **medicine** (AI diagnosis, claims,
 lab data pipelines).
@@ -28,21 +28,31 @@ a human does.
 
 **[Light](https://light.inc)** — Senior Software Engineer, Procure-to-Pay & Record-to-Report ·
 *Dec 2025 – present*
-Backend on the team owning AP automation, procurement, the approval engine and the accounting
-ledger. Built the team's autonomous ticket-to-PR agent and multi-agent PR review fleet.
+Own financial software from discovery to production across backend, web and infrastructure.
+Improve platform reliability, engineering feedback and AI-assisted development workflows.
 
 **Ankor.app** — Senior Software Engineer · *Jul – Nov 2025*
 Led a financial reconciliation platform from inception to production — 5+ payment providers at
-98%+ match accuracy, four-tier dbt pipeline, automated double-entry journals.
+98%+ match accuracy, settlement tracking, audit trails and refund accrual forecasting.
 
 **Adia Health** (formerly Flow Health) — Senior Software Engineer · *Jan 2021 – Jun 2025*
-AI-powered medical assistant for labs, physicians and insurers. Recovered a completely lost
-production database of ~1.5 billion records by replaying events out of Kafka, CloudWatch and S3.
+Built clinical recommendations, insurance claim-filing and lab-data workflows for an AI medical
+assistant. Recovered a completely lost production database of ~1.5 billion records by replaying
+events out of Kafka, CloudWatch and S3.
 
 **CoatConnect** · *2019 – 2020* — web performance and SSR.
 **BirdCloud** · *2017 – 2018* — first job, client software across legal, medical and laundry.
 
 ## Things I've built in the open
+
+**[Kin.app](https://www.kin-split.app)** *(source private)* — a bill-splitting app on the
+[App Store](https://apps.apple.com/app/id6763578086) and
+[Google Play](https://play.google.com/store/apps/details?id=app.kinsplit.mobile) that splits per item
+instead of per head, so nobody pays for a coffee they didn't drink.
+Designed, built and shipped solo. A double-entry ledger under every balance, with payments that
+record which debts they settle or offset; a receipt scanner that costs about 0.8¢ a page and scores
+0.96 on a 70-receipt eval board; and 150+ executable architecture rules that fail the build, which
+is what makes "written with coding agents, reviewed line by line" mean something.
 
 **[peel](https://github.com/ziadalzarka/peel)** — a terminal diff reviewer that stages what you
 just reviewed. Every local diff tool is read-only, so reviewing and `git add` end up as two
@@ -58,17 +68,11 @@ Apple Photos library with any OpenAI-compatible LLM, writing keywords, titles, d
 OCR text back into Photos.app. Built for a local model in LM Studio, so the photos never have to
 leave the machine.
 
-**Magmooty** *(source private)* — an offline-first distributed system in Rust, Go and Tauri for
-regions with unreliable connectivity. Cryptographic sync on SurrealDB/RocksDB with a hybrid
-logical clock, a Go-to-Rust FFI bridge, UDP peer discovery and BLE attendance tracking.
-
 ## Writing
 
 <!-- BLOG-POST-LIST:START -->
-- [TypeOrm is timing out with Jest Fake Timers](https://medium.com/@ziadalzarka/typeorm-is-timing-out-with-jest-fake-timers-c11f8a350a78?source=rss-c07fb8a8f629------2)
-- [Linking a Go static library to Rust and handling asynchronous calls](https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b?source=rss-c07fb8a8f629------2)
-- [10 Essential Steps to Dramatically Optimize The Performance of a Website](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece?source=rss-c07fb8a8f629------2)
-- [The easiest way to crack a WiFi password using your computer](https://medium.com/@ziadalzarka/the-easiest-way-to-crack-a-wifi-password-using-your-computer-7f0b308feb10?source=rss-c07fb8a8f629------2)
+- [Linking a Go static library to Rust and handling asynchronous calls](https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b)
+- [Optimizing website performance](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece)
 <!-- BLOG-POST-LIST:END -->
 
 ## Talks and videos

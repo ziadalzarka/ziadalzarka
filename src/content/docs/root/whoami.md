@@ -13,7 +13,7 @@ links:
 ---
 
 I started coding at 12, took my first paid job at 16, and have been doing this professionally for
-nine years since.
+9 years since.
 
 I like being thrown at problems I don't know how to solve yet — a medical knowledge graph one
 year, a Rust sync engine the next, an agent platform after that.

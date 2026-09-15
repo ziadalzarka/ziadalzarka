@@ -15,8 +15,8 @@ echo "pages: $pages"
 [ "$pages" -eq 2 ] || echo "  WARNING: expected 2 pages"
 
 if command -v pdftotext >/dev/null; then
-  pdftotext -layout "$PDF" resume-ats-text.txt
-  for h in SUMMARY "WORK EXPERIENCE" PROJECTS SKILLS EDUCATION; do
+  pdftotext -layout -nopgbrk "$PDF" resume-ats-text.txt
+  for h in SUMMARY "WORK EXPERIENCE" PROJECTS "EARLIER EXPERIENCE" SKILLS EDUCATION; do
     grep -q "^$h$" resume-ats-text.txt \
       && echo "  ok      $h" \
       || echo "  BROKEN  $h  (letter-spacing on h2 is fragmenting it)"

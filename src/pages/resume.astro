@@ -1,0 +1,12 @@
+---
+import resume from '../../resume/resume.html?raw';
+
+const head = resume.match(/<head>([\s\S]*?)<\/head>/)![1];
+const body = resume.match(/<body>([\s\S]*?)<\/body>/)![1];
+---
+
+<!doctype html>
+<html lang="en">
+  <head><Fragment set:html={head} /></head>
+  <body><Fragment set:html={body} /></body>
+</html>

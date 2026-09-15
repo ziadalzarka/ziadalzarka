@@ -1,7 +1,7 @@
 ---
 group: ship
 file: image-labeler.py
-order: 2
+order: 3
 kind: project
 title: iCloud Image Labeler
 tagline: Auto-label an Apple Photos library with any OpenAI-compatible LLM.

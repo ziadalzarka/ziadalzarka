@@ -18,6 +18,9 @@
   --text-faint: #4c5e59;
   --amber: #e9a13b;
   --amber-sunk: #2a1f0d;
+  --violet: #6d4ae0;
+  --violet-ink: color-mix(in srgb, var(--violet) 65%, white);
+  --kin-gradient: linear-gradient(110deg, var(--amber), var(--violet-ink));
   --jade: #58b79b;
   --coral: #e0705b;
 
@@ -33,7 +36,6 @@
   --ground: #050908;
   --rail: 16.5rem;
   --bar: 2.125rem;
-  --shell-max: 104rem;
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -135,15 +137,8 @@ kbd {
   grid-template-rows: var(--bar) minmax(0, 1fr) var(--bar);
   height: 100dvh;
   overflow: hidden;
-  max-width: var(--shell-max);
-  margin-inline: auto;
+  width: 100%;
   background: var(--bg);
-}
-
-@media (min-width: 104rem) {
-  .shell {
-    border-inline: 1px solid var(--line);
-  }
 }
 
 .bar {
@@ -357,18 +352,19 @@ kbd {
 }
 
 .pane__inner {
-  max-width: 52rem;
-  margin-inline: auto;
-  padding: 0 clamp(1.1rem, 4vw, 3.25rem);
+  --content-columns: repeat(2, minmax(0, 1fr));
+  --content-gap: clamp(3rem, 6vw, 8rem);
+  width: 100%;
+  padding: 0 clamp(1.1rem, 4vw, 4.5rem) 40vh;
+}
+
+.portfolio__column {
+  min-width: 0;
 }
 
 .doc {
   padding: clamp(2rem, 6vh, 3.75rem) 0 0;
   scroll-margin-top: 0;
-}
-
-.doc:last-child {
-  padding-bottom: 40vh;
 }
 
 .doc__head {
@@ -424,7 +420,7 @@ kbd {
 
 .prose p {
   color: var(--text-dim);
-  max-width: 40rem;
+  max-width: 76ch;
 }
 
 .prose strong {
@@ -443,7 +439,7 @@ kbd {
   position: relative;
   padding-left: 1.5rem;
   color: var(--text-dim);
-  max-width: 40rem;
+  max-width: 76ch;
 }
 
 .prose li::before {
@@ -612,34 +608,115 @@ kbd {
   color: var(--bg);
 }
 
+.thesis__apps {
+  margin-top: 2.5rem;
+  min-width: 0;
+}
+
+.thesis__apps-title {
+  color: var(--text-dim);
+  margin-bottom: 0.85rem;
+}
+
 .hotlinks {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.3rem 1.4rem;
-  margin-top: 1.2rem;
-  font-size: var(--step-ui);
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid var(--line-lit);
+}
+
+.hotlinks li {
+  border-bottom: 1px solid var(--line);
 }
 
 .hotlink {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: 'name arrow' 'meta arrow';
+  gap: 0.45rem 1rem;
+  padding: 1.35rem 0;
   color: var(--amber);
   text-decoration: none;
 }
 
-.hotlink::before {
-  content: '→ ';
-  color: var(--text-faint);
+.hotlink__name {
+  grid-area: name;
+  font-family: var(--display);
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  font-weight: 500;
+  justify-self: start;
 }
 
-.hotlink:hover {
+.hotlink[href='https://www.kin-split.app'] .hotlink__name {
+  color: transparent;
+  background: var(--kin-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hotlink:hover .hotlink__name {
   text-decoration: underline;
+  text-decoration-color: var(--amber);
   text-underline-offset: 0.22em;
 }
 
 .hotlink__meta {
-  margin-left: 0.5rem;
-  font-size: var(--step-micro);
-  color: var(--text-faint);
+  grid-area: meta;
+  max-width: 48ch;
+  font-size: var(--step-ui);
+  color: var(--text-dim);
+}
+
+.hotlink__arrow {
+  grid-area: arrow;
+  align-self: center;
+  font-size: 1.25rem;
+  color: var(--text-dim);
+}
+
+.hotlink:hover .hotlink__arrow {
+  color: var(--amber);
+}
+
+@media (min-width: 80rem) {
+  .portfolio {
+    display: grid;
+    grid-template-columns: var(--content-columns);
+    column-gap: var(--content-gap);
+    align-items: start;
+  }
+
+  .doc--thesis {
+    display: grid;
+    grid-template-columns: var(--content-columns);
+    grid-template-areas:
+      'title apps'
+      'lede apps'
+      'cta apps'
+      'hint hint';
+    column-gap: var(--content-gap);
+  }
+
+  .thesis {
+    grid-area: title;
+  }
+
+  .thesis__lede {
+    grid-area: lede;
+  }
+
+  .doc--thesis > .cta {
+    grid-area: cta;
+  }
+
+  .thesis__apps {
+    grid-area: apps;
+    align-self: center;
+    margin-top: clamp(2.5rem, 9vh, 5.5rem);
+  }
+
+  .thesis__hint {
+    grid-area: hint;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -714,14 +791,16 @@ kbd {
 .offers {
   display: grid;
   gap: 0;
+  padding: 0;
+  list-style: none;
   margin-top: 1.9rem;
   border-top: 1px solid var(--line);
 }
 
 .offer {
   display: grid;
-  grid-template-columns: 2.25rem minmax(0, 1fr);
-  gap: 0 0.9rem;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  gap: 0 0.75rem;
   padding: 1.05rem 0;
   border-bottom: 1px solid var(--line);
 }
@@ -1008,10 +1087,6 @@ kbd {
   }
 
   .pane__inner {
-    max-width: none;
-  }
-
-  .doc:last-child {
     padding-bottom: 6rem;
   }
 
@@ -1061,6 +1136,7 @@ kbd {
 
   .doc {
     padding: 2.25rem 0 0;
+    scroll-margin-top: calc(var(--bar) + 2.75rem);
   }
 }
 

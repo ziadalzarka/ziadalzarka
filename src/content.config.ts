@@ -25,7 +25,7 @@ const docs = defineCollection({
     repo: z.string().optional(),
 
     highlights: z
-      .array(z.object({ label: z.string(), doc: z.string(), meta: z.string() }))
+      .array(z.object({ label: z.string(), href: z.string().url(), meta: z.string() }))
       .default([]),
 
     stack: z.array(z.string()).default([]),

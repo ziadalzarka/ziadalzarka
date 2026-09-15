@@ -7,32 +7,39 @@ title: Light
 role: Senior Software Engineer — Procure-to-Pay & Record-to-Report
 period: Dec 2025 — present
 place: Remote
-treeMeta: ledgers · AP · agents
-stack: [Kotlin, Java 17, Gradle, PostgreSQL, Exposed, Guice, JAX-RS, AWS, Kubernetes, Terraform, Datadog, JobRunr, Claude Agent SDK, MCP]
+treeMeta: platform · product · AI
+stack: [Kotlin, PostgreSQL, AWS, Kubernetes, Terraform, Datadog, AI agents]
 links:
   - { label: "light.inc", href: "https://light.inc" }
 ---
 
-[Light](https://light.inc) is an agentic accounting platform — an AI-native general ledger for
-companies operating across entities, countries and currencies. I'm a backend engineer on the team
-that owns AP automation, procurement, the approval engine and the ledger.
+[Light](https://light.inc) builds financial software. My work combines product ownership,
+financial systems engineering and platform reliability, taking complex requirements through
+architecture, implementation and production operation.
 
-### ai engineering tooling
+### finance products and ownership
 
-- Built an autonomous Claude Code agent that turns a GitHub issue or Linear ticket into a reviewed
-  pull request, with MCP access to Slack, Linear and Datadog.
-- Built a multi-agent PR review fleet — architecture, security, product-logic and code-standards
-  reviewers posting inline findings — now running on every backend PR.
-- Wrote the framework the org develops against: reusable planning and debugging skills, ADRs and
-  documentation, and per-module instruction files that cut agent context overhead.
+- Built procurement, payment and approval workflows that help finance teams manage spend,
+  route decisions and maintain accounting controls.
+- Delivered financial reporting and data exports that make accounting data usable in
+  day-to-day finance operations.
+- Own delivery across backend, web and infrastructure, starting with customer conversations
+  and carrying the work through rollout.
+- Learn unfamiliar accounting domains, model their rules and turn them into auditable workflows.
+- Find gaps in requirements before they become expensive implementation decisions, then break
+  large initiatives into releases that can be reviewed and shipped independently.
 
-### ledger and platform work
+### platform reliability and performance
 
-- Migrated the ledger's hottest endpoints from offset to keyset pagination over multi-million-row
-  tables, with the covering indexes and read-replica routing to match.
-- Designed a durable resumable CSV export pipeline on checkpointed S3 multipart uploads, so
-  multi-million-row exports stopped exhausting the connection pool.
-- Built the bill-to-purchase-order matching and goods-receipt flow behind three-way matching,
-  including PO extraction from invoice OCR and interactive Slack confirmations.
-- Instrumented the domain in Datadog, turning silent data-correctness failures into alertable
-  signals, and extracted a reusable idempotency module now used across four domains.
+- Improved data-intensive backends through database tuning, bounded resource use and background
+  processing that can recover from interruptions.
+- Follow production problems from diagnosis to durable fixes, with safeguards against recurrence.
+- Built observability into delivery so engineers can spot performance risks and failures early.
+
+### AI and engineering practices
+
+- Built AI-assisted development and review workflows, with reusable instructions and skills
+  that make agents useful on a large codebase.
+- Improved test speed and isolation to shorten the feedback loop during development.
+- Made domain knowledge, architecture decisions and operational lessons easier for engineers
+  and agents to find and reuse.

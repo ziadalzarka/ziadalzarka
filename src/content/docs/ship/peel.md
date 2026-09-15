@@ -1,7 +1,7 @@
 ---
 group: ship
 file: peel.go
-order: 0
+order: 1
 kind: project
 title: peel
 tagline: A terminal diff reviewer that stages what you just reviewed.

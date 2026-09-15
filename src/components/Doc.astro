@@ -16,7 +16,7 @@ const displayParts =
   isThesis && d.display && d.accent ? d.display.split(d.accent) : null;
 ---
 
-<section class="doc" id={entry.id} data-doc={entry.id} aria-labelledby={`${entry.id}-title`}>
+<section class:list={['doc', { 'doc--thesis': isThesis }]} id={entry.id} data-doc={entry.id} aria-labelledby={`${entry.id}-title`}>
   {
     isThesis ? (
       <header class="thesis">
@@ -87,14 +87,20 @@ const displayParts =
         </div>
 
         {d.highlights.length > 0 && (
-          <p class="hotlinks">
-            {d.highlights.map((h) => (
-              <a class="hotlink" href={`#${h.doc}`} data-jump={h.doc}>
-                {h.label}
-                <span class="hotlink__meta">{h.meta}</span>
-              </a>
-            ))}
-          </p>
+          <aside class="thesis__apps" aria-labelledby={`${entry.id}-apps`}>
+            <h2 class="thesis__apps-title micro" id={`${entry.id}-apps`}>Apps I've built</h2>
+            <ul class="hotlinks">
+              {d.highlights.map((h) => (
+                <li>
+                  <a class="hotlink" href={h.href}>
+                    <span class="hotlink__name">{h.label}</span>
+                    <span class="hotlink__meta">{h.meta}</span>
+                    <span class="hotlink__arrow" aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
         )}
 
         <p class="thesis__hint">

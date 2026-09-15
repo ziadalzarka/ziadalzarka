@@ -33,25 +33,56 @@ function stickyOffset() {
   return (bar?.offsetHeight ?? 0) + (rail?.offsetHeight ?? 0);
 }
 
+let glideFrame = 0;
+
+function stopGlide() {
+  cancelAnimationFrame(glideFrame);
+}
+
+function glide(from: number, to: number, apply: (top: number) => void) {
+  stopGlide();
+  const distance = to - from;
+  if (reduced.matches || Math.abs(distance) < 2) {
+    apply(to);
+    return;
+  }
+
+  const duration = Math.min(420, 160 + Math.sqrt(Math.abs(distance)) * 6);
+  const start = performance.now();
+
+  const step = (now: number) => {
+    const t = Math.min(1, (now - start) / duration);
+    apply(from + distance * (1 - (1 - t) ** 3));
+    programmatic = Date.now();
+    if (t < 1) glideFrame = requestAnimationFrame(step);
+  };
+  glideFrame = requestAnimationFrame(step);
+}
+
 /**
  * The pane is the scroll container on desktop; the document scrolls on mobile.
- * scrollIntoView is not used — it no-ops against the pane — so the offset is
- * measured and applied directly. Always instant: Chrome also no-ops
- * `behavior: 'smooth'` here, and a terminal jumps between files rather than
- * gliding.
+ * scrollIntoView is not used — it no-ops against the pane — and neither is
+ * `behavior: 'smooth'`, which Chrome also no-ops here, so the offset is
+ * measured and applied directly.
  */
-function scrollToDoc(doc: HTMLElement) {
+function scrollToDoc(doc: HTMLElement, { smooth = false } = {}) {
+  stopGlide();
+
   if (compact.matches) {
-    window.scrollTo({
-      top: window.scrollY + doc.getBoundingClientRect().top - stickyOffset(),
-      behavior: 'auto',
-    });
+    const from = window.scrollY;
+    const to = from + doc.getBoundingClientRect().top - stickyOffset();
+    if (smooth) glide(from, to, (top) => window.scrollTo(0, top));
+    else window.scrollTo(0, to);
   } else {
-    pane.scrollTo({
-      top: pane.scrollTop + doc.getBoundingClientRect().top - pane.getBoundingClientRect().top,
-      behavior: 'auto',
-    });
+    const from = pane.scrollTop;
+    const to = from + doc.getBoundingClientRect().top - pane.getBoundingClientRect().top;
+    if (smooth) glide(from, to, (top) => (pane.scrollTop = top));
+    else pane.scrollTop = to;
   }
+}
+
+for (const input of ['wheel', 'touchstart', 'mousedown'] as const) {
+  window.addEventListener(input, stopGlide, { passive: true });
 }
 
 /** Keep the selected row inside the rail without dragging the page around. */
@@ -103,7 +134,7 @@ function setCurrent(node: HTMLAnchorElement) {
   beginDwell(node.dataset.node!);
 }
 
-function select(index: number, { scroll = true } = {}) {
+function select(index: number, { scroll = true, smooth = false } = {}) {
   const list = visibleNodes();
   if (list.length === 0) return;
 
@@ -114,7 +145,7 @@ function select(index: number, { scroll = true } = {}) {
   const doc = document.getElementById(node.dataset.node!);
   if (doc) {
     programmatic = Date.now();
-    scrollToDoc(doc);
+    scrollToDoc(doc, { smooth });
   }
 }
 
@@ -135,8 +166,13 @@ function spy() {
 
     const top = compact.matches ? stickyOffset() + 8 : 40;
     let current = docs[0];
+    let nearestTop = -Infinity;
     for (const doc of docs) {
-      if (doc.getBoundingClientRect().top <= top) current = doc;
+      const docTop = doc.getBoundingClientRect().top;
+      if (docTop <= top && docTop > nearestTop) {
+        current = doc;
+        nearestTop = docTop;
+      }
     }
 
     const node = byId.get(current.dataset.doc!);
@@ -152,6 +188,7 @@ window.addEventListener('resize', spy, { passive: true });
    even if you never scroll past its end. */
 const observer = new IntersectionObserver(
   (entries) => {
+    if (Date.now() - programmatic < 400) return;
     for (const entry of entries) {
       if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
         beginDwell((entry.target as HTMLElement).dataset.doc!);
@@ -257,12 +294,12 @@ document.addEventListener('keydown', (e) => {
     case 'j':
     case 'ArrowDown':
       e.preventDefault();
-      select(at + 1);
+      select(at + 1, { smooth: true });
       break;
     case 'k':
     case 'ArrowUp':
       e.preventDefault();
-      select(at - 1);
+      select(at - 1, { smooth: true });
       break;
     case 'Enter':
       e.preventDefault();

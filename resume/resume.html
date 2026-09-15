@@ -2,379 +2,230 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Ziad Alzarka — Senior Software Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ziad Alzarka - Senior Software Engineer</title>
 <style>
-  @page {
-    size: A4;
-    margin: 10mm 13mm;
-  }
-
+  @page { size: A4; margin: 14mm 15mm; }
   :root {
     --ink: #14181d;
     --muted: #4a5560;
-    --faint: #6b7680;
+    --faint: #596772;
     --accent: #0d7a63;
     --rule: #d8dee3;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 9pt;
-    line-height: 1.31;
+    font-size: 10pt;
+    line-height: 1.4;
     color: var(--ink);
     -webkit-font-smoothing: antialiased;
   }
-
   a { color: var(--accent); text-decoration: none; }
-
-  /* ---------- header ---------- */
-
-  header { margin-bottom: 11px; }
-
-  h1 {
-    font-size: 22pt;
-    font-weight: 700;
-    letter-spacing: -0.7px;
-    line-height: 1.05;
-  }
-
-  .headline {
-    font-size: 10.6pt;
-    font-weight: 600;
-    color: var(--accent);
-    margin-top: 3px;
-    letter-spacing: 0.1px;
-  }
-
-  .contact {
-    margin-top: 6px;
-    font-size: 9pt;
-    color: var(--muted);
-  }
-
-  .contact span.sep { color: var(--rule); padding: 0 5px; }
-
-  /* ---------- sections ---------- */
-
+  header { margin-bottom: 16px; }
+  h1 { font-size: 25pt; font-weight: 700; letter-spacing: -0.7px; line-height: 1.1; }
+  .headline { font-size: 11pt; font-weight: 600; color: var(--accent); margin-top: 5px; }
+  .contact { margin-top: 9px; font-size: 9pt; color: var(--muted); line-height: 1.6; }
+  .sep { color: var(--rule); padding: 0 5px; }
   h2 {
-    font-size: 8.6pt;
+    font-size: 9pt;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--ink);
-    padding-bottom: 3px;
-    border-bottom: 1.2px solid var(--accent);
-    margin: 8px 0 5px;
-  }
-
-  section { break-inside: auto; }
-
-  .summary { color: var(--muted); }
-  .summary strong { color: var(--ink); font-weight: 600; }
-
-  /* ---------- jobs ---------- */
-
-  .job { margin-bottom: 6px; }
-  .job:last-child { margin-bottom: 0; }
-
-  .job-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--accent);
+    margin: 16px 0 10px;
     break-after: avoid;
   }
-
-  .title, .blurb { break-after: avoid; }
-
-  .employer {
-    font-size: 11pt;
-    font-weight: 700;
-    letter-spacing: -0.15px;
+  .summary { color: var(--muted); }
+  strong { font-weight: 600; color: var(--ink); }
+  .job { margin-bottom: 17px; break-inside: avoid; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .employer { font-size: 12pt; font-weight: 700; }
+  .place { font-size: 9pt; font-weight: 400; color: var(--faint); }
+  .dates { font-size: 9pt; color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .title { font-size: 10pt; font-weight: 600; color: var(--accent); margin-top: 2px; }
+  .blurb { color: var(--muted); margin-top: 5px; }
+  ul { list-style: none; margin-top: 7px; }
+  li { position: relative; padding-left: 12px; margin-bottom: 5px; break-inside: avoid; }
+  li:last-child { margin-bottom: 0; }
+  li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
+  .page-two { break-before: page; }
+  .page-two > h2:first-child { margin-top: 0; }
+  .project { margin-bottom: 14px; }
+  .project .employer { font-size: 11pt; }
+  .project .blurb { margin-top: 4px; }
+  .project ul { margin-top: 5px; }
+  .project li { margin-bottom: 4px; }
+  .project-link { font-size: 9pt; font-weight: 400; }
+  .earlier { font-size: 9.5pt; }
+  .earlier .job { margin-bottom: 8px; }
+  .earlier .employer { font-size: 10pt; }
+  .earlier .blurb { margin-top: 2px; }
+  .skills { font-size: 9.5pt; color: var(--muted); }
+  .skills p { margin-bottom: 4px; }
+  .education { font-size: 9.5pt; }
+  .education .row { display: flex; justify-content: space-between; gap: 12px; }
+  .languages { margin-top: 4px; color: var(--muted); }
+  @media screen {
+    html { background: #eef1f3; }
+    body { max-width: 210mm; margin: 28px auto; padding: 14mm 15mm; background: #fff; }
+    .page-two { margin-top: 36px; }
   }
-
-  .employer .place {
-    font-weight: 400;
-    font-size: 9.2pt;
-    color: var(--faint);
-    letter-spacing: 0;
+  @media screen and (max-width: 600px) {
+    body { margin: 0; padding: 24px 18px; }
+    .contact a { display: inline-block; }
+    .job-head { flex-wrap: wrap; gap: 2px 12px; }
+    .education .row { flex-wrap: wrap; }
   }
-
-  .dates {
-    font-size: 8.8pt;
-    color: var(--faint);
-    white-space: nowrap;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .title {
-    font-size: 9.8pt;
-    font-weight: 600;
-    color: var(--accent);
-    margin-top: 1px;
-  }
-
-  .blurb {
-    color: var(--muted);
-    margin-top: 3px;
-  }
-
-  ul { list-style: none; margin-top: 4px; }
-
-  li {
-    position: relative;
-    padding-left: 11px;
-    margin-bottom: 1.5px;
-    break-inside: avoid;
-  }
-
-  li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--accent);
-    font-size: 9.5pt;
-  }
-
-  li strong { font-weight: 600; }
-
-  .stack {
-    margin-top: 5px;
-    font-size: 8.9pt;
-    color: var(--faint);
-  }
-
-  .stack b { color: var(--muted); font-weight: 600; }
-
-  /* ---------- skills ---------- */
-
-  .skills dl { display: block; }
-
-  .skills .row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 2.5px;
-    break-inside: avoid;
-  }
-
-  .skills dt {
-    flex: 0 0 96px;
-    font-weight: 700;
-    font-size: 8.9pt;
-  }
-
-  .skills dd { flex: 1; color: var(--muted); }
-
-  /* ---------- education ---------- */
-
-  .edu {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
-  }
-
-  .edu-school { font-weight: 700; font-size: 10pt; }
-  .edu-degree { color: var(--muted); }
 </style>
 </head>
 <body>
-
 <header>
   <h1>Ziad Alzarka</h1>
-  <div class="headline">Senior Software Engineer — Backend, Platform &amp; AI Systems</div>
+  <div class="headline">Senior Software Engineer | Platform, Product &amp; AI</div>
   <div class="contact">
     <a href="mailto:ziadalzarka@gmail.com">ziadalzarka@gmail.com</a><span class="sep">|</span>+20 109 670 7442<span class="sep">|</span>Cairo, Egypt (Remote)<br>
-    <a href="https://linkedin.com/in/ziadalzarka">linkedin.com/in/ziadalzarka</a><span class="sep">|</span><a href="https://github.com/ziadalzarka">github.com/ziadalzarka</a><span class="sep">|</span><a href="https://medium.com/@ziadalzarka">medium.com/@ziadalzarka</a>
+    <a href="https://ziadalzarka.dev">ziadalzarka.dev</a><span class="sep">|</span><a href="https://linkedin.com/in/ziadalzarka">linkedin.com/in/ziadalzarka</a><span class="sep">|</span><a href="https://github.com/ziadalzarka">github.com/ziadalzarka</a>
   </div>
 </header>
 
 <section>
   <h2>Summary</h2>
-  <p class="summary">
-    Senior engineer and systems architect, <strong>9 years</strong> building <strong>data-intensive platforms</strong>
-    across the <strong>financial and medical domains</strong> — double-entry ledgers, reconciliation and AP automation;
-    AI diagnosis, claims and lab data pipelines. Designs <strong>AI agents and workflows that automate engineering
-    itself</strong>, and works comfortably from Kotlin/JVM services and Postgres query plans to Rust distributed systems.
-  </p>
+  <p class="summary">Senior software engineer and systems architect with <strong>9 years</strong> building
+    <strong>data-intensive platforms</strong> across <strong>finance and healthcare</strong>: ledgers, reconciliation
+    and AP automation; AI medical assistants, claims and lab pipelines. Takes products from architecture to
+    production across backend, data, web and mobile, and builds <strong>AI agents and workflows that automate
+    engineering</strong>.</p>
 </section>
 
 <section>
   <h2>Work Experience</h2>
-
   <div class="job">
     <div class="job-head">
-      <div class="employer">Light <span class="place">— Remote</span></div>
-      <div class="dates">December 2025 – Present</div>
+      <div class="employer">Light <span class="place">| Remote</span></div>
+      <div class="dates">Dec 2025 - Present</div>
     </div>
     <div class="title">Senior Software Engineer, Procure-to-Pay &amp; Record-to-Report</div>
-    <p class="blurb">
-      Backend engineer on the team owning AP automation, procurement, the approval engine and the accounting ledger
-      in a Kotlin modular monolith.
-    </p>
+    <p class="blurb">Product and platform engineering for financial software.</p>
     <ul>
-      <li><strong>Built an autonomous Claude Code agent</strong> turning a GitHub issue or Linear ticket into a reviewed
-        pull request — phased planning/execution workflows, MCP access to Slack, Linear and Datadog, and a migration
-        from the Anthropic API to AWS Bedrock for compliance.</li>
-      <li><strong>Shipped the multi-agent PR review fleet now running on every backend PR</strong> — independent
-        architecture, security, product-logic and code-standards reviewers posting inline findings, rolled out from a
-        pilot allowlist to the whole backend org.</li>
-      <li>Authored the agent framework the org develops against: reusable planning and debugging skills, ADRs and
-        documentation, an automated PR-authoring and release workflow, and per-module instruction files that cut agent
-        context overhead on a large codebase.</li>
-      <li><strong>Eliminated the failure mode that took production down twice.</strong> Migrated the ledger's hottest
-        endpoints from offset to <strong>keyset pagination</strong> over multi-million-row tables — index-seekable row
-        comparison, capped offset depth, read-replica routing and the covering indexes to match.</li>
-      <li>Designed a <strong>durable resumable CSV export pipeline</strong> — checkpointed S3 multipart uploads with a
-        72-hour resume window and hybrid sync/async delivery — so multi-million-row exports stopped exhausting the
-        connection pool.</li>
-      <li>Built the <strong>bill-to-purchase-order matching and goods-receipt flow</strong> at the core of three-way
-        matching: PO number extraction from invoice OCR, automatic matching with outcome metrics, and interactive
-        Slack confirmations that let requesters confirm delivery without entering the app.</li>
-      <li>Instrumented the domain in <strong>Datadog</strong> — orphaned-approval gauges, query-shape and pagination-depth
-        distributions — turning silent data-correctness failures into alertable signals, and extracted a reusable
-        <strong>idempotency module</strong> now used across four domains.</li>
+      <li>Built <strong>procurement, payment and approval workflows</strong> for finance teams to manage
+        spend and accounting controls.</li>
+      <li>Delivered <strong>financial reporting and exports</strong> for day-to-day finance operations.</li>
+      <li>Own <strong>discovery, architecture and delivery</strong> across backend, web and infrastructure.</li>
+      <li>Improved <strong>reliability and performance</strong> with database tuning, resilient background
+        jobs, tests and observability.</li>
+      <li>Built <strong>AI-assisted development and review workflows</strong> with reusable agent instructions and skills.</li>
     </ul>
-    <div class="stack"><b>Technologies:</b> Kotlin, Java 17, Gradle, PostgreSQL, Exposed, Guice, JAX-RS, AWS (S3, SNS/SQS,
-      Bedrock), Kubernetes, Terraform, Helm, Datadog, JobRunr, Claude Code, Claude Agent SDK, MCP, GitHub Actions.</div>
   </div>
 
   <div class="job">
     <div class="job-head">
-      <div class="employer">Ankor.app <span class="place">— Malmö, Sweden (Remote)</span></div>
-      <div class="dates">July 2025 – November 2025</div>
+      <div class="employer">Ankor.app <span class="place">| Sweden, Remote</span></div>
+      <div class="dates">Jul 2025 - Nov 2025</div>
     </div>
     <div class="title">Senior Software Engineer</div>
-    <p class="blurb">
-      Led technical development of a financial reconciliation platform for e-commerce businesses, inception to production.
-    </p>
+    <p class="blurb">Led a financial reconciliation product from inception to production.</p>
     <ul>
-      <li>Architected a multi-tenant SaaS platform processing <strong>millions of transactions monthly at 98%+
-        reconciliation accuracy</strong>, integrating 5+ payment providers (Shopify, Klarna, PayPal, Plaid, Adyen).</li>
-      <li>Built a four-tier data pipeline (raw → staging → fact → app) with dbt and Python ETL, enabling transaction
-        matching, multi-currency support and automated double-entry journal generation.</li>
-      <li>Delivered the full product surface: React/TypeScript frontend, GraphQL API and NestJS backend, with settlement
-        tracking, audit trail and Excel financial reporting including an <strong>ML-based refunds accrual
-        forecast</strong>.</li>
-      <li>Established engineering foundations — monorepo tooling, test framework, CI/CD to GCP, and a split
-        transactional (PostgreSQL) / analytical (BigQuery, MotherDuck) data architecture.</li>
-      <li>Took the platform to production and <strong>4 paying customers in 3 months</strong> before the company wound
-        down on funding constraints.</li>
+      <li>Built <strong>settlement tracking, audit trails and ML-based refund accrual forecasts</strong>
+        to help merchants track payouts and account for expected refunds.</li>
+      <li>Integrated <strong>5+ payment providers</strong> into a multi-tenant platform processing millions of
+        transactions monthly at <strong>98%+ reconciliation accuracy</strong>.</li>
+      <li>Built dbt/Python pipelines across PostgreSQL, BigQuery and DuckDB for transaction matching,
+        multi-currency accounting and automated double-entry journals.</li>
     </ul>
-    <div class="stack"><b>Technologies:</b> TypeScript, React, NestJS, GraphQL, PostgreSQL, BigQuery, MotherDuck (DuckDB),
-      dbt, Python (dlt), Apache Airflow, GCP, Auth0, Tailwind CSS.</div>
   </div>
 
   <div class="job">
     <div class="job-head">
-      <div class="employer">Adia Health <span class="place">(formerly Flow Health) — Remote</span></div>
-      <div class="dates">January 2021 – June 2025</div>
+      <div class="employer">Adia Health <span class="place">| formerly Flow Health, Remote</span></div>
+      <div class="dates">Jan 2021 - Jun 2025</div>
     </div>
     <div class="title">Senior Software Engineer</div>
-    <p class="blurb">
-      Led technical development of an AI-powered medical assistant for laboratories, physicians and insurers — AI
-      diagnosis and test recommendation, claim filing, fee schedules, vector search and real-time cross-database
-      replication.
-    </p>
+    <p class="blurb">Led development of an AI medical assistant for laboratories, physicians and insurers.</p>
     <ul>
-      <li><strong>Recovered a completely lost production database of ~1.5 billion records</strong> by replaying events
-        reconstructed from Kafka, CloudWatch and S3.</li>
-      <li>Migrated the primary datastore from <strong>Cassandra to DynamoDB</strong>, improving availability and
-        performance while cutting maintenance and cost by <strong>90%</strong>.</li>
-      <li>Integrated <strong>vector search into the medical knowledge graph</strong> using AWS OpenSearch, tuned for
-        high-volume ETL workloads.</li>
-      <li>Introduced a graph database for relationship-heavy queries, <strong>reducing aggregation latency by
-        35%</strong>; reworked data services to remove race conditions and ACL overhead, <strong>cutting latency a
-        further 20%</strong>.</li>
-      <li>Built ingestion pipelines normalising unstructured medical history and embedded software streaming results
-        from Sysmex lab analysers; set the team's CI, code-standards and RFC practices.</li>
+      <li>Built <strong>AI-assisted diagnosis and test recommendations</strong>, alongside insurance
+        claim filing and fee-schedule workflows.</li>
+      <li>Made medical histories and lab results usable in the product through <strong>vector search</strong>,
+        structured ingestion and Sysmex analyser integration.</li>
+      <li><strong>Recovered ~1.5 billion records</strong> after a complete production database loss by
+        reconstructing and replaying events from Kafka, CloudWatch and S3.</li>
+      <li>Migrated Cassandra to DynamoDB, improving reliability while <strong>cutting maintenance and cost
+        by 90%</strong>.</li>
+      <li>Reduced graph-query latency by <strong>35%</strong> and service latency a further <strong>20%</strong>
+        through data-model changes and concurrency fixes.</li>
     </ul>
-    <div class="stack"><b>Technologies:</b> TypeScript, React, NestJS, Cassandra, DynamoDB, AWS Neptune, PostgreSQL,
-      Python, AWS, OpenSearch, SageMaker, Kafka.</div>
-  </div>
-
-  <div class="job">
-    <div class="job-head">
-      <div class="employer">CoatConnect <span class="place">— Cairo, Egypt</span></div>
-      <div class="dates">January 2019 – December 2020</div>
-    </div>
-    <div class="title">Software Engineer</div>
-    <p class="blurb">Accelerated development of a web portal connecting doctors to medical events and conferences.</p>
-    <ul>
-      <li>Optimised performance and bundle size to a <strong>1.7s Largest Contentful Paint</strong>, and added
-        server-side rendering for SEO.</li>
-      <li>Built the shared UI library that shortened new-view delivery, a web scraper enriching the platform with
-        medical event data from multiple sources, and integrations for payments, analytics and marketing automation.</li>
-    </ul>
-    <div class="stack"><b>Technologies:</b> TypeScript, React, NestJS, Node.js, MongoDB, AWS.</div>
-  </div>
-
-  <div class="job">
-    <div class="job-head">
-      <div class="employer">BirdCloud <span class="place">— Cairo, Egypt</span></div>
-      <div class="dates">January 2017 – December 2018</div>
-    </div>
-    <div class="title">Software Engineer</div>
-    <p class="blurb">Built software digitalising client operations across legal, medical and laundry domains.</p>
-    <ul>
-      <li>Built a shared UI and utility library that cut delivery time enough to take on <strong>20% more clients and
-        a 30% revenue increase</strong>, working directly with clients to scope and shape delivery.</li>
-    </ul>
-    <div class="stack"><b>Technologies:</b> TypeScript, Angular, React Native, MySQL, C# .NET.</div>
   </div>
 </section>
 
-<section>
+<section class="page-two">
   <h2>Projects</h2>
+  <div class="job project">
+    <div class="job-head">
+      <div class="employer">Kin.app <span class="project-link">| <a href="https://apps.apple.com/app/id6763578086">App Store</a> · <a href="https://play.google.com/store/apps/details?id=app.kinsplit.mobile">Google Play</a> · <a href="https://www.kin-split.app">Website</a></span></div>
+      <div class="dates">Jan 2026 - Present</div>
+    </div>
+    <p class="blurb">Designed, built and shipped solo: an iOS and Android app for splitting receipts by item.
+      Kotlin backend, React Native app and Python receipt scanner.</p>
+    <ul>
+      <li>Built a <strong>double-entry ledger</strong> with traceable debt settlement and reversible corrections.</li>
+      <li>Developed an AI receipt scanner at <strong>~0.8¢ per scan and ~9s latency</strong>, evaluated on 70 receipts.</li>
+      <li>Combined coding agents and manual review with <strong>150+ automated architecture rules</strong>
+        and end-to-end tests.</li>
+    </ul>
+  </div>
+
+  <div class="job project">
+    <div class="job-head">
+      <div class="employer">peel <span class="project-link">| <a href="https://github.com/ziadalzarka/peel">GitHub</a></span></div>
+      <div class="dates">Jul 2026 - Present</div>
+    </div>
+    <p class="blurb">Open-source Go terminal app that combines code review and Git staging. Distributed through Homebrew.</p>
+    <ul>
+      <li>Built comments that follow code through edits, with structured feedback for coding agents.</li>
+      <li>Integrated <strong>Claude Code and Codex walkthroughs</strong>, live refresh and resumable GitHub PR reviews.</li>
+    </ul>
+  </div>
+
+  <div class="job project">
+    <div class="employer">iCloud Image Labeler <span class="project-link">| <a href="https://github.com/ziadalzarka/icloud-image-labeler">GitHub</a></span></div>
+    <p class="blurb">Built a Python tool that makes Apple Photos searchable with AI-generated keywords, captions and
+      OCR text for photos and videos. Supports <strong>local models through LM Studio or Ollama</strong>, with
+      automatic metadata write-back and background processing.</p>
+  </div>
+
+</section>
+
+<section class="earlier">
+  <h2>Earlier Experience</h2>
   <div class="job">
     <div class="job-head">
-      <div class="employer">Magmooty <span class="place">— <a href="https://github.com/magmooty/monorepo">github.com/magmooty/monorepo</a></span></div>
-      <div class="dates">March 2025 – Present</div>
+      <div class="employer">CoatConnect <span class="place">| Software Engineer, Cairo</span></div>
+      <div class="dates">2019 - 2020</div>
     </div>
-    <div class="title">Offline-First Distributed System (Rust, Go, Tauri)</div>
-    <p class="blurb">
-      An offline-first education management platform for regions with unreliable connectivity — cryptographic sync,
-      cross-language FFI bridges, peer discovery and BLE attendance behind a cross-platform desktop app.
-    </p>
-    <ul>
-      <li>Architected the <strong>sync engine in Rust</strong> on SurrealDB/RocksDB: master-replica LAN replication and
-        chunked last-write-wins batching with a <strong>hybrid logical clock</strong> for online sync, authenticated
-        with RSA-2048/RS256 JWTs for zero data loss and MITM resistance.</li>
-      <li>Engineered a <strong>Go-to-Rust FFI bridge</strong>, compiling a WhatsApp bot to a C static library (CGO
-        c-archive) exposing an async C ABI consumed through Rust unsafe bindings.</li>
-      <li>Built a <strong>UDP broadcast auto-discovery protocol</strong> with subnet calculation and multi-NIC handling,
-        plus a BLE peripheral scanner for proximity-based attendance.</li>
-      <li>Shipped an <strong>Axum REST API</strong> with record-level permissions and time-bound 2FA, and a Docker
-        cross-compilation pipeline targeting <strong>6 architectures</strong> with signed auto-updates and RTL Arabic
-        PDF generation.</li>
-    </ul>
-    <div class="stack"><b>Technologies:</b> Rust, Axum, Tauri, Go, SurrealDB, RocksDB, SQLite, TypeScript, Svelte,
-      Tailwind CSS, Docker, DigitalOcean.</div>
+    <p class="blurb">Improved a medical events portal to <strong>1.7s Largest Contentful Paint</strong>; built shared UI components and server-side rendering.</p>
+  </div>
+  <div class="job">
+    <div class="job-head">
+      <div class="employer">BirdCloud <span class="place">| Software Engineer, Cairo</span></div>
+      <div class="dates">2017 - 2018</div>
+    </div>
+    <p class="blurb">Built client software and shared libraries that enabled <strong>20% more clients and 30% revenue growth</strong>.</p>
   </div>
 </section>
 
 <section class="skills">
   <h2>Skills</h2>
-  <div class="row"><dt>Programming</dt><dd>Kotlin, TypeScript, Python, Rust, Go, SQL, Java, C#</dd></div>
-  <div class="row"><dt>AI &amp; Agents</dt><dd>Claude Code, Claude Agent SDK, Anthropic API, AWS Bedrock, Model Context Protocol (MCP), multi-agent orchestration, LLM code review, RAG and vector search, OpenAI GPT</dd></div>
-  <div class="row"><dt>Backend</dt><dd>JVM services (Guice, JAX-RS, Exposed), NestJS, Node.js, Axum, GraphQL, REST API design, event-driven architecture (SNS/SQS, Kafka), background jobs, idempotency, distributed transactions</dd></div>
-  <div class="row"><dt>Data</dt><dd>PostgreSQL (query planning, indexing, keyset pagination, replication), DynamoDB, Cassandra, MongoDB, MySQL, Redis, SurrealDB, Neptune, OpenSearch, BigQuery, DuckDB, dbt, Airflow</dd></div>
-  <div class="row"><dt>Infra &amp; Ops</dt><dd>AWS (S3, SNS/SQS, Lambda, Bedrock, OpenSearch), GCP, Kubernetes/EKS, Docker, Terraform, Helm, GitHub Actions, CI/CD, Datadog (metrics, APM, distributed tracing, monitors)</dd></div>
-  <div class="row"><dt>Frontend</dt><dd>React, Next.js, Svelte, Angular, React Native, Tailwind CSS, Core Web Vitals optimisation</dd></div>
-  <div class="row"><dt>Domain</dt><dd>Double-entry accounting, AP and procurement, payment reconciliation, VAT compliance, approval workflows, multi-tenant SaaS</dd></div>
-  <div class="row"><dt>Spoken</dt><dd>English — bilingual; Arabic — native</dd></div>
+  <p><strong>Languages:</strong> Kotlin, TypeScript, Python, Rust, Go, SQL</p>
+  <p><strong>Platforms:</strong> PostgreSQL, AWS, GCP, Docker, Kubernetes, Terraform, React, React Native</p>
+  <p><strong>AI &amp; engineering:</strong> Claude Code, MCP, LLM evaluation, vector search, CI/CD, observability</p>
 </section>
 
-<section>
+<section class="education">
   <h2>Education</h2>
-  <div class="edu">
-    <div><span class="edu-school">Bachelor of Science, Computer Science</span><span class="edu-degree">&nbsp;&nbsp;·&nbsp;&nbsp;Egypt</span></div>
-    <div class="dates">2018 – 2022</div>
-  </div>
+  <div class="row"><strong>Bachelor of Science, Computer Science</strong><span class="dates">2018 - 2022</span></div>
+  <p class="languages">English: bilingual · Arabic: native</p>
 </section>
-
 </body>
 </html>

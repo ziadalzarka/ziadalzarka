@@ -1,124 +1,86 @@
 Ziad Alzarka
-Senior Software Engineer — Backend, Platform & AI Systems
+Senior Software Engineer | Platform, Product & AI
 ziadalzarka@gmail.com | +20 109 670 7442 | Cairo, Egypt (Remote)
-linkedin.com/in/ziadalzarka | github.com/ziadalzarka | medium.com/@ziadalzarka
+ziadalzarka.dev | linkedin.com/in/ziadalzarka | github.com/ziadalzarka
 
 SUMMARY
 
-Senior engineer and systems architect, 9 years building data-intensive platforms across the financial and medical domains —
-double-entry ledgers, reconciliation and AP automation; AI diagnosis, claims and lab data pipelines. Designs AI agents and
-workflows that automate engineering itself, and works comfortably from Kotlin/JVM services and Postgres query plans to Rust
-distributed systems.
+Senior software engineer and systems architect with 9 years building data-intensive platforms across finance
+and healthcare: ledgers, reconciliation and AP automation; AI medical assistants, claims and lab pipelines. Takes
+products from architecture to production across backend, data, web and mobile, and builds AI agents and
+workflows that automate engineering.
 
 WORK EXPERIENCE
 
-Light — Remote                                                                                         December 2025 – Present
+
+Light | Remote                                                                                  Dec 2025 - Present
 Senior Software Engineer, Procure-to-Pay & Record-to-Report
-Backend engineer on the team owning AP automation, procurement, the approval engine and the accounting ledger in a Kotlin
-modular monolith.
-• Built an autonomous Claude Code agent turning a GitHub issue or Linear ticket into a reviewed pull request — phased
-  planning/execution workflows, MCP access to Slack, Linear and Datadog, and a migration from the Anthropic API to AWS
-  Bedrock for compliance.
-• Shipped the multi-agent PR review fleet now running on every backend PR — independent architecture, security, product-
-  logic and code-standards reviewers posting inline findings, rolled out from a pilot allowlist to the whole backend org.
-• Authored the agent framework the org develops against: reusable planning and debugging skills, ADRs and documentation, an
-  automated PR-authoring and release workflow, and per-module instruction files that cut agent context overhead on a large
-  codebase.
-• Eliminated the failure mode that took production down twice. Migrated the ledger's hottest endpoints from offset to keyset
-  pagination over multi-million-row tables — index-seekable row comparison, capped offset depth, read-replica routing and the
-  covering indexes to match.
-• Designed a durable resumable CSV export pipeline — checkpointed S3 multipart uploads with a 72-hour resume window and
-  hybrid sync/async delivery — so multi-million-row exports stopped exhausting the connection pool.
-• Built the bill-to-purchase-order matching and goods-receipt flow at the core of three-way matching: PO number extraction
-  from invoice OCR, automatic matching with outcome metrics, and interactive Slack confirmations that let requesters confirm
-  delivery without entering the app.
-• Instrumented the domain in Datadog — orphaned-approval gauges, query-shape and pagination-depth distributions — turning
-  silent data-correctness failures into alertable signals, and extracted a reusable idempotency module now used across four
-  domains.
-Technologies: Kotlin, Java 17, Gradle, PostgreSQL, Exposed, Guice, JAX-RS, AWS (S3, SNS/SQS, Bedrock), Kubernetes,
-Terraform, Helm, Datadog, JobRunr, Claude Code, Claude Agent SDK, MCP, GitHub Actions.
+Product and platform engineering for financial software.
+• Built procurement, payment and approval workflows for finance teams to manage spend and accounting
+  controls.
+• Delivered financial reporting and exports for day-to-day finance operations.
+• Own discovery, architecture and delivery across backend, web and infrastructure.
+• Improved reliability and performance with database tuning, resilient background jobs, tests and observability.
+• Built AI-assisted development and review workflows with reusable agent instructions and skills.
 
-Ankor.app — Malmö, Sweden (Remote)                                                                   July 2025 – November 2025
+Ankor.app | Sweden, Remote                                                                     Jul 2025 - Nov 2025
 Senior Software Engineer
-Led technical development of a financial reconciliation platform for e-commerce businesses, inception to production.
-• Architected a multi-tenant SaaS platform processing millions of transactions monthly at 98%+ reconciliation accuracy,
-  integrating 5+ payment providers (Shopify, Klarna, PayPal, Plaid, Adyen).
-• Built a four-tier data pipeline (raw → staging → fact → app) with dbt and Python ETL, enabling transaction matching, multi-
-  currency support and automated double-entry journal generation.
-• Delivered the full product surface: React/TypeScript frontend, GraphQL API and NestJS backend, with settlement tracking,
-  audit trail and Excel financial reporting including an ML-based refunds accrual forecast.
-• Established engineering foundations — monorepo tooling, test framework, CI/CD to GCP, and a split transactional (PostgreSQL)
-  / analytical (BigQuery, MotherDuck) data architecture.
-• Took the platform to production and 4 paying customers in 3 months before the company wound down on funding
-  constraints.
-Technologies: TypeScript, React, NestJS, GraphQL, PostgreSQL, BigQuery, MotherDuck (DuckDB), dbt, Python (dlt), Apache
-Airflow, GCP, Auth0, Tailwind CSS.
+Led a financial reconciliation product from inception to production.
+• Built settlement tracking, audit trails and ML-based refund accrual forecasts to help merchants track
+  payouts and account for expected refunds.
+• Integrated 5+ payment providers into a multi-tenant platform processing millions of transactions monthly at
+  98%+ reconciliation accuracy.
+• Built dbt/Python pipelines across PostgreSQL, BigQuery and DuckDB for transaction matching, multi-currency
+  accounting and automated double-entry journals.
 
-Adia Health (formerly Flow Health) — Remote                                                            January 2021 – June 2025
+Adia Health | formerly Flow Health, Remote                                                     Jan 2021 - Jun 2025
 Senior Software Engineer
-Led technical development of an AI-powered medical assistant for laboratories, physicians and insurers — AI diagnosis and test
-recommendation, claim filing, fee schedules, vector search and real-time cross-database replication.
-• Recovered a completely lost production database of ~1.5 billion records by replaying events reconstructed from Kafka,
-  CloudWatch and S3.
-• Migrated the primary datastore from Cassandra to DynamoDB, improving availability and performance while cutting
-  maintenance and cost by 90%.
-• Integrated vector search into the medical knowledge graph using AWS OpenSearch, tuned for high-volume ETL workloads.
-• Introduced a graph database for relationship-heavy queries, reducing aggregation latency by 35%; reworked data services to
-  remove race conditions and ACL overhead, cutting latency a further 20%.
-• Built ingestion pipelines normalising unstructured medical history and embedded software streaming results from Sysmex lab
-  analysers; set the team's CI, code-standards and RFC practices.
-Technologies: TypeScript, React, NestJS, Cassandra, DynamoDB, AWS Neptune, PostgreSQL, Python, AWS, OpenSearch,
-SageMaker, Kafka.
-
-CoatConnect — Cairo, Egypt                                                                         January 2019 – December 2020
-Software Engineer
-Accelerated development of a web portal connecting doctors to medical events and conferences.
-• Optimised performance and bundle size to a 1.7s Largest Contentful Paint, and added server-side rendering for SEO.
-• Built the shared UI library that shortened new-view delivery, a web scraper enriching the platform with medical event data from
-  multiple sources, and integrations for payments, analytics and marketing automation.
-Technologies: TypeScript, React, NestJS, Node.js, MongoDB, AWS.
-
-BirdCloud — Cairo, Egypt                                                                           January 2017 – December 2018
-Software Engineer
-Built software digitalising client operations across legal, medical and laundry domains.
-• Built a shared UI and utility library that cut delivery time enough to take on 20% more clients and a 30% revenue increase,
-  working directly with clients to scope and shape delivery.
-Technologies: TypeScript, Angular, React Native, MySQL, C# .NET.
-
+Led development of an AI medical assistant for laboratories, physicians and insurers.
+• Built AI-assisted diagnosis and test recommendations, alongside insurance claim filing and fee-schedule
+  workflows.
+• Made medical histories and lab results usable in the product through vector search, structured ingestion and
+  Sysmex analyser integration.
+• Recovered ~1.5 billion records after a complete production database loss by reconstructing and replaying
+  events from Kafka, CloudWatch and S3.
+• Migrated Cassandra to DynamoDB, improving reliability while cutting maintenance and cost by 90%.
+• Reduced graph-query latency by 35% and service latency a further 20% through data-model changes and
+  concurrency fixes.
 PROJECTS
 
-Magmooty — github.com/magmooty/monorepo                                                                     March 2025 – Present
-Offline-First Distributed System (Rust, Go, Tauri)
-An offline-first education management platform for regions with unreliable connectivity — cryptographic sync, cross-language FFI
-bridges, peer discovery and BLE attendance behind a cross-platform desktop app.
-• Architected the sync engine in Rust on SurrealDB/RocksDB: master-replica LAN replication and chunked last-write-wins
-  batching with a hybrid logical clock for online sync, authenticated with RSA-2048/RS256 JWTs for zero data loss and MITM
-  resistance.
-• Engineered a Go-to-Rust FFI bridge, compiling a WhatsApp bot to a C static library (CGO c-archive) exposing an async C ABI
-  consumed through Rust unsafe bindings.
-• Built a UDP broadcast auto-discovery protocol with subnet calculation and multi-NIC handling, plus a BLE peripheral
-  scanner for proximity-based attendance.
-• Shipped an Axum REST API with record-level permissions and time-bound 2FA, and a Docker cross-compilation pipeline
-  targeting 6 architectures with signed auto-updates and RTL Arabic PDF generation.
-Technologies: Rust, Axum, Tauri, Go, SurrealDB, RocksDB, SQLite, TypeScript, Svelte, Tailwind CSS, Docker, DigitalOcean.
+
+Kin.app | App Store · Google Play · Website                                                        Jan 2026 - Present
+Designed, built and shipped solo: an iOS and Android app for splitting receipts by item. Kotlin backend, React
+Native app and Python receipt scanner.
+• Built a double-entry ledger with traceable debt settlement and reversible corrections.
+• Developed an AI receipt scanner at ~0.8¢ per scan and ~9s latency, evaluated on 70 receipts.
+• Combined coding agents and manual review with 150+ automated architecture rules and end-to-end tests.
+
+peel | GitHub                                                                                      Jul 2026 - Present
+Open-source Go terminal app that combines code review and Git staging. Distributed through Homebrew.
+• Built comments that follow code through edits, with structured feedback for coding agents.
+• Integrated Claude Code and Codex walkthroughs, live refresh and resumable GitHub PR reviews.
+
+iCloud Image Labeler | GitHub
+Built a Python tool that makes Apple Photos searchable with AI-generated keywords, captions and OCR text for
+photos and videos. Supports local models through LM Studio or Ollama, with automatic metadata write-back
+and background processing.
+
+EARLIER EXPERIENCE
+
+CoatConnect | Software Engineer, Cairo                                                                   2019 - 2020
+Improved a medical events portal to 1.7s Largest Contentful Paint; built shared UI components and server-side
+rendering.
+
+BirdCloud | Software Engineer, Cairo                                                                     2017 - 2018
+Built client software and shared libraries that enabled 20% more clients and 30% revenue growth.
 
 SKILLS
 
-Programming        Kotlin, TypeScript, Python, Rust, Go, SQL, Java, C#
-AI & Agents        Claude Code, Claude Agent SDK, Anthropic API, AWS Bedrock, Model Context Protocol (MCP), multi-agent
-                   orchestration, LLM code review, RAG and vector search, OpenAI GPT
-Backend            JVM services (Guice, JAX-RS, Exposed), NestJS, Node.js, Axum, GraphQL, REST API design, event-driven
-                   architecture (SNS/SQS, Kafka), background jobs, idempotency, distributed transactions
-Data               PostgreSQL (query planning, indexing, keyset pagination, replication), DynamoDB, Cassandra, MongoDB,
-                   MySQL, Redis, SurrealDB, Neptune, OpenSearch, BigQuery, DuckDB, dbt, Airflow
-Infra & Ops        AWS (S3, SNS/SQS, Lambda, Bedrock, OpenSearch), GCP, Kubernetes/EKS, Docker, Terraform, Helm,
-                   GitHub Actions, CI/CD, Datadog (metrics, APM, distributed tracing, monitors)
-Frontend           React, Next.js, Svelte, Angular, React Native, Tailwind CSS, Core Web Vitals optimisation
-Domain             Double-entry accounting, AP and procurement, payment reconciliation, VAT compliance, approval workflows,
-                   multi-tenant SaaS
-Spoken             English — bilingual; Arabic — native
+Languages: Kotlin, TypeScript, Python, Rust, Go, SQL
+Platforms: PostgreSQL, AWS, GCP, Docker, Kubernetes, Terraform, React, React Native
+AI & engineering: Claude Code, MCP, LLM evaluation, vector search, CI/CD, observability
 
 EDUCATION
 
-Bachelor of Science, Computer Science · Egypt                                                                         2018 – 2022
-
+Bachelor of Science, Computer Science                                                                    2018 - 2022
+English: bilingual · Arabic: native
