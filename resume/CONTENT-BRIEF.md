@@ -105,7 +105,7 @@ Roles, in order. Dates are confirmed:
 |---|---|---|---|
 | Light | Senior Software Engineer, Procure-to-Pay & Record-to-Report | Dec 2025 – Present | Copenhagen, Denmark (Remote) |
 | Ankor.app | Senior Software Engineer | Jul 2025 – Nov 2025 | Malmö, Sweden (Remote) |
-| Adia Health (formerly Flow Health) | Senior Software Engineer | Jan 2021 – Jun 2025 | Remote |
+| Adia Health (formerly Flow Health) | Senior Software Engineer | Jan 2021 – Jun 2025 | Los Angeles, US (Remote) |
 | CoatConnect | Software Engineer | Jan 2019 – Dec 2020 | Cairo, Egypt |
 | BirdCloud | Software Engineer | Jan 2017 – Dec 2018 | Cairo, Egypt |
 

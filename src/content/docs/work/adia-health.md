@@ -6,7 +6,7 @@ kind: role
 title: Adia Health
 role: Senior Software Engineer
 period: Jan 2021 — Jun 2025
-place: Remote
+place: Los Angeles, US · remote
 treeMeta: medical AI · data recovery
 stack: [TypeScript, React, NestJS, Cassandra, DynamoDB, AWS Neptune, PostgreSQL, Python, OpenSearch, SageMaker, Kafka]
 ---

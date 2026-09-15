@@ -13,7 +13,7 @@ workflows that automate engineering.
 WORK EXPERIENCE
 
 
-Light     | Remote                                                                                Dec 2025 - Present
+Light     | Copenhagen, Denmark (Remote)                                                          Dec 2025 - Present
 Senior Software Engineer, Procure-to-Pay & Record-to-Report
 Worked on the ledger's reliability and the finance products built on it, from customer conversations to production.
 • Led intercompany invoicing end to end, from domain research and design to building every layer.
@@ -35,7 +35,7 @@ Worked on the ledger's reliability and the finance products built on it, from cu
 • Delivered aged AP/AR reports, EU Sales List VAT reporting and non-calendar fiscal years, replacing manual
   year-end SQL work and clearing statutory reporting blockers for customer go-lives.
 
-Ankor.app | Sweden, Remote                                                                       Jul 2025 - Nov 2025
+Ankor.app | Malmö, Sweden (Remote)                                                               Jul 2025 - Nov 2025
 Senior Software Engineer
 Led technical development of a financial reconciliation platform for e-commerce businesses, from inception to
 production.
@@ -45,7 +45,7 @@ production.
   MotherDuck for transaction matching, multi-currency support and automated double-entry journals.
 • Delivered the full product across a React/TypeScript frontend, GraphQL API and NestJS backend, with
   monorepo tooling and CI/CD to GCP.
-Adia Health         | formerly Flow Health, Remote                                                          Jan 2021 - Jun 2025
+Adia Health         | formerly Flow Health, Los Angeles, US (Remote)                                        Jan 2021 - Jun 2025
 Senior Software Engineer
 Led technical development of an AI medical assistant for laboratories, physicians and insurers.
 • Built AI-assisted diagnosis and test recommendations, plus insurance claim filing and fee schedules.
@@ -79,12 +79,12 @@ Python tool that makes Apple Photos searchable with AI keywords, captions and OC
 
 EARLIER EXPERIENCE
 
-CoatConnect | Software Engineer, Cairo                                                                               2019 - 2020
+CoatConnect | Software Engineer, Cairo, Egypt                                                                        2019 - 2020
 Developed a medical events platform, refactored it end to end and optimized its performance to 1.7s LCP (article).
-BirdCloud | Software Engineer, Cairo                                                                                 2017 - 2018
+BirdCloud | Software Engineer, Cairo, Egypt                                                                          2017 - 2018
 Accelerated product delivery with a reusable component library, plus reusable ERP modules and a C# library, increasing
 client capacity by 20% and revenue by 30%.
-Magmooty | formerly Coretrix, Cairo                                                                               2016 - Present
+Magmooty | formerly Coretrix, Cairo, Egypt                                                                        2016 - Present
 Built a platform for Egyptian tutoring centres, later rebuilt as an offline-first Rust app with Go-to-Rust FFI (article).
 
 SKILLS

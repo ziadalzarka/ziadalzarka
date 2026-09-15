@@ -27,30 +27,32 @@ vulnerabilities before merge.
 ## Experience
 
 **[Light](https://light.inc)** — Senior Software Engineer, Procure-to-Pay & Record-to-Report ·
-*Dec 2025 – present*
+Copenhagen, Denmark (remote) · *Dec 2025 – present*\
 Led intercompany invoicing end to end and built three-way matching. Root-caused and fixed three
 production incidents, including a platform outage; cut failed bank payments from ~3% to near zero
 and made the integration test suite ~10x faster. Built the team's AI code and security reviewers
 and Lucid, its docs and architecture decision record system.
 
-**Ankor.app** — Senior Software Engineer · *Jul – Nov 2025*
+**Ankor.app** — Senior Software Engineer · Malmö, Sweden (remote) · *Jul – Nov 2025*\
 Led a financial reconciliation platform from inception to production — millions of transactions a
 month at 98%+ reconciliation accuracy across 5+ payment providers, with dbt pipelines behind
 transaction matching and automated double-entry journals.
 
 **[Adia Health](https://www.adia.ai/)** (formerly Flow Health) — Senior Software Engineer ·
-*Jan 2021 – Jun 2025*
+Los Angeles, US (remote) · *Jan 2021 – Jun 2025*\
 Led development of an AI medical assistant for laboratories, physicians and insurers. Recovered a
 completely lost production database of ~1.5 billion records by replaying events out of Kafka,
 CloudWatch and S3, moved Cassandra to DynamoDB for 90% lower cost, and cut latency by 35% and a
 further 20%.
 
-**CoatConnect** · *2019 – 2020* — developed a medical events platform, refactored it end to end
-and got it to a 1.7s Largest Contentful Paint.
-**BirdCloud** · *2017 – 2018* — sped up delivery with a reusable component library and ERP modules,
-growing client capacity 20% and revenue 30%.
-**Magmooty** (formerly Coretrix) · *2016 – present* — a platform for tutoring centres in Egypt,
-later rebuilt as an offline-first Rust app.
+Earlier, all in Cairo, Egypt:
+
+- **CoatConnect** · *2019 – 2020* — developed a medical events platform, refactored it end to end and
+  got it to a 1.7s Largest Contentful Paint.
+- **BirdCloud** · *2017 – 2018* — sped up delivery with a reusable component library and ERP modules,
+  growing client capacity 20% and revenue 30%.
+- **Magmooty** (formerly Coretrix) · *2016 – present* — a platform for tutoring centres, later rebuilt
+  as an offline-first Rust app.
 
 ## Things I've built
 

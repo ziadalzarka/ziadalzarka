@@ -6,7 +6,7 @@ kind: role
 title: Light
 role: Senior Software Engineer — Procure-to-Pay & Record-to-Report
 period: Dec 2025 — present
-place: Remote
+place: Copenhagen, Denmark · remote
 treeMeta: ledger · AP · incidents · agents
 stack: [Kotlin, Java 17, Gradle, PostgreSQL, Exposed, Guice, JAX-RS, AWS, Kubernetes, Terraform, Datadog, JobRunr, Claude Agent SDK, MCP]
 links:
