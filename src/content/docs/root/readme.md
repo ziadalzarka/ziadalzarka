@@ -13,7 +13,7 @@ highlights:
   - { label: "image-labeler.py", href: "https://github.com/ziadalzarka/icloud-image-labeler", meta: "Make Apple Photos searchable with local AI labels, captions and OCR." }
 ---
 
-**Ziad Alzarka** — senior software engineer and systems architect. 9 years on double-entry
+**Ziad Alzarka** — senior software engineer and systems architect. 10 years on double-entry
 ledgers, medical AI, and agent platforms that do real engineering work.
 
 I also designed, built and shipped [Kin.app](https://www.kin-split.app),

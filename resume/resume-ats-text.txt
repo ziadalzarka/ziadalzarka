@@ -5,7 +5,7 @@ ziadalzarka.dev | linkedin.com/in/ziadalzarka | github.com/ziadalzarka
 
 SUMMARY
 
-Senior software engineer and systems architect with 9 years building data-intensive platforms across finance
+Senior software engineer and systems architect with 10 years building data-intensive platforms across finance
 and healthcare: ledgers, reconciliation and AP automation; AI medical assistants, claims and lab pipelines. Takes
 products from architecture to production across backend, data, web and mobile, and builds AI agents and
 workflows that automate engineering.
@@ -13,74 +13,88 @@ workflows that automate engineering.
 WORK EXPERIENCE
 
 
-Light | Remote                                                                                  Dec 2025 - Present
+Light     | Remote                                                                                Dec 2025 - Present
 Senior Software Engineer, Procure-to-Pay & Record-to-Report
-Product and platform engineering for financial software.
-• Built procurement, payment and approval workflows for finance teams to manage spend and accounting
-  controls.
-• Delivered financial reporting and exports for day-to-day finance operations.
-• Own discovery, architecture and delivery across backend, web and infrastructure.
-• Improved reliability and performance with database tuning, resilient background jobs, tests and observability.
-• Built AI-assisted development and review workflows with reusable agent instructions and skills.
+Worked on the ledger's reliability and the finance products built on it, from customer conversations to production.
+• Led intercompany invoicing end to end, from domain research and design to building every layer.
+• Built three-way matching with customers who needed it to move their AP onto the platform: automatic bill-to-
+  purchase-order matching, and goods-receipt confirmation built across every layer in two weeks.
+• Root-caused and fixed three production incidents: a platform outage, connection-pool exhaustion and out-of-
+  memory pod crashes; added platform-wide safeguards against repeats.
+• Sped up ledger queries and exports: reclaimed ~17.5 GB of duplicate and unused indexes, added indexes for
+  real query patterns, moved heavy reads to a replica and made large exports resumable background jobs.
+• Cut failed bank payments from ~3% to near zero with automatic retries, and made the integration test suite
+  ~10x faster with per-test data isolation and 10 parallel partitions.
+• Designed a reusable notification system: new notification types and delivery channels such as Slack and
+  Microsoft Teams could plug in without changing the core, with async delivery, retries and do-not-disturb.
+• Set the team's AI tooling standards. Built an AI code reviewer that reviewed 1,700+ PRs and prevented 45+
+  bugs, and a security agent that prevented 5+ vulnerabilities.
+• Built Lucid, the repo's docs and ADR system, to spread knowledge beyond a few engineers, which helped new
+  engineers onboard faster.
+• Made Datadog metrics and alerts the team's default in every PR.
+• Delivered aged AP/AR reports, EU Sales List VAT reporting and non-calendar fiscal years, replacing manual
+  year-end SQL work and clearing statutory reporting blockers for customer go-lives.
 
-Ankor.app | Sweden, Remote                                                                     Jul 2025 - Nov 2025
+Ankor.app | Sweden, Remote                                                                       Jul 2025 - Nov 2025
 Senior Software Engineer
-Led a financial reconciliation product from inception to production.
-• Built settlement tracking, audit trails and ML-based refund accrual forecasts to help merchants track
-  payouts and account for expected refunds.
-• Integrated 5+ payment providers into a multi-tenant platform processing millions of transactions monthly at
-  98%+ reconciliation accuracy.
-• Built dbt/Python pipelines across PostgreSQL, BigQuery and DuckDB for transaction matching, multi-currency
-  accounting and automated double-entry journals.
+Led technical development of a financial reconciliation platform for e-commerce businesses, from inception to
+production.
+• Architected a multi-tenant platform processing millions of transactions monthly at 98%+ reconciliation
+  accuracy, integrating 5+ payment providers (Shopify, Klarna, PayPal, Plaid, Adyen).
+• Built a four-tier dbt and Python pipeline (raw → staging → fact → app) over PostgreSQL, BigQuery and
+  MotherDuck for transaction matching, multi-currency support and automated double-entry journals.
+• Delivered the full product across a React/TypeScript frontend, GraphQL API and NestJS backend, with
+  monorepo tooling and CI/CD to GCP.
+Adia Health         | formerly Flow Health, Remote                                                          Jan 2021 - Jun 2025
+Senior Software Engineer
+Led technical development of an AI medical assistant for laboratories, physicians and insurers.
+• Built AI-assisted diagnosis and test recommendations, plus insurance claim filing and fee schedules.
+• Recovered a completely lost production database of ~1.5 billion records by replaying events reconstructed
+  from Kafka, CloudWatch and S3.
+• Migrated the primary datastore from Cassandra to DynamoDB, improving availability and performance while
+  cutting maintenance and cost by 90%.
+• Introduced a graph database for relationship-heavy queries, cutting aggregation latency by 35%; removed
+  race conditions and ACL overhead in data services, cutting latency a further 20%.
+• Integrated vector search into the medical knowledge graph on AWS OpenSearch, built ingestion pipelines for
+  unstructured medical histories, and wrote software streaming results from Sysmex lab analysers.
+• Built real-time cross-database replication and set the team's CI, code-standards and RFC practices.
 
-Adia Health | formerly Flow Health, Remote                                                     Jan 2021 - Jun 2025
-Senior Software Engineer
-Led development of an AI medical assistant for laboratories, physicians and insurers.
-• Built AI-assisted diagnosis and test recommendations, alongside insurance claim filing and fee-schedule
-  workflows.
-• Made medical histories and lab results usable in the product through vector search, structured ingestion and
-  Sysmex analyser integration.
-• Recovered ~1.5 billion records after a complete production database loss by reconstructing and replaying
-  events from Kafka, CloudWatch and S3.
-• Migrated Cassandra to DynamoDB, improving reliability while cutting maintenance and cost by 90%.
-• Reduced graph-query latency by 35% and service latency a further 20% through data-model changes and
-  concurrency fixes.
 PROJECTS
 
 
-Kin.app | App Store · Google Play · Website                                                        Jan 2026 - Present
-Designed, built and shipped solo: an iOS and Android app for splitting receipts by item. Kotlin backend, React
-Native app and Python receipt scanner.
-• Built a double-entry ledger with traceable debt settlement and reversible corrections.
-• Developed an AI receipt scanner at ~0.8¢ per scan and ~9s latency, evaluated on 70 receipts.
-• Combined coding agents and manual review with 150+ automated architecture rules and end-to-end tests.
+Kin.app      | App Store · Google Play · Website                                                              Jan 2026 - Present
+Designed, built and shipped solo: an AI-powered app for splitting receipts by item.
+• Built an AI receipt reader (~0.8¢, ~9s per scan) that escalates to a stronger model when OCR and a small
+  model disagree, reaching 97% accuracy on 500 receipts across scripts, languages, tax rules and formats.
+• Built a voice assistant that turns live speech into receipts, and an MCP server for personal AI agents.
+• Built a double-entry ledger, and 150+ fitness functions adapted from Software Architecture: The Hard Parts
+  that govern how AI changes the codebase and keep quality consistent.
 
-peel | GitHub                                                                                      Jul 2026 - Present
-Open-source Go terminal app that combines code review and Git staging. Distributed through Homebrew.
+peel    | GitHub                                                                                              Jul 2026 - Present
+Open-source Go TUI that combines code review and Git staging, with Claude Code and Codex walkthroughs.
 • Built comments that follow code through edits, with structured feedback for coding agents.
-• Integrated Claude Code and Codex walkthroughs, live refresh and resumable GitHub PR reviews.
 
-iCloud Image Labeler | GitHub
-Built a Python tool that makes Apple Photos searchable with AI-generated keywords, captions and OCR text for
-photos and videos. Supports local models through LM Studio or Ollama, with automatic metadata write-back
-and background processing.
+iCloud Image Labeler           | GitHub
+Python tool that makes Apple Photos searchable with AI keywords, captions and OCR, using local models.
 
 EARLIER EXPERIENCE
 
-CoatConnect | Software Engineer, Cairo                                                                   2019 - 2020
-Improved a medical events portal to 1.7s Largest Contentful Paint; built shared UI components and server-side
-rendering.
-
-BirdCloud | Software Engineer, Cairo                                                                     2017 - 2018
-Built client software and shared libraries that enabled 20% more clients and 30% revenue growth.
+CoatConnect | Software Engineer, Cairo                                                                               2019 - 2020
+Developed a medical events platform, refactored it end to end and optimized its performance to 1.7s LCP (article).
+BirdCloud | Software Engineer, Cairo                                                                                 2017 - 2018
+Accelerated product delivery with a reusable component library, plus reusable ERP modules and a C# library, increasing
+client capacity by 20% and revenue by 30%.
+Magmooty | formerly Coretrix, Cairo                                                                               2016 - Present
+Built a platform for Egyptian tutoring centres, later rebuilt as an offline-first Rust app with Go-to-Rust FFI (article).
 
 SKILLS
 
-Languages: Kotlin, TypeScript, Python, Rust, Go, SQL
-Platforms: PostgreSQL, AWS, GCP, Docker, Kubernetes, Terraform, React, React Native
-AI & engineering: Claude Code, MCP, LLM evaluation, vector search, CI/CD, observability
+Languages: Kotlin, TypeScript, Python, Rust, Go, SQL, C#, Java
+Data: PostgreSQL, Redis, Elasticsearch, DynamoDB, MongoDB, DocumentDB, AWS Neptune, Neo4j, vector search
+Platforms: AWS, GCP, Docker, Kubernetes, Terraform, Datadog, Grafana, CI/CD, React, React Native
+AI: Claude Code, Codex, MCP, AI tuning, LLM evaluation
 
 EDUCATION
 
-Bachelor of Science, Computer Science                                                                    2018 - 2022
+Bachelor of Science, Computer Science                                                                                2018 - 2022
 English: bilingual · Arabic: native

@@ -1,6 +1,6 @@
 # Ziad Alzarka
 
-**Senior software engineer and systems architect.** 9 years building data-intensive
+**Senior software engineer and systems architect.** 10 years building data-intensive
 platforms in two domains where a wrong number is somebody's real problem — **finance**
 (double-entry ledgers, reconciliation, AP automation) and **medicine** (AI diagnosis, claims,
 lab data pipelines).
@@ -54,7 +54,7 @@ record which debts they settle or offset; a receipt scanner that costs about 0.8
 0.96 on a 70-receipt eval board; and 150+ executable architecture rules that fail the build, which
 is what makes "written with coding agents, reviewed line by line" mean something.
 
-**[peel](https://github.com/ziadalzarka/peel)** — a terminal diff reviewer that stages what you
+**[peel](https://github.com/ziadalzarka/peel)** — a TUI diff reviewer that stages what you
 just reviewed. Every local diff tool is read-only, so reviewing and `git add` end up as two
 passes over the same diff. `peel` is one pass: read a file, press `s`, and it's staged, folded
 away, and the next file is in front of you.

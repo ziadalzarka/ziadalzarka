@@ -30,9 +30,9 @@ const rendered = await Promise.all(
 );
 
 const introduction = rendered.filter(({ entry }) => entry.data.kind === 'thesis');
-const experience = rendered.filter(({ entry }) => ['work', 'ship'].includes(entry.data.group));
+const experience = rendered.filter(({ entry }) => entry.data.group === 'work');
 const background = rendered.filter(
-  ({ entry }) => entry.data.kind !== 'thesis' && !['work', 'ship'].includes(entry.data.group)
+  ({ entry }) => entry.data.kind !== 'thesis' && entry.data.group !== 'work'
 );
 
 const releases = await getReleases();
@@ -62,8 +62,8 @@ const contactId = ordered.find((e) => e.data.kind === 'contact')?.id ?? '';
 ---
 
 <Base
-  title="Ziad Alzarka — senior software engineer"
-  description="Senior software engineer and systems architect. 9 years on data-intensive platforms across finance and medicine — ledgers, reconciliation, medical AI — plus AI agents that do real engineering work. Available for consulting."
+  title="Ziad Alzarka - Senior Software Engineer"
+  description="Senior software engineer and systems architect. 10 years on data-intensive platforms across finance and medicine — ledgers, reconciliation, medical AI — plus AI agents that do real engineering work. Available for consulting."
 >
   <div class="shell">
     <header class="bar bar--top">

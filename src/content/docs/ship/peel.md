@@ -4,7 +4,7 @@ file: peel.go
 order: 1
 kind: project
 title: peel
-tagline: A terminal diff reviewer that stages what you just reviewed.
+tagline: A TUI diff reviewer that stages what you just reviewed.
 status: public
 repo: ziadalzarka/peel
 treeMeta: go · tui

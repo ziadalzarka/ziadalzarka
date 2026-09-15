@@ -14,5 +14,6 @@ stack: [TypeScript, Angular, React Native, MySQL, "C# .NET"]
 My first professional role. I built software digitalising client operations across legal, medical
 and laundry businesses.
 
-- Built a shared UI and utility library that cut delivery time enough to take on noticeably more
-  clients and grow revenue, working directly with clients to scope and shape delivery.
+- Accelerated product delivery with a reusable component library, plus reusable ERP modules and a
+  library written in C#, increasing client capacity by 20% and revenue by 30%. Worked directly with
+  clients to scope each delivery.

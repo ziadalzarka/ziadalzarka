@@ -43,6 +43,18 @@
   .job:last-child { margin-bottom: 0; }
   .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   .employer { font-size: 12pt; font-weight: 700; }
+  .employer > a { color: inherit; }
+  .employer > a::after {
+    content: "";
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0.3em;
+    vertical-align: 0.1em;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%230d7a63' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 1.5h3.5V5M10.5 1.5 5.5 6.5M9 7.5v2.5a.5.5 0 0 1-.5.5h-6.5a.5.5 0 0 1-.5-.5V3.5a.5.5 0 0 1 .5-.5H5'/%3E%3C/svg%3E") no-repeat center / contain;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
   .place { font-size: 9pt; font-weight: 400; color: var(--faint); }
   .dates { font-size: 9pt; color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
   .title { font-size: 10pt; font-weight: 600; color: var(--accent); margin-top: 2px; }
@@ -53,18 +65,19 @@
   li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
   .page-two { break-before: page; }
   .page-two > h2:first-child { margin-top: 0; }
-  .project { margin-bottom: 14px; }
+  .project { margin-bottom: 12px; }
   .project .employer { font-size: 11pt; }
   .project .blurb { margin-top: 4px; }
   .project ul { margin-top: 5px; }
   .project li { margin-bottom: 4px; }
   .project-link { font-size: 9pt; font-weight: 400; }
   .earlier { font-size: 9.5pt; }
-  .earlier .job { margin-bottom: 8px; }
+  .earlier .job { margin-bottom: 5px; }
   .earlier .employer { font-size: 10pt; }
   .earlier .blurb { margin-top: 2px; }
   .skills { font-size: 9.5pt; color: var(--muted); }
-  .skills p { margin-bottom: 4px; }
+  .skills p { margin-bottom: 2px; }
+  .earlier h2, .skills h2, .education h2 { margin: 12px 0 8px; }
   .education { font-size: 9.5pt; }
   .education .row { display: flex; justify-content: space-between; gap: 12px; }
   .languages { margin-top: 4px; color: var(--muted); }
@@ -93,7 +106,7 @@
 
 <section>
   <h2>Summary</h2>
-  <p class="summary">Senior software engineer and systems architect with <strong>9 years</strong> building
+  <p class="summary">Senior software engineer and systems architect with <strong>10 years</strong> building
     <strong>data-intensive platforms</strong> across <strong>finance and healthcare</strong>: ledgers, reconciliation
     and AP automation; AI medical assistants, claims and lab pipelines. Takes products from architecture to
     production across backend, data, web and mobile, and builds <strong>AI agents and workflows that automate
@@ -104,19 +117,31 @@
   <h2>Work Experience</h2>
   <div class="job">
     <div class="job-head">
-      <div class="employer">Light <span class="place">| Remote</span></div>
+      <div class="employer"><a href="https://light.inc">Light</a> <span class="place">| Remote</span></div>
       <div class="dates">Dec 2025 - Present</div>
     </div>
     <div class="title">Senior Software Engineer, Procure-to-Pay &amp; Record-to-Report</div>
-    <p class="blurb">Product and platform engineering for financial software.</p>
+    <p class="blurb">Worked on the ledger's reliability and the finance products built on it, from customer
+      conversations to production.</p>
     <ul>
-      <li>Built <strong>procurement, payment and approval workflows</strong> for finance teams to manage
-        spend and accounting controls.</li>
-      <li>Delivered <strong>financial reporting and exports</strong> for day-to-day finance operations.</li>
-      <li>Own <strong>discovery, architecture and delivery</strong> across backend, web and infrastructure.</li>
-      <li>Improved <strong>reliability and performance</strong> with database tuning, resilient background
-        jobs, tests and observability.</li>
-      <li>Built <strong>AI-assisted development and review workflows</strong> with reusable agent instructions and skills.</li>
+      <li>Led <strong>intercompany invoicing</strong> end to end, from domain research and design to building every layer.</li>
+      <li>Built <strong>three-way matching</strong> with customers who needed it to move their AP onto the platform:
+        automatic bill-to-purchase-order matching, and goods-receipt confirmation built across every layer in two weeks.</li>
+      <li>Root-caused and fixed <strong>three production incidents</strong>: a platform outage,
+        connection-pool exhaustion and out-of-memory pod crashes; added platform-wide safeguards against repeats.</li>
+      <li>Sped up ledger queries and exports: reclaimed <strong>~17.5 GB</strong> of duplicate and unused indexes, added
+        indexes for real query patterns, moved heavy reads to a replica and made large exports resumable background jobs.</li>
+      <li>Cut failed bank payments from <strong>~3% to near zero</strong> with automatic retries, and made the integration
+        test suite <strong>~10x faster</strong> with per-test data isolation and 10 parallel partitions.</li>
+      <li>Designed a reusable <strong>notification system</strong>: new notification types and delivery channels such as
+        Slack and Microsoft Teams could plug in without changing the core, with async delivery, retries and do-not-disturb.</li>
+      <li>Set the team's <strong>AI tooling standards</strong>. Built an AI code reviewer that reviewed <strong>1,700+ PRs</strong>
+        and prevented <strong>45+ bugs</strong>, and a security agent that prevented <strong>5+ vulnerabilities</strong>.</li>
+      <li>Built <strong>Lucid</strong>, the repo's docs and ADR system, to spread knowledge beyond a few engineers, which
+        helped new engineers onboard faster.</li>
+      <li>Made <strong>Datadog metrics and alerts</strong> the team's default in every PR.</li>
+      <li>Delivered <strong>aged AP/AR reports, EU Sales List VAT reporting and non-calendar fiscal years</strong>,
+        replacing manual year-end SQL work and clearing statutory reporting blockers for customer go-lives.</li>
     </ul>
   </div>
 
@@ -126,73 +151,71 @@
       <div class="dates">Jul 2025 - Nov 2025</div>
     </div>
     <div class="title">Senior Software Engineer</div>
-    <p class="blurb">Led a financial reconciliation product from inception to production.</p>
+    <p class="blurb">Led technical development of a financial reconciliation platform for e-commerce businesses,
+      from inception to production.</p>
     <ul>
-      <li>Built <strong>settlement tracking, audit trails and ML-based refund accrual forecasts</strong>
-        to help merchants track payouts and account for expected refunds.</li>
-      <li>Integrated <strong>5+ payment providers</strong> into a multi-tenant platform processing millions of
-        transactions monthly at <strong>98%+ reconciliation accuracy</strong>.</li>
-      <li>Built dbt/Python pipelines across PostgreSQL, BigQuery and DuckDB for transaction matching,
-        multi-currency accounting and automated double-entry journals.</li>
+      <li>Architected a multi-tenant platform processing <strong>millions of transactions monthly at 98%+ reconciliation
+        accuracy</strong>, integrating 5+ payment providers (Shopify, Klarna, PayPal, Plaid, Adyen).</li>
+      <li>Built a four-tier dbt and Python pipeline (raw → staging → fact → app) over PostgreSQL, BigQuery and MotherDuck
+        for transaction matching, multi-currency support and automated double-entry journals.</li>
+      <li>Delivered the full product across a React/TypeScript frontend, GraphQL API and NestJS backend, with monorepo
+        tooling and CI/CD to GCP.</li>
     </ul>
   </div>
 
-  <div class="job">
+  <div class="job page-two">
     <div class="job-head">
-      <div class="employer">Adia Health <span class="place">| formerly Flow Health, Remote</span></div>
+      <div class="employer"><a href="https://www.adia.ai/">Adia Health</a> <span class="place">| formerly Flow Health, Remote</span></div>
       <div class="dates">Jan 2021 - Jun 2025</div>
     </div>
     <div class="title">Senior Software Engineer</div>
-    <p class="blurb">Led development of an AI medical assistant for laboratories, physicians and insurers.</p>
+    <p class="blurb">Led technical development of an AI medical assistant for laboratories, physicians and insurers.</p>
     <ul>
-      <li>Built <strong>AI-assisted diagnosis and test recommendations</strong>, alongside insurance
-        claim filing and fee-schedule workflows.</li>
-      <li>Made medical histories and lab results usable in the product through <strong>vector search</strong>,
-        structured ingestion and Sysmex analyser integration.</li>
-      <li><strong>Recovered ~1.5 billion records</strong> after a complete production database loss by
-        reconstructing and replaying events from Kafka, CloudWatch and S3.</li>
-      <li>Migrated Cassandra to DynamoDB, improving reliability while <strong>cutting maintenance and cost
-        by 90%</strong>.</li>
-      <li>Reduced graph-query latency by <strong>35%</strong> and service latency a further <strong>20%</strong>
-        through data-model changes and concurrency fixes.</li>
+      <li>Built <strong>AI-assisted diagnosis and test recommendations</strong>, plus insurance claim filing and fee schedules.</li>
+      <li><strong>Recovered a completely lost production database of ~1.5 billion records</strong> by replaying events
+        reconstructed from Kafka, CloudWatch and S3.</li>
+      <li>Migrated the primary datastore from <strong>Cassandra to DynamoDB</strong>, improving availability and performance
+        while cutting maintenance and cost by <strong>90%</strong>.</li>
+      <li>Introduced a graph database for relationship-heavy queries, <strong>cutting aggregation latency by 35%</strong>;
+        removed race conditions and ACL overhead in data services, <strong>cutting latency a further 20%</strong>.</li>
+      <li>Integrated <strong>vector search into the medical knowledge graph</strong> on AWS OpenSearch, built ingestion
+        pipelines for unstructured medical histories, and wrote software streaming results from Sysmex lab analysers.</li>
+      <li>Built real-time cross-database replication and set the team's CI, code-standards and RFC practices.</li>
     </ul>
   </div>
 </section>
 
-<section class="page-two">
+<section>
   <h2>Projects</h2>
   <div class="job project">
     <div class="job-head">
-      <div class="employer">Kin.app <span class="project-link">| <a href="https://apps.apple.com/app/id6763578086">App Store</a> · <a href="https://play.google.com/store/apps/details?id=app.kinsplit.mobile">Google Play</a> · <a href="https://www.kin-split.app">Website</a></span></div>
+      <div class="employer"><a href="https://kin-split.app">Kin.app</a> <span class="project-link">| <a href="https://apps.apple.com/app/id6763578086">App Store</a> · <a href="https://play.google.com/store/apps/details?id=app.kinsplit.mobile">Google Play</a> · <a href="https://www.kin-split.app">Website</a></span></div>
       <div class="dates">Jan 2026 - Present</div>
     </div>
-    <p class="blurb">Designed, built and shipped solo: an iOS and Android app for splitting receipts by item.
-      Kotlin backend, React Native app and Python receipt scanner.</p>
+    <p class="blurb">Designed, built and shipped solo: an AI-powered app for splitting receipts by item.</p>
     <ul>
-      <li>Built a <strong>double-entry ledger</strong> with traceable debt settlement and reversible corrections.</li>
-      <li>Developed an AI receipt scanner at <strong>~0.8¢ per scan and ~9s latency</strong>, evaluated on 70 receipts.</li>
-      <li>Combined coding agents and manual review with <strong>150+ automated architecture rules</strong>
-        and end-to-end tests.</li>
+      <li>Built an <strong>AI receipt reader</strong> (~0.8¢, ~9s per scan) that escalates to a stronger model when OCR and a
+        small model disagree, reaching <strong>97% accuracy</strong> on 500 receipts across scripts, languages, tax rules and formats.</li>
+      <li>Built a <strong>voice assistant</strong> that turns live speech into receipts, and an <strong>MCP server</strong> for personal AI agents.</li>
+      <li>Built a <strong>double-entry ledger</strong>, and <strong>150+ fitness functions</strong> adapted from <em>Software Architecture:
+        The Hard Parts</em> that govern how AI changes the codebase and keep quality consistent.</li>
     </ul>
   </div>
 
   <div class="job project">
     <div class="job-head">
-      <div class="employer">peel <span class="project-link">| <a href="https://github.com/ziadalzarka/peel">GitHub</a></span></div>
+      <div class="employer"><a href="https://github.com/ziadalzarka/peel">peel</a> <span class="project-link">| <a href="https://github.com/ziadalzarka/peel">GitHub</a></span></div>
       <div class="dates">Jul 2026 - Present</div>
     </div>
-    <p class="blurb">Open-source Go terminal app that combines code review and Git staging. Distributed through Homebrew.</p>
+    <p class="blurb">Open-source Go TUI that combines code review and Git staging, with <strong>Claude Code and Codex walkthroughs</strong>.</p>
     <ul>
       <li>Built comments that follow code through edits, with structured feedback for coding agents.</li>
-      <li>Integrated <strong>Claude Code and Codex walkthroughs</strong>, live refresh and resumable GitHub PR reviews.</li>
     </ul>
   </div>
 
   <div class="job project">
-    <div class="employer">iCloud Image Labeler <span class="project-link">| <a href="https://github.com/ziadalzarka/icloud-image-labeler">GitHub</a></span></div>
-    <p class="blurb">Built a Python tool that makes Apple Photos searchable with AI-generated keywords, captions and
-      OCR text for photos and videos. Supports <strong>local models through LM Studio or Ollama</strong>, with
-      automatic metadata write-back and background processing.</p>
+    <div class="employer"><a href="https://github.com/ziadalzarka/icloud-image-labeler">iCloud Image Labeler</a> <span class="project-link">| <a href="https://github.com/ziadalzarka/icloud-image-labeler">GitHub</a></span></div>
+    <p class="blurb">Python tool that makes Apple Photos searchable with AI keywords, captions and OCR, using <strong>local models</strong>.</p>
   </div>
 
 </section>
@@ -204,22 +227,32 @@
       <div class="employer">CoatConnect <span class="place">| Software Engineer, Cairo</span></div>
       <div class="dates">2019 - 2020</div>
     </div>
-    <p class="blurb">Improved a medical events portal to <strong>1.7s Largest Contentful Paint</strong>; built shared UI components and server-side rendering.</p>
+    <p class="blurb">Developed a medical events platform, refactored it end to end and optimized its performance to <strong>1.7s LCP</strong> (<a href="https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece">article</a>).</p>
   </div>
   <div class="job">
     <div class="job-head">
       <div class="employer">BirdCloud <span class="place">| Software Engineer, Cairo</span></div>
       <div class="dates">2017 - 2018</div>
     </div>
-    <p class="blurb">Built client software and shared libraries that enabled <strong>20% more clients and 30% revenue growth</strong>.</p>
+    <p class="blurb">Accelerated product delivery with a reusable component library, plus reusable ERP modules and a C# library,
+      increasing client capacity by <strong>20%</strong> and revenue by <strong>30%</strong>.</p>
+  </div>
+  <div class="job">
+    <div class="job-head">
+      <div class="employer">Magmooty <span class="place">| formerly Coretrix, Cairo</span></div>
+      <div class="dates">2016 - Present</div>
+    </div>
+    <p class="blurb">Built a platform for Egyptian tutoring centres, later rebuilt as an offline-first Rust app with Go-to-Rust FFI
+      (<a href="https://medium.com/@ziadalzarka/linking-a-go-static-library-to-rust-and-handling-asynchronous-calls-5672932a966b">article</a>).</p>
   </div>
 </section>
 
 <section class="skills">
   <h2>Skills</h2>
-  <p><strong>Languages:</strong> Kotlin, TypeScript, Python, Rust, Go, SQL</p>
-  <p><strong>Platforms:</strong> PostgreSQL, AWS, GCP, Docker, Kubernetes, Terraform, React, React Native</p>
-  <p><strong>AI &amp; engineering:</strong> Claude Code, MCP, LLM evaluation, vector search, CI/CD, observability</p>
+  <p><strong>Languages:</strong> Kotlin, TypeScript, Python, Rust, Go, SQL, C#, Java</p>
+  <p><strong>Data:</strong> PostgreSQL, Redis, Elasticsearch, DynamoDB, MongoDB, DocumentDB, AWS Neptune, Neo4j, vector search</p>
+  <p><strong>Platforms:</strong> AWS, GCP, Docker, Kubernetes, Terraform, Datadog, Grafana, CI/CD, React, React Native</p>
+  <p><strong>AI:</strong> Claude Code, Codex, MCP, AI tuning, LLM evaluation</p>
 </section>
 
 <section class="education">

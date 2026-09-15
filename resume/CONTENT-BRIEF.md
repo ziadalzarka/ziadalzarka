@@ -34,30 +34,52 @@ On 2026-09-15, Ziad requested a mix of senior engineering, AI and platform posit
 also suitable for general engineering and consulting. The résumé headline is now
 **Senior Software Engineer | Platform, Product & AI**. Kin.app leads the projects section
 with solo product ownership; peel follows as an open-source developer tool, then iCloud Image
-Labeler. Magmooty was removed at Ziad's request. Use the numeral **9 years** throughout the résumé and website.
+Labeler. Magmooty was removed from projects at Ziad's request, then added back on 2026-09-15 as one
+line in Earlier Experience: a tutoring-centre management platform he started in 2016 as Coretrix. Use the numeral **10 years** throughout the résumé and website.
 
 Ziad found the detailed version too dense. The current version uses 10pt body text, 1.4 line
-spacing and wider margins, with shorter achievement bullets and one compact skills section.
-The original detailed summary is retained at Ziad's request. Recent work is on page 1;
-projects, earlier experience, skills and education are on page 2.
+spacing and wider margins, with two-line achievement bullets and one compact skills section.
+The original detailed summary is retained at Ziad's request. Light and Ankor are on page 1;
+Adia Health starts page 2, followed by projects, earlier experience, skills and education.
 Keep the detailed backup unchanged when editing the current version.
 
-Keep product contributions prominent alongside platform achievements. Ankor should highlight
-settlement tracking, audit trails and refund accrual forecasting; omit the customer-count launch
-bullet. Adia Health should cover clinical recommendations, claims and lab-data integration.
-Light can describe broad finance product areas and user value while preserving the privacy rule below.
+Keep product contributions prominent alongside platform achievements. For Ankor, omit the
+settlement tracking / audit trail / refund accrual forecast bullet (Ziad removed it on 2026-09-15)
+and the customer-count launch bullet. Adia Health should cover clinical recommendations, claims and lab-data integration.
+Light should name concrete features, incidents and numbers, following the rules below.
 
-Light's current section was informed by private notes, checked on 2026-09-15. Ziad explicitly
-asked to describe his capabilities rather than publish specifics from those notes. Do not include
-customer names, internal project or tool names, metrics, incident details or feature-level disclosures.
-Focus on end-to-end product ownership, financial domain modelling, reliability and performance,
-observability, test infrastructure and AI-assisted engineering. Keep product and platform work first.
+Later on 2026-09-15 Ziad said the capability-only copy for Light, Ankor and Adia Health was far
+too simple, and asked for the specifics back on both the résumé and the site. Use the detailed
+backup for Ankor, Adia Health and older roles. The source for Light is his Notion page
+"Ziad at Light" (https://app.notion.com/p/uselight/Ziad-at-Light-2fcf9bd84c8c807eacfceaa39f7855e8,
+last edited 2026-09-14). Name concrete features, production incidents and numbers from it. Still leave out:
+
+- customer, partner and colleague names, until Ziad approves naming them
+- internal names such as Jarvis and AMC; say what the thing does instead. Lucid, the docs and
+  ADR system, can be named (Ziad asked on 2026-09-15)
+- the March security incident, the bank-detail exposure, and incident dates
+- PR and commit counts
+- the SQL `CASCADE` ban (Ziad asked on 2026-09-15 not to mention it)
+
+The three Light incidents are: a platform outage,
+database connection-pool exhaustion from ledger pagination (cursor pagination and a 10k offset cap),
+and out-of-memory pod crashes from a 15.4M-row load. Only one was caused by pagination, so do not
+reuse the old backup's "took production down twice" wording.
 Do not include the Anthropic API/AWS Bedrock migration in the résumé or website copy;
 Ziad considers it irrelevant to this positioning.
 
-Kin.app is available on **iOS and Android**, confirmed by Ziad on 2026-09-15. Link both stores:
+Kin.app is available on **iOS and Android**, confirmed by Ziad on 2026-09-15, but copy should just
+say "app", not "iOS and Android" (Ziad asked on 2026-09-15). Link both stores:
 [App Store](https://apps.apple.com/app/id6763578086) and
 [Google Play](https://play.google.com/store/apps/details?id=app.kinsplit.mobile).
+Kin's AI features, checked in the Kin repo on 2026-09-15: an AI receipt reader (~0.8¢ and ~9s per scan; escalates
+to a stronger model when OCR and the small model disagree; 97% accuracy on 500 receipts across scripts,
+languages, tax rules and formats, per Ziad on 2026-09-15), a voice assistant with live transcription,
+and an MCP server that lets personal AI agents read receipts and balances. Don't mention OAuth
+(Ziad asked on 2026-09-15). Don't mention the
+70-receipt eval set. The receipt reader now runs in the Kotlin backend, not a Python service.
+Kin's 150+ architecture rules are fitness functions (Ziad took the idea from *Software Architecture:
+The Hard Parts*) that govern how AI changes the codebase; describe them that way.
 
 ## Hard factual constraints
 
@@ -71,9 +93,9 @@ reintroduce an error he has already caught.
 | Ankor.app "July 2025 – Present" | Ankor ended **November 2025**. Light began **December 2025**. No overlap |
 | "Bechelor" | *Bachelor* of Science, Computer Science |
 
-He did **not** found or lead the AI platform — never claim either. Describe his contribution
-as building AI-assisted engineering and review workflows, reusable skills and agent instructions.
-The privacy rule above applies even when a specific accomplishment is verified.
+He did **not** found or lead the AI platform — never claim either. What he did build can be
+named: an autonomous AI coding agent whose reviewers became the team's PR review tooling, a security
+reviewer on every PR, and the docs and architecture decision record system with the skills that write it.
 
 ## Verified facts
 
@@ -102,9 +124,15 @@ to carry a hero stat, and they are already stated unhedged in `resume.html`:
 - Adia Health: ~1.5B records recovered · 90% cost reduction · 35% and 20% latency reductions
 - CoatConnect: 1.7s LCP
 - BirdCloud: 20% more clients, 30% revenue increase
+- Light, from Ziad's Notion page: ~17.5 GB of indexes reclaimed · ~10x faster integration tests ·
+  failed bank payments ~3% to near zero · 15.4M-row out-of-memory root cause
+- Light AI reviewers, from a GitHub review of Dec 2025 – Sep 2026: code reviewer on 1,708 PRs with
+  47 findings the PR author confirmed as real · security agent on 3,151 PRs with 6 confirmed findings,
+  one of them deferred. Publish as 1,700+ PRs, 45+ bugs and 5+ vulnerabilities; these are lower bounds.
+  Only a couple of the security findings are clearly severe, so don't call all of them severe. Ziad built and maintains the
+  review workflows, but another engineer improved the reviewer prompts, so don't say he wrote all of them
 
-Ankor's product work is documented in the detailed backup. Light's public copy should follow
-the capability and privacy guidance above.
+Ankor's product work is documented in the detailed backup.
 
 ## Design tokens used in the PDF
 
@@ -130,7 +158,7 @@ Affects both résumé and site:
 1. Exact job title at Light — is "Procure-to-Pay & Record-to-Report" right, or plain Senior Software Engineer?
    LinkedIn currently says plain "Senior Software Engineer"
 2. ~~Light's location/HQ~~ — answered: **Copenhagen, Capital Region of Denmark · Remote**
-3. Is the job search public? Light work must remain at the capability level; private incident and project details are excluded.
+3. Is the job search public? Customer names stay out of the Light copy until Ziad says otherwise.
 4. Is the Medium blog still active? A dead link costs more than a missing one
 5. The résumé headline and summary were aligned on 2026-09-15. Site and LinkedIn headline
    alignment remains a separate task.

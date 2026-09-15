@@ -17,7 +17,7 @@ offers:
     proof: "AI-assisted engineering workflows · agent feedback and guided code review in peel · coding agents and architecture checks in Kin.app"
   - name: Architecture review and product build
     body: "Zero-to-production product engineering, or a second opinion on a system before you commit to it. Kotlin/JVM, TypeScript, React, NestJS, Postgres, AWS and GCP."
-    proof: "9 years, five companies, two of them from inception"
+    proof: "10 years, five companies, two of them from inception"
 ---
 
 I take on consulting and advisory work alongside my day job. Four things I'm genuinely good at,

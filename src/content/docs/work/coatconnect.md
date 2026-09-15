@@ -11,10 +11,12 @@ treeMeta: web performance · SSR
 stack: [TypeScript, React, NestJS, Node.js, MongoDB, AWS]
 ---
 
-I accelerated development of a web portal connecting doctors to medical events and conferences.
+I developed a web platform connecting doctors to medical events and conferences, refactored it end to end
+and optimised its performance.
 
 - Optimised performance and bundle size down to a 1.7s Largest Contentful Paint, and added
-  server-side rendering for SEO.
+  server-side rendering for SEO. I wrote up the approach in
+  [Optimizing website performance](https://medium.com/@ziadalzarka/dramatically-optimize-the-performance-of-a-website-def4b8f8aece).
 - Built the shared UI library that shortened new-view delivery, a web scraper enriching the
   platform with medical event data from multiple sources, and integrations for payments,
   analytics and marketing automation.
