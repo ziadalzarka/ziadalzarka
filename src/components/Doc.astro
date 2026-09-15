@@ -19,6 +19,18 @@ const displayParts =
 
 /* A project with a repo and nothing else to point at goes to the repo. */
 const site = d.site ?? (d.repo ? `https://github.com/${d.repo}` : undefined);
+
+/* The title carries the link, and the footer spells the address out — one is
+   the way out, the other is the address you can read, say or copy. The entry is
+   derived from `site` so the two can never drift, and a doc that already lists
+   that address keeps its own wording. */
+const readable = (url: string) =>
+  url.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
+
+const links =
+  site && !d.links.some((l) => l.href === site)
+    ? [...d.links, { label: readable(site), href: site }]
+    : d.links;
 ---
 
 <section class:list={['doc', { 'doc--thesis': isThesis }]} id={entry.id} data-doc={entry.id} style={seq === undefined ? undefined : `--seq:${seq}`} aria-labelledby={`${entry.id}-title`}>
@@ -199,9 +211,9 @@ const site = d.site ?? (d.repo ? `https://github.com/${d.repo}` : undefined);
   }
 
   {
-    d.links.length > 0 && (
+    links.length > 0 && (
       <ul class="links">
-        {d.links.map((l) => (
+        {links.map((l) => (
           <li>
             <a
               href={l.href}
