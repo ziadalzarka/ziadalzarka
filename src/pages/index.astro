@@ -6,19 +6,12 @@ import Mark from '../components/Mark.astro';
 import { getReleases } from '../data/github';
 import { CONTACT } from '../data/contact';
 
-/**
- * Tree order is the one true reading order: the rail renders it top to bottom,
- * and on a phone the pane stacks into it. `column` says which of the two desktop
- * columns a group lands in, and the columns have to stay a clean split of this
- * list — `lead` groups first, then `aside` — or the stacked order stops matching
- * the rail. The check below the render enforces it.
- */
 const GROUPS = [
-  { key: 'root', label: null, column: 'lead' },
-  { key: 'work', label: 'work/', column: 'lead' },
-  { key: 'ship', label: 'ship/', column: 'aside' },
-  { key: 'write', label: 'write/', column: 'aside' },
-  { key: 'hire', label: 'hire/', column: 'aside' },
+  { key: 'root', label: null },
+  { key: 'work', label: 'work/' },
+  { key: 'ship', label: 'ship/' },
+  { key: 'write', label: 'write/' },
+  { key: 'hire', label: 'hire/' },
 ] as const;
 
 const all = await getCollection('docs');
@@ -36,30 +29,20 @@ const rendered = await Promise.all(
   ordered.map(async (entry) => ({ entry, Content: (await render(entry)).Content }))
 );
 
-const columnOf = new Map(GROUPS.map((g) => [g.key, g.column]));
-
 const introduction = rendered.filter(({ entry }) => entry.data.kind === 'thesis');
-const inColumn = (column: (typeof GROUPS)[number]['column']) =>
-  rendered.filter(
-    ({ entry }) => entry.data.kind !== 'thesis' && columnOf.get(entry.data.group) === column
-  );
+const experience = rendered.filter(({ entry }) => entry.data.group === 'work');
+const background = rendered.filter(
+  ({ entry }) => entry.data.kind !== 'thesis' && entry.data.group !== 'work'
+);
 
-/** Left: what I take on, who I am, where I have worked. Right: what I shipped and wrote. */
-const lead = inColumn('lead');
-const aside = inColumn('aside');
-
-/* One reading order, checked at build time: the pane's document order — thesis,
-   then the lead column, then the aside column — has to be the rail's order, or
-   the mobile tab strip highlights files in an order the page does not scroll in. */
-const railOrder = ordered.map((e) => e.id);
-const paneOrder = [...introduction, ...lead, ...aside].map(({ entry }) => entry.id);
-
-if (railOrder.join('\n') !== paneOrder.join('\n')) {
-  throw new Error(
-    'Pane order no longer matches the file tree. Each column must be a contiguous ' +
-      `run of GROUPS, lead groups first.\n  rail: ${railOrder.join(', ')}\n  pane: ${paneOrder.join(', ')}`
-  );
-}
+/**
+ * Every file's place in the tree. Two desktop columns read across, not down, so
+ * their document order is roles first and the rest after — fine side by side,
+ * wrong once the columns stack, where the page has to read in the rail's order.
+ * The stylesheet stacks by this number, so a new file or group falls into line
+ * with the tree on its own.
+ */
+const seqOf = new Map(ordered.map((e, i) => [e.id, i]));
 
 const releases = await getReleases();
 
@@ -156,19 +139,29 @@ const contactId = ordered.find((e) => e.data.kind === 'contact')?.id ?? '';
             ))
           }
           <div class="portfolio">
-            <div class="portfolio__column" data-column="lead">
+            <div class="portfolio__column" data-column="experience">
               {
-                lead.map(({ entry, Content }) => (
-                  <Doc entry={entry} path={pathFor(entry)} release={releaseFor(entry)}>
+                experience.map(({ entry, Content }) => (
+                  <Doc
+                    entry={entry}
+                    path={pathFor(entry)}
+                    release={releaseFor(entry)}
+                    seq={seqOf.get(entry.id)}
+                  >
                     <Content />
                   </Doc>
                 ))
               }
             </div>
-            <div class="portfolio__column" data-column="aside">
+            <div class="portfolio__column" data-column="background">
               {
-                aside.map(({ entry, Content }) => (
-                  <Doc entry={entry} path={pathFor(entry)} release={releaseFor(entry)}>
+                background.map(({ entry, Content }) => (
+                  <Doc
+                    entry={entry}
+                    path={pathFor(entry)}
+                    release={releaseFor(entry)}
+                    seq={seqOf.get(entry.id)}
+                  >
                     <Content />
                   </Doc>
                 ))

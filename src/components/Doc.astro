@@ -6,9 +6,11 @@ interface Props {
   entry: CollectionEntry<'docs'>;
   path: string;
   release?: string;
+  /** Place in the file tree — the order the stacked layout reads in. */
+  seq?: number;
 }
 
-const { entry, path, release } = Astro.props;
+const { entry, path, release, seq } = Astro.props;
 const d = entry.data;
 const isThesis = d.kind === 'thesis';
 
@@ -16,7 +18,7 @@ const displayParts =
   isThesis && d.display && d.accent ? d.display.split(d.accent) : null;
 ---
 
-<section class:list={['doc', { 'doc--thesis': isThesis }]} id={entry.id} data-doc={entry.id} aria-labelledby={`${entry.id}-title`}>
+<section class:list={['doc', { 'doc--thesis': isThesis }]} id={entry.id} data-doc={entry.id} style={seq === undefined ? undefined : `--seq:${seq}`} aria-labelledby={`${entry.id}-title`}>
   {
     isThesis ? (
       <header class="thesis">

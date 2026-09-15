@@ -677,6 +677,27 @@ kbd {
   color: var(--amber);
 }
 
+/* Below the two-column layout the columns are not columns any more, they are one
+   run of files — and a run has to read in the rail's order, not column by column,
+   or the tab strip highlights files in an order the page does not scroll in.
+   `display: contents` lifts the files out of their columns so `--seq`, each one's
+   place in the tree, can interleave them. Side by side the columns read across
+   rather than down, so the source order is right there and this does nothing. */
+@media not all and (min-width: 80rem) {
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio__column {
+    display: contents;
+  }
+
+  .portfolio .doc {
+    order: var(--seq, 0);
+  }
+}
+
 @media (min-width: 80rem) {
   .portfolio {
     display: grid;
