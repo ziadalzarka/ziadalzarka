@@ -23,6 +23,8 @@ const docs = defineCollection({
     tagline: z.string().optional(),
     status: z.enum(['public', 'private']).optional(),
     repo: z.string().optional(),
+    /** Where the company or project lives. The title links to it. */
+    site: z.string().url().optional(),
 
     highlights: z
       .array(z.object({ label: z.string(), href: z.string().url(), meta: z.string() }))

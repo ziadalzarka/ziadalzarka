@@ -9,11 +9,10 @@ period: Dec 2025 — present
 place: Copenhagen, Denmark · remote
 treeMeta: ledger · AP · incidents · agents
 stack: [Kotlin, Java 17, Gradle, PostgreSQL, Exposed, Guice, JAX-RS, AWS, Kubernetes, Terraform, Datadog, JobRunr, Claude Agent SDK, MCP]
-links:
-  - { label: "light.inc", href: "https://light.inc" }
+site: "https://light.inc"
 ---
 
-[Light](https://light.inc) is an agentic accounting platform — an AI-native general ledger for
+Light is an agentic accounting platform — an AI-native general ledger for
 companies operating across entities, countries and currencies. I work on the ledger's reliability
 and the finance features built on it, and own work end to end, from customer conversations to production.
 

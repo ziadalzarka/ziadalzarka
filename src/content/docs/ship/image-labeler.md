@@ -9,8 +9,6 @@ status: public
 repo: ziadalzarka/icloud-image-labeler
 treeMeta: python · local llm
 stack: [Python, osxphotos, PhotoScript, Pillow, ffmpeg, LM Studio, Ollama]
-links:
-  - { label: "github.com/ziadalzarka/icloud-image-labeler", href: "https://github.com/ziadalzarka/icloud-image-labeler" }
 ---
 
 Generates keywords, titles, descriptions and OCR text for photos and videos, then writes the

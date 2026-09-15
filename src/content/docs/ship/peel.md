@@ -9,8 +9,6 @@ status: public
 repo: ziadalzarka/peel
 treeMeta: go · tui
 stack: [Go, Bubble Tea, git, Homebrew]
-links:
-  - { label: "github.com/ziadalzarka/peel", href: "https://github.com/ziadalzarka/peel" }
 ---
 
 Every local diff-review tool is read-only, so reviewing and `git add` end up as two passes over

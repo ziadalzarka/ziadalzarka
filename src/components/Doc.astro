@@ -16,6 +16,9 @@ const isThesis = d.kind === 'thesis';
 
 const displayParts =
   isThesis && d.display && d.accent ? d.display.split(d.accent) : null;
+
+/* A project with a repo and nothing else to point at goes to the repo. */
+const site = d.site ?? (d.repo ? `https://github.com/${d.repo}` : undefined);
 ---
 
 <section class:list={['doc', { 'doc--thesis': isThesis }]} id={entry.id} data-doc={entry.id} style={seq === undefined ? undefined : `--seq:${seq}`} aria-labelledby={`${entry.id}-title`}>
@@ -50,7 +53,18 @@ const displayParts =
           {release && <span class="micro" style="color:var(--jade)">{release}</span>}
           {d.status === 'private' && <span class="micro">private source</span>}
         </div>
-        <h2 class="doc__title" id={`${entry.id}-title`}>{d.title}</h2>
+        <h2 class="doc__title" id={`${entry.id}-title`}>
+          {site ? (
+            <a class="doc__title-link" href={site} rel="noopener" target="_blank">
+              {d.title}
+              <span class="doc__title-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          ) : (
+            d.title
+          )}
+        </h2>
         {d.tagline && <p class="doc__meta">{d.tagline}</p>}
         {(d.role || d.period || d.place) && (
           <p class="doc__meta">

@@ -8,11 +8,11 @@ tagline: My bill-splitting app. Designed, built and shipped solo.
 status: private
 period: Jan 2026 — present
 treeMeta: kotlin · react native
+site: "https://www.kin-split.app"
 stack: [Kotlin, Ktor, Exposed, PostgreSQL, React Native, Expo, TypeScript, Python, FastAPI, k6, Fly.io]
 links:
   - { label: "App Store", href: "https://apps.apple.com/app/id6763578086" }
   - { label: "Google Play", href: "https://play.google.com/store/apps/details?id=app.kinsplit.mobile" }
-  - { label: "kin-split.app", href: "https://www.kin-split.app" }
 ---
 
 Kin.app lets everyone claim what they ordered on a shared receipt. Tax and service charges follow
