@@ -51,7 +51,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
   <rect x="0" y="0" width="${W}" height="52" fill="${sunk}"/>
   <line x1="0" y1="52" x2="${W}" y2="52" stroke="${line}" stroke-width="1"/>
   <text x="40" y="33" font-family="${mono}" font-size="18" fill="${dim}">
-    <tspan fill="${amber}">ziad</tspan>@ziadalzarka.dev
+    <tspan fill="${amber}">ziad</tspan>@prod
   </text>
   <text x="${W - 40}" y="33" text-anchor="end" font-family="${mono}" font-size="14"
         fill="${faint}" letter-spacing="2">README.MD</text>

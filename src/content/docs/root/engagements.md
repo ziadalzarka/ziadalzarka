@@ -20,5 +20,4 @@ offers:
     proof: "10 years, five companies, two of them from inception"
 ---
 
-I take on consulting and advisory work alongside my day job. Four things I'm genuinely good at,
-with the evidence for each.
+Four things I'm genuinely good at, with the evidence for each.

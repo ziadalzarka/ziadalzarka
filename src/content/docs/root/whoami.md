@@ -18,8 +18,6 @@ I started coding at 12, took my first paid job at 16, and have been doing this p
 I like being thrown at problems I don't know how to solve yet — a medical knowledge graph one
 year, a Rust sync engine the next, an agent platform after that.
 
-Outside work I sing and play guitar, and I live in Egypt with my wife, Rola.
-
 ### education
 
 Bachelor of Science, Computer Science, 2018–2022.

@@ -98,5 +98,5 @@ I started coding at 12 and took my first paid job at 16. Most of what I write at
 shared publicly, so this profile shows only a small part of it — the full picture is at
 **[ziadalzarka.dev](https://ziadalzarka.dev)**.
 
-I take on consulting and advisory work alongside my day job. If you have a system that has to be
-right and currently isn't, [get in touch](mailto:ziadalzarka@gmail.com).
+If you have a system that has to be right and currently isn't,
+[get in touch](mailto:ziadalzarka@gmail.com).
