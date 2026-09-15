@@ -1,0 +1,41 @@
+---
+/**
+ * The Claude burst, drawn rather than imported: twelve rays around a centre,
+ * alternating long and short. It is a hand-made likeness, not Anthropic's asset,
+ * so it stays small and sits at the end of the prompt like a shell glyph.
+ */
+interface Props {
+  size?: number;
+}
+
+const { size = 13 } = Astro.props;
+
+const CENTRE = 12;
+const INNER = 2.4;
+const RAYS = 12;
+
+const rays = Array.from({ length: RAYS }, (_, i) => {
+  const angle = (i / RAYS) * Math.PI * 2 - Math.PI / 2;
+  const outer = i % 2 === 0 ? 10.4 : 8;
+  const at = (radius: number) => ({
+    x: +(CENTRE + Math.cos(angle) * radius).toFixed(2),
+    y: +(CENTRE + Math.sin(angle) * radius).toFixed(2),
+  });
+  return { from: at(INNER), to: at(outer) };
+});
+---
+
+<svg
+  class="claude-mark"
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  role="img"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2.6"
+  stroke-linecap="round"
+>
+  <title>Claude</title>
+  {rays.map((ray) => <line x1={ray.from.x} y1={ray.from.y} x2={ray.to.x} y2={ray.to.y} />)}
+</svg>

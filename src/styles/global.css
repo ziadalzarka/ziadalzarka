@@ -22,6 +22,7 @@
   --violet-ink: color-mix(in srgb, var(--violet) 65%, white);
   --kin-gradient: linear-gradient(110deg, var(--amber), var(--violet-ink));
   --jade: #58b79b;
+  --claude: #d97757;
   --coral: #e0705b;
 
   --display: 'Martian Mono Variable', 'Martian Mono Fallback', ui-monospace, monospace;
@@ -177,6 +178,14 @@ kbd {
 .bar__host b {
   color: var(--amber);
   font-weight: 500;
+}
+
+/* Sits at the end of the prompt the way a shell glyph would — Claude's colour,
+   dimmed to the weight of the host name so it reads as part of the line. */
+.claude-mark {
+  margin-left: 0.5ch;
+  vertical-align: -0.12em;
+  color: color-mix(in srgb, var(--claude) 85%, transparent);
 }
 
 .body {
