@@ -18,3 +18,6 @@ ledgers, medical AI, and agent platforms that do real engineering work.
 
 I also designed, built and shipped [Kin.app](https://www.kin-split.app),
 my app for splitting bills by item.
+
+> Electricity didn't change the world when it was new and exciting, it changed it
+> when it became boring.
